@@ -61,37 +61,43 @@
 //         background-color: red;
 //     }
 // }
-function CSSNode(query,attributes) {
-    this.query = query;
-    this.attributes= attributes;
+function CSSNode(query, attributes) {
+  this.query = query.removeComment().trim();
+  this.attributes = attributes;
 }
 
-CSSNode.paste = function(str) {
-    var result = [];
-    var arr = str.spit('{');
-    var query = arr[0];
-    var queryArr = query.split(',');
-    var attributesRaw = arr[1].replace('}', '');
-    var attributesArr = attributesRaw.split(';');
-    var attributes = [];
-    for (let i = 0; i < attributesArr.length; i++) {
-        if (attributesArr[i]) {
-            attributes.push(attributesArr[i]);
-        }
+CSSNode.parse = function (str) {
+  var result = [];
+  var arr = str.split('{');
+  var query = arr[0];
+  var queryArr = query.split(',');
+  var attributesRaw = arr[1].replace('}', '');
+  var attributesArr = attributesRaw.split(';');
+  var attributes = [];
+  for (let i = 0; i < attributesArr.length; i++) {
+    let attr = Attribute.parse(attributesArr[i]);
+    if (attr) {
+      attributes.push(attr);
     }
-    for (let i = 0; i < queryArr.length; i++) {
-        if (queryArr[i]) {
-            result.push(new CSSNode(queryArr[i], attributes))
-        }
+  }
+  for (let i = 0; i < queryArr.length; i++) {
+    if (queryArr[i]) {
+      result.push(new CSSNode(queryArr[i], attributes))
     }
-    return result;
+  }
+  return result;
 };
-
 function Attribute(name, value) {
-    this.name = name;
-    this.value = value;
+  this.name = name.removeComment().trim();
+  this.value = value.trim();
 }
-Attribute.parse = function(str) {
-    var attr = str.split(':');
+Attribute.parse = function (str) {
+  var attr = str.split(':');
+  if (attr.length === 2) {
     return new Attribute(attr[0], attr[1]);
+  } else {
+    return;
+  }
+
 };
+module.exports = CSSNode;
