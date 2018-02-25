@@ -35,6 +35,15 @@
       expect(child1.attributes[1].name).toBe("line-height");
       expect(child0.attributes[3].value).toBe("baseline");
     });
+      it("should return correct structure 4", function () {
+          var origin = "sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }";
+          var nodes = CSSNode.parse(origin, "screen and (min-width: 30em)", "Uncomment out the line below to help debug layout issues");
+          var expMedia = "screen and (min-width: 30em)";
+          var expComment = "Uncomment out the line below to help debug layout issues";
+          var child0 = nodes[0];
+          expect(child0.mediaQuery).toBe(expMedia);
+          expect(child0.comment).toBe(expComment);
+      });
   });
   
 });

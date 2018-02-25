@@ -61,17 +61,25 @@
 //         background-color: red;
 //     }
 // }
-function CSSNode(query, attributes) {
+function CSSNode(query, attributes, mediaQuery, comment) {
   this.query = query.removeComment().trim();
   this.attributes = attributes;
+  this.mediaQuery = (mediaQuery || "").trim();
+  this.comment = (comment || "").trim();
 }
 
-CSSNode.parse = function (str) {
+CSSNode.parse = function (str, mediaQuery, comment) {
   var result = [];
   var arr = str.split('{');
   var query = arr[0];
   var queryArr = query.split(',');
-  var attributesRaw = arr[1].replace('}', '');
+    try {
+        var attributesRaw = arr[1].replace('}', '');
+    }
+    catch(err) {
+        console.log(str);
+    }
+
   var attributesArr = attributesRaw.split(';');
   var attributes = [];
   for (let i = 0; i < attributesArr.length; i++) {
@@ -82,7 +90,7 @@ CSSNode.parse = function (str) {
   }
   for (let i = 0; i < queryArr.length; i++) {
     if (queryArr[i]) {
-      result.push(new CSSNode(queryArr[i], attributes))
+      result.push(new CSSNode(queryArr[i], attributes, mediaQuery, comment))
     }
   }
   return result;

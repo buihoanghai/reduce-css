@@ -1,2 +1,7 @@
 # Dependency directories
 node_modules/
+.idea/
+lib/
+package-lock.json
+spec/helpers/
+spec/jasmine_examples/
