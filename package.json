@@ -1,0 +1,25 @@
+{
+  "name": "reduce-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buihoanghai/reduce-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buihoanghai/reduce-css/issues"
+  },
+  "homepage": "https://github.com/buihoanghai/reduce-css#readme",
+  "devDependencies": {
+    "jasmine": "^3.0.0",
+    "jasmine-core": "^2.99.1",
+    "karma": "^2.0.0",
+    "karma-jasmine": "^1.1.1"
+  }
+}
