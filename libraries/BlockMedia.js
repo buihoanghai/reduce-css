@@ -10,7 +10,10 @@ function BlockMedia() {
     this.isMatchEnd = function (str) {
         var countStartBracket = (str.match(/{/g) || []).length;
         var countEndBracket = (str.match(/}/g) || []).length;
-        return countEndBracket === countStartBracket;
+        if(countEndBracket === countStartBracket && countEndBracket > 0){
+            return true;
+        }
+        return false;
     }
 }
 BlockMedia.isMatchStart = function (str) {
@@ -19,7 +22,10 @@ BlockMedia.isMatchStart = function (str) {
         return false;
     }
     var strEnd = str.slice(-6);
-    return strEnd === "@media";
+    if(strEnd === "@media"){
+        return true;
+    }
+    return false;
 };
 
 module.exports = BlockMedia;

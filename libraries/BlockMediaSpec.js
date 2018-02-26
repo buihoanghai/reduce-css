@@ -26,6 +26,9 @@
         it("should match end correctly 4", function () {
             expect(blockMedia.isMatchEnd("screen and (min-width: 60em){ { {{{}} }")).toBe(false);
         });
+        it("should match end correctly 5", function () {
+            expect(blockMedia.isMatchEnd(" ")).toBe(false);
+        });
     })
     describe("end",function () {
         it("should parse correct structure 1", function () {

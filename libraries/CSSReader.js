@@ -24,11 +24,11 @@ function CSSReader() {
         if (currentFactory) {
             if (currentFactory.isMatchEnd(currentStr)) {
                 var result = currentFactory.end(currentStr, media || {}, currentComment || {});
+                currentFactory = undefined;
+                currentStr = "";
                 if(result){
                     return result;
                 }
-                currentFactory = undefined;
-                currentStr = "";
                 return;
             }
             return;
