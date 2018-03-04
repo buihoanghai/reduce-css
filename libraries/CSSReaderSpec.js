@@ -86,6 +86,7 @@
                 " */\n" +
                 "figcaption, figure, main {/* 1 */ display: block; }";
             var nodes = cssReader.parse(rawStr);
+            console.log(nodes);
             expect(nodes.length).toBe(12);
         });
 
