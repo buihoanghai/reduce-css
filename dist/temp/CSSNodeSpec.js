@@ -69,35 +69,35 @@ define(['./CSSNode', './util'], function (CSSNode) {
                 var origin = ".sub, sup { font-size: 75%;}";
                 var nodes = CSSNode.parse(origin);
                 var child0 = nodes[0];
-                var expectedMixin = "@mixin sub{.sub{font-size:75%;}}";
+                var expectedMixin = "@mixin tachyon-sub{.sub{font-size:75%;}}";
                 expect(child0.createMixin()).toBe(expectedMixin);
             });
             it("should return correct string 2", function () {
                 var origin = ".sub, sup { font-size: 75%;}";
                 var nodes = CSSNode.parse(origin, "screen and (min-width: 30em)");
                 var child0 = nodes[0];
-                var expectedMixin = "@mixin sub{ @media screen and (min-width: 30em){.sub{font-size:75%;}}}";
+                var expectedMixin = "@mixin tachyon-sub{ @media screen and (min-width: 30em){.sub{font-size:75%;}}}";
                 expect(child0.createMixin()).toBe(expectedMixin);
             });
             it("should return correct string 3", function () {
                 var origin = ".sub{ font-size: 75%; position: relative;}";
                 var nodes = CSSNode.parse(origin);
                 var child0 = nodes[0];
-                var expectedMixin = "@mixin sub{.sub{font-size:75%;position:relative;}}";
+                var expectedMixin = "@mixin tachyon-sub{.sub{font-size:75%;position:relative;}}";
                 expect(child0.createMixin()).toBe(expectedMixin);
             });
             it("should return correct string 2", function () {
                 var origin = ".sub, sup { font-size: 75%;}";
                 var nodes = CSSNode.parse(origin, "screen and (min-width: 30em)");
                 var child0 = nodes[0];
-                var expectedMixin = "@mixin sub{ @media screen and (min-width: 30em){.sub{font-size:75%;}}}";
+                var expectedMixin = "@mixin tachyon-sub{ @media screen and (min-width: 30em){.sub{font-size:75%;}}}";
                 expect(child0.createMixin()).toBe(expectedMixin);
             });
         });
         describe("getMixinName", function () {
             it("should remove special char 1", function () {
                 var query = "[type =\"button\"]::-moz-focus-inner";
-                var expectedMixinName = "typebutton-moz-focus-inner";
+                var expectedMixinName = "tachyon-typebutton-moz-focus-inner";
                 var node = new CSSNode(query, []);
                 expect(node.getMixinName()).toBe(expectedMixinName);
             });

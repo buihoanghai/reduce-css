@@ -7,12 +7,12 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.css">
     <script data-main="index" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
-    <link rel="https://unpkg.com/tachyons@4.9.0/css/tachyons.css">
 
 </head>
 <body>
-    <textarea id="rawStr">
+    <textarea class="db w-100 h5" id="rawStr">
 /* Responsive images! */
 img { max-width: 100%; }
 /*
@@ -3081,7 +3081,10 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .v-btm-l { vertical-align: bottom; }
 }
     </textarea>
-    <textarea id="processedStr">
+    <textarea class="db w-100 h5" id="htmlStr">
+
+    </textarea>
+    <textarea class="db w-100 h5" id="processedStr" placeholder="">
 
     </textarea>
 <button onclick="process();">Click</button>
