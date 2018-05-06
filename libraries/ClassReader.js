@@ -11,8 +11,12 @@ function ClassReader() {
     return result;
   };
   this.isStartClass = function (str) {
-    if(str.slice(-7) === "class=\"" || str.slice(-7) === "class='" || str.slice(-8) === "Class= \""){
-      return true;
+    const arr = ["class=\"", "class='", "Class= \"", "className= \"", "className=\""];
+    for (var i = 0; i < arr.length; i++) {
+      const item = arr[i];
+      if (str.slice(-item.length) === item) {
+        return true;
+      }
     }
     return false;
   };
