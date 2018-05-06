@@ -8,6 +8,11 @@ define(['./CSSReader', './ClassReader'], function (CSSReader,ClassReader) {
     }
     return this.toString();
   };
+  window.process1= function () {
+    var rawStr = $('#htmlStr').val();
+    var result = rawStr.replace(/\n/g,"").replace(/"/g,"\\\"").replace(/className=/g,"class=");
+    $('#processedStr').val(result);
+  };
   window.process = function process() {
     var rawStr = $('#rawStr').val();
     var htmlStr = $('#htmlStr').val();
@@ -17,17 +22,33 @@ define(['./CSSReader', './ClassReader'], function (CSSReader,ClassReader) {
     var usedClass = classReader.parse(htmlStr);
     var result = "";
     for (var i = 0; i < nodes.length; i++) {
-      // var mixinStr = nodes[i].createMixin();
-      // result = result + '\n        ' + mixinStr;
+      //Create mixin
+      var mixinStr = nodes[i].createMixin();
+        if(mixinStr)
+          result = result + '\n' + mixinStr;
 
-      //
-      for (var j = 0; j < usedClass.length; j++) {
-        if (nodes[i].query === "." + usedClass[j]) {
-          var mixinStr = nodes[i].getMixinName();
-          result = result + '\n@include ' + mixinStr + ';';
-          break;
-        }
-      }
+      //Create example
+      // var mixinStr = nodes[i].getMixinName();
+      // result = result + '\n@include ' + mixinStr + ';';
+
+      // Find used
+      // for (var j = 0; j < usedClass.length; j++) {
+      //   if (nodes[i].query === "." + usedClass[j]) {
+      //     var mixinStr = nodes[i].getMixinName();
+      //     result = result + '\n@include ' + mixinStr + ';';
+      //     break;
+      //   }
+      // }
+
+      //Find used CSS
+      // for (var j = 0; j < usedClass.length; j++) {
+      //   if (nodes[i].query === "." + usedClass[j]) {
+      //     var css = nodes[i].getCSS();
+      //     result = result + '\n' + css;
+      //     break;
+      //   }
+      // }
+
     }
     $('#processedStr').val(result);
   }
