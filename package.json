@@ -1,5 +1,5 @@
 {
-  "name": "reduce-css",
+  "name": "reduce-css-hai-bui",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/buihoanghai/reduce-css.git"
   },
-  "author": "",
+  "author": "buihoanghai",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/buihoanghai/reduce-css/issues"

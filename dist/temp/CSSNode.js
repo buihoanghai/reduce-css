@@ -5,7 +5,9 @@ define(["module", './Attribute'], function (module, Attribute) {
         this.query = query.removeComment().trim();
         this.attributes = attributes;
         if (mediaQuery) {
-            mediaQuery = mediaQuery.replace("screen and (min-width: 30em) and (max-width: 60em)", "screen and (min-width: 30em) and (max-width: 64em)").replace("screen and (min-width: 60em)", "screen and (min-width: 64em)");
+            mediaQuery = mediaQuery.replace("screen and (min-width: 30em) and (max-width: 60em)", "@include breakpoint-m()")
+              .replace("screen and (min-width: 60em)", "@include breakpoint-l()")
+              .replace("screen and (min-width: 30em)", "@include breakpoint-ns()");
         }
         this.mediaQuery = (mediaQuery || "").trim();
         this.comment = (comment || "").trim();
@@ -20,7 +22,7 @@ define(["module", './Attribute'], function (module, Attribute) {
             var attributes = this.attributes;
             var result = "@mixin " + nameMixin + "{";
             if (mediaQuery) {
-                result = result + " @media " + mediaQuery + "{";
+                result = result + mediaQuery + "{";
             }
             result = "" + result + this.query + "{";
             for (var i = 0; i < attributes.length; i++) {
