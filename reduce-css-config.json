@@ -11,5 +11,6 @@
   ],
   "baseCSS": [
     "styles/base-tachyon.scss"
-  ]
+  ],
+  "baseMixin": "styles/mixin.scss"
 }

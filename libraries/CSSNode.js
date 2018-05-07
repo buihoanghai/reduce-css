@@ -63,50 +63,101 @@
 // }
 require("./util");
 function CSSNode(query, attributes, mediaQuery, comment) {
-    this.query = query.removeComment().trim();
-    this.attributes = attributes;
-    this.mediaQuery = (mediaQuery || "").trim();
-    this.comment = (comment || "").trim();
+  this.query = query.removeComment().trim();
+  this.attributes = attributes;
+  if (mediaQuery) {
+    mediaQuery = mediaQuery.replace("screen and (min-width: 30em) and (max-width: 60em)", "@include breakpoint-m()")
+      .replace("screen and (min-width: 60em)", "@include breakpoint-l()")
+      .replace("screen and (min-width: 30em)", "@include breakpoint-ns()");
+  }
+  this.mediaQuery = (mediaQuery || "").trim();
+  this.comment = (comment || "").trim();
+  // @mixin breakpoint-down($point) {
+  //     @media ('max-width': $point) {
+  //         @content;
+  //         }
+  //     }
+  this.createMixin = function () {
+    var nameMixin = this.getMixinName();
+    var mediaQuery = this.mediaQuery;
+    var attributes = this.attributes;
+    var result = "@mixin " + nameMixin + "{";
+    if (mediaQuery) {
+      result = result + mediaQuery + "{";
+    }
+    result = "" + result + this.query + "{";
+    for (var i = 0; i < attributes.length; i++) {
+      var attribute = attributes[i];
+
+      if(attribute.name.indexOf("color")>-1 || attribute.value.indexOf("color")>-1) {
+        return "";
+      }
+      result = "" + result + attribute.name + ":" + attribute.value + ";";
+    }
+    result = result + '}';
+    if (mediaQuery) {
+      result = result + '}';
+    }
+    result = result + '}';
+    return result;
+  };
+  this.getMixinName = function () {
+    return "tachyon-" + this.query.replace(/[&\/\\#,+()$~%.'":*?<>{} =\[\]]/g, '');
+  };
+  this.getCSS =function() {
+    var attributes = this.attributes;
+    var result = this.query + "{";
+    for (var i = 0; i < attributes.length; i++) {
+      var attribute = attributes[i];
+
+      if (attribute.name.indexOf("color") > -1 || attribute.value.indexOf("color") > -1) {
+        return "";
+      }
+      result = "" + result + attribute.name + ":" + attribute.value + ";";
+    }
+    result = result + '}';
+    return result;
+  }
 }
 
 CSSNode.parse = function (str, mediaQuery, comment) {
-    var result = [];
-    var arr = str.split('{');
-    var query = arr[0];
-    var queryArr = query.split(',');
-    try {
-        var attributesRaw = arr[1].replace('}', '');
-    }
-    catch(err) {
-        console.log(str);
-    }
+  var result = [];
+  var arr = str.split('{');
+  var query = arr[0];
+  var queryArr = query.split(',');
+  try {
+    var attributesRaw = arr[1].replace('}', '');
+  }
+  catch(err) {
+    console.log(str);
+  }
 
-    var attributesArr = attributesRaw.split(';');
-    var attributes = [];
-    for (let i = 0; i < attributesArr.length; i++) {
-        let attr = Attribute.parse(attributesArr[i]);
-        if (attr) {
-            attributes.push(attr);
-        }
+  var attributesArr = attributesRaw.split(';');
+  var attributes = [];
+  for (let i = 0; i < attributesArr.length; i++) {
+    let attr = Attribute.parse(attributesArr[i]);
+    if (attr) {
+      attributes.push(attr);
     }
-    for (let i = 0; i < queryArr.length; i++) {
-        if (queryArr[i]) {
-            result.push(new CSSNode(queryArr[i], attributes, mediaQuery, comment))
-        }
+  }
+  for (let i = 0; i < queryArr.length; i++) {
+    if (queryArr[i]) {
+      result.push(new CSSNode(queryArr[i], attributes, mediaQuery, comment))
     }
-    return result;
+  }
+  return result;
 };
 function Attribute(name, value) {
-    this.name = name.removeComment().trim();
-    this.value = value.trim();
+  this.name = name.removeComment().trim();
+  this.value = value.trim();
 }
 Attribute.parse = function (str) {
-    var attr = str.split(':');
-    if (attr.length === 2) {
-        return new Attribute(attr[0], attr[1]);
-    } else {
-        return;
-    }
+  var attr = str.split(':');
+  if (attr.length === 2) {
+    return new Attribute(attr[0], attr[1]);
+  } else {
+    return;
+  }
 
 };
 module.exports = CSSNode;
