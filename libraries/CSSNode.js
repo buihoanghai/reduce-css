@@ -61,6 +61,7 @@
 //         background-color: red;
 //     }
 // }
+require("./util");
 function CSSNode(query, attributes, mediaQuery, comment) {
     this.query = query.removeComment().trim();
     this.attributes = attributes;

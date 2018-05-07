@@ -1,5 +1,4 @@
 ﻿describe("CSSNode", function () {
-  require('./util');
   var CSSNode = require('./CSSNode');
   describe("parse", function () {
     it("should return correct structure 1", function () {
