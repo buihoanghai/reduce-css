@@ -1,2 +1,104 @@
-var CSSReader = require('./libraries/CSSReader');
-module.exports = CSSReader;
+const _ = require('lodash');
+var dir = require('node-dir');
+const ClassReader = require("./libraries/CSSReader");
+const CSSReader = require("./libraries/CSSReader");
+var config = require("./reduce-css-config");
+const fs = require('fs');
+var css = [];
+function run(c) {
+  config = c;
+  var paths = _.clone(config.paths);
+  readBaseCSS();
+  readUsedClass();
+  setTimeout(function () {
+    for (var i = 0; i < paths.length; i++) {
+      createdUsedClass( css , paths[i].usedClass, paths[i].out);
+    }
+  }, 10000)
+}
+function readUsedClass() {
+  const paths = config.paths;
+  for (var i = 0; i < paths.length; i++) {
+    paths[i].usedClass = [];
+    readUsedClassInFile(paths[i].path, paths[i]);
+  }
+}
+function readUsedClassInFile(path, p) {
+  dir.readFiles(path,
+    function (err, content, next) {
+      if (err) throw err;
+      next();
+    },
+    function (err, files) {
+      if (err) throw err;
+      files.forEach(file => {
+        if (file.indexOf(".js") > -1) {
+        fs.readFile(file, 'utf8', function (err, data) {
+          if (err) throw err;
+          const classReader = new ClassReader();
+          p.usedClass = p.usedClass.concat(classReader.parse(data));
+        });
+
+      }
+    })
+    });
+}
+function readBaseCSS(){
+  const cssReader = new CSSReader();
+  const baseCSS = config.baseCSS;
+  for(let i = 0; i < baseCSS.length; i++){
+    const filename = baseCSS[i];
+    fs.readFile(filename, 'utf8', function(err, data) {
+      if (err) throw err;
+      css = css.concat(cssReader.parse(data));
+      //createMixin(css);
+    });
+  }
+}
+function createMixinExample(nodes){
+  let result = "";
+  for (let i = 0; i < nodes.length; i++) {
+    let mixinStr = nodes[i].getMixinName();
+    result = result + '\n@include ' + mixinStr + ';';
+  }
+  console.log(result)
+  return result;
+}
+function createMixin(nodes){
+  let result = "";
+  for (let i = 0; i < nodes.length; i++) {
+    let mixinStr = nodes[i].createMixin();
+    if(mixinStr)
+      result = result + '\n' + mixinStr;
+  }
+  fs.writeFile("styles/mixin-tachyon.scss", result, function(err) {
+    if(err) {
+      return console.log(err);
+    }
+    console.log("The file was saved!");
+  });
+}
+function createdUsedClass(nodes, usedClasses, out) {
+  let result = "";
+  for (let i = 0; i < nodes.length; i++) {
+    for (var j = 0; j < usedClasses.length; j++) {
+      if (nodes[i].query === "." + usedClasses[j]) {
+        var mixinStr = nodes[i].getMixinName();
+        result = result + '\n@include ' + mixinStr + ';';
+        break;
+      }
+    }
+  }
+  fs.writeFile(out, result, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("The file was saved!", out);
+  });
+}
+var reduceCSS = {
+  run: run,
+  createMixinExample: createMixinExample,
+  createMixin: createMixin
+};
+module.exports = reduceCSS;

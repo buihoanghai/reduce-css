@@ -1,0 +1,15 @@
+{
+  "paths": [
+    {
+      "path": "pages/product",
+      "out": "pages/product/used.scss"
+    },
+    {
+      "path": "pages/article",
+      "out": "pages/article/used.scss"
+    }
+  ],
+  "baseCSS": [
+    "styles/base-tachyon.scss"
+  ]
+}

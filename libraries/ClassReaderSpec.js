@@ -40,6 +40,12 @@ describe("ClassReader", function () {
     it("should recognize string start correctly 4", function () {
       expect(classReader.isStartClass("$compareButtonClass= \"")).toBe(true);
     });
+    it("should recognize string start correctly 5", function () {
+      expect(classReader.isStartClass("className= \"")).toBe(true);
+    });
+    it("should recognize string start correctly 5", function () {
+      expect(classReader.isStartClass("className=\"")).toBe(true);
+    });
   });
   describe("isEndClass", function () {
     it("should recognize string end correctly 1", function () {
