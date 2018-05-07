@@ -1,12 +1,14 @@
 const _ = require('lodash');
 var dir = require('node-dir');
-const ClassReader = require("./libraries/CSSReader");
+const ClassReader = require("./libraries/ClassReader");
 const CSSReader = require("./libraries/CSSReader");
-var config = require("./reduce-css-config");
+var config;
 const fs = require('fs');
 var css = [];
-function run(c) {
+function initConfig(c){
   config = c;
+}
+function run() {
   var paths = _.clone(config.paths);
   readBaseCSS();
   readUsedClass();
@@ -14,7 +16,7 @@ function run(c) {
     for (var i = 0; i < paths.length; i++) {
       createdUsedClass( css , paths[i].usedClass, paths[i].out);
     }
-  }, 10000)
+  }, 10000);
 }
 function readUsedClass() {
   const paths = config.paths;
@@ -38,7 +40,6 @@ function readUsedClassInFile(path, p) {
           const classReader = new ClassReader();
           p.usedClass = p.usedClass.concat(classReader.parse(data));
         });
-
       }
     })
     });
@@ -51,9 +52,11 @@ function readBaseCSS(){
     fs.readFile(filename, 'utf8', function(err, data) {
       if (err) throw err;
       css = css.concat(cssReader.parse(data));
-      //createMixin(css);
     });
   }
+  setTimeout(function () {
+    createMixin();
+  },10000);
 }
 function createMixinExample(nodes){
   let result = "";
@@ -61,19 +64,19 @@ function createMixinExample(nodes){
     let mixinStr = nodes[i].getMixinName();
     result = result + '\n@include ' + mixinStr + ';';
   }
-  console.log(result)
   return result;
 }
-function createMixin(nodes){
+function createMixin(){
+  let nodes = css;
   let result = "";
   for (let i = 0; i < nodes.length; i++) {
     let mixinStr = nodes[i].createMixin();
     if(mixinStr)
       result = result + '\n' + mixinStr;
   }
-  fs.writeFile("styles/mixin-tachyon.scss", result, function(err) {
+  fs.writeFile(config.baseMixin, result, function(err) {
     if(err) {
-      return console.log(err);
+      return console.log(err, config.baseMixin);
     }
     console.log("The file was saved!");
   });
@@ -93,11 +96,13 @@ function createdUsedClass(nodes, usedClasses, out) {
     if (err) {
       return console.log(err);
     }
-    console.log("The file was saved!", out);
+    console.log("The file was saved!", result);
   });
 }
 var reduceCSS = {
+  initConfig: initConfig,
   run: run,
+  readBaseCSS: readBaseCSS,
   createMixinExample: createMixinExample,
   createMixin: createMixin
 };
