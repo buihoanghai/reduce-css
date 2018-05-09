@@ -1,11 +1,11 @@
 {
   "paths": [
     {
-      "path": "pages/product",
+      "path": "view/**/*.js",
       "out": "pages/product/used.scss"
     },
     {
-      "path": "pages/article",
+      "path": "view/**/*.js",
       "out": "pages/article/used.scss"
     }
   ],

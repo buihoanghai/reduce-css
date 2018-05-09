@@ -1,5 +1,5 @@
 const _ = require('lodash');
-var dir = require('node-dir');
+var globule = require('globule');
 const ClassReader = require("./libraries/ClassReader");
 const CSSReader = require("./libraries/CSSReader");
 var config;
@@ -26,23 +26,14 @@ function readUsedClass() {
   }
 }
 function readUsedClassInFile(path, p) {
-  dir.readFiles(path,
-    function (err, content, next) {
-      if (err) throw err;
-      next();
-    },
-    function (err, files) {
-      if (err) throw err;
-      files.forEach(file => {
-        if (file.indexOf(".js") > -1) {
-        fs.readFile(file, 'utf8', function (err, data) {
-          if (err) throw err;
-          const classReader = new ClassReader();
-          p.usedClass = p.usedClass.concat(classReader.parse(data));
-        });
-      }
-    })
-    });
+  var filePaths = globule.find(path);
+  filePaths.forEach(file => {
+      fs.readFile(file, 'utf8', function (err, data) {
+        if (err) throw err;
+        const classReader = new ClassReader();
+        p.usedClass = p.usedClass.concat(classReader.parse(data));
+      });
+  });
 }
 function readBaseCSS(){
   const cssReader = new CSSReader();
