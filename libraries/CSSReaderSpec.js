@@ -24,7 +24,7 @@
             var nodes = cssReader.parse(rawStr);
             var child0 = nodes[0];
             var expectedComment = "comment";
-            var expectedMediaQuery = "screen and (min-width: 30em)";
+            var expectedMediaQuery = "@include breakpoint-ns()";
             expect(nodes.length).toBe(2);
             expect(child0.comment).toBe(expectedComment);
             expect(child0.mediaQuery).toBe(expectedMediaQuery);

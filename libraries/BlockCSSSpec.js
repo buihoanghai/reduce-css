@@ -40,7 +40,7 @@
 
         });
         it("should parse correct structure 2", function () {
-            var media = { query: "screen and (min-width: 30em)"};
+            var media = { query: "@include breakpoint-ns()"};
             var comment = { comment: "Uncomment out the line below to help debug layout issues"};
             var nodes = blockComment.end("html { line-height: 1.15; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }", media, comment);
             var child0 = nodes[0]
