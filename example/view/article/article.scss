@@ -1,0 +1,31 @@
+@import "../../styles/index";
+@import "used";
+html{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+.top-06{
+  top: .6rem;
+}
+.w-max-content{    width: max-content;}
+.pl-075{ padding-left: .75rem; }
+.pt-045{ padding-top: .45rem; }
+.pt-04{ padding-top: .4rem; }
+.pl-055{ padding-left: .55rem; }
+.w5r {width: 5rem;}
+.h5r {height: 5rem;}
+.f8 { font-size: .65rem; }
+.min-h-4 { min-height: 8rem}
+/*Medium*/
+@media screen and (min-width: 30em) and (max-width: 60em) {
+}
+@media screen and (min-width: 60em) {
+  .w24r-l {width: 24rem;}
+  .pr24r-l {padding-right: 24rem}
+}
+/*Not Small*/
+@media screen and (min-width: 30em) {
+  .min-h-auto-ns { min-height: auto}
+  .ml-12-ns{ margin-left: 12rem}
+  .w-12-ns{ width: 12rem}
+  .h-12-ns{ height: 12rem}
+}

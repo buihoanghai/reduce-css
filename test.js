@@ -1,4 +1,4 @@
 const reduceCSS = require("./index");
-const config = require("./reduce-css-config");
+const config = require("./example/reduce-css-config");
 reduceCSS.initConfig(config);
 reduceCSS.run();
