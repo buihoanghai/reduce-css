@@ -38,7 +38,7 @@
            var nodes = blockMedia.end(rawStr);
            var child1 = nodes[1];
            expect(nodes.length).toBe(2);
-           expect(child1.mediaQuery).toBe("screen and (min-width: 30em)");
+           expect(child1.mediaQuery).toBe("@include breakpoint-ns()");
 
         });
     })

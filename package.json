@@ -1,12 +1,10 @@
 {
   "name": "reduce-css-hai-bui",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
-    "transpile": "babel index.js --out-file index-transpiled.js",
-    "build": "babel libraries --out-dir dist/temp"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",

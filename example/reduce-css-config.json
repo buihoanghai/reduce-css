@@ -1,7 +1,7 @@
 {
   "paths": [
     {
-      "path": "example/view/article/**/*.js",
+      "path": "example/view/article/**/*.jsx",
       "out": "example/view/article/used.scss"
     }
   ],
