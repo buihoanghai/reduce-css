@@ -1,0 +1,12 @@
+{
+  "paths": [
+    {
+      "path": "example/view/article/**/*.js",
+      "out": "example/view/article/used.scss"
+    }
+  ],
+  "baseCSS": [
+    "example/styles/base-tachyon.scss"
+  ],
+  "baseMixin": "example/styles/mixin.scss"
+}
