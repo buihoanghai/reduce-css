@@ -16,7 +16,7 @@ function run() {
     for (var i = 0; i < paths.length; i++) {
       createdUsedClass( css , paths[i].usedClass, paths[i].out);
     }
-  }, 10000);
+  }, 5000);
 }
 function readUsedClass() {
   const paths = config.paths;
@@ -25,8 +25,19 @@ function readUsedClass() {
     readUsedClassInFile(paths[i].path, paths[i]);
   }
 }
+function getFiles(path){
+  var files = [];
+  if(typeof(path) === "Array"){
+    _.each(path,item =>{
+      files.concat(globule.find(item));
+  });
+  } else {
+    files = globule.find(path);
+  }
+  return files;
+}
 function readUsedClassInFile(path, p) {
-  var filePaths = globule.find(path);
+  var filePaths = getFiles(path);
   filePaths.forEach(file => {
       fs.readFile(file, 'utf8', function (err, data) {
         if (err) throw err;
@@ -47,7 +58,7 @@ function readBaseCSS(){
   }
   setTimeout(function () {
     createMixin();
-  },10000);
+  },5000);
 }
 function createMixinExample(nodes){
   let result = "";
@@ -69,7 +80,7 @@ function createMixin(){
     if(err) {
       return console.log(err, config.baseMixin);
     }
-    console.log("The file was saved!");
+    console.log("Generate Mixin File", config.baseMixin);
   });
 }
 function createdUsedClass(nodes, usedClasses, out) {
@@ -87,7 +98,7 @@ function createdUsedClass(nodes, usedClasses, out) {
     if (err) {
       return console.log(err);
     }
-    console.log("The file was saved!", result);
+    console.log("Generate Used Class File", out);
   });
 }
 var reduceCSS = {
