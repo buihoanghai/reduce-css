@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link rel="https://unpkg.com/tachyons@4.9.0/css/tachyons.css">
+    <style>
+        #rawStr,#processedStr{
+            width: 100%;
+            height: 10rem;
+            margin-bottom: 2rem;
+
+        }
+    </style>
+</head>
+<body style="padding:1rem">
+    <textarea id="rawStr" >
+
+    </textarea>
+    <textarea id="processedStr">
+
+    </textarea>
+<button onclick="convertHTMLToString();">Click</button>
+<script>
+    function convertHTMLToString(){
+      //
+      var rawStr = $('#rawStr').val();
+
+      var result = rawStr
+        .replace(/\r?\n|\r/g, "")  //Enter
+        .replace(/className/g,"class")
+        .replace(/ class="mv2"/g,"")
+        .replace(/ +(?= )/g,'') //2 spaces
+        .replace(/"/g, "\\\"") // " => /"
+        .trim();
+
+      $('#processedStr').val(result);
+    }
+</script>
+</body>
+</html>
