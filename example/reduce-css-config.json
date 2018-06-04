@@ -2,7 +2,8 @@
   "paths": [
     {
       "path": ["example/view/article/**/*.jsx"],
-      "out": "example/view/article/used.scss"
+      "out": "example/view/article/used.scss",
+      "unresolved": "example/view/article/unresolved.scss"
     }
   ],
   "baseCSS": [
