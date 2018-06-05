@@ -13,21 +13,27 @@ function run() {
     var deferedReadBaseCSS = readBaseCSS();
     var deferedReadUsedClass = readUsedClass();
     console.time("Reduce-CSS");
-    Promise.all([deferedReadBaseCSS, deferedReadUsedClass]).then(()=>{
+    Promise.all([deferedReadBaseCSS, deferedReadUsedClass]).then(() => {
+        for (var i = 0; i < paths.length; i++) {
+            createdUsedClass(css, paths[i].usedClass, paths[i].out, paths[i].unresolved);
+        }
         createMixin();
-    for (var i = 0; i < paths.length; i++) {
-        createdUsedClass( css , paths[i].usedClass, paths[i].out, paths[i].unresolved);
-    }
-    console.timeEnd("Reduce-CSS");
-});
+        console.timeEnd("Reduce-CSS");
+    });
 }
 function readUsedClass() {
     let defered = new Promise((resolve, reject) => {
         const paths = config.paths;
+    let deferedList = [];
     for (var i = 0; i < paths.length; i++) {
-        paths[i].usedClass = [];
-        readUsedClassInFile(paths[i].path, paths[i], resolve);
+        deferedList.push(new Promise((resolve1, reject1) => {
+            paths[i].usedClass = [];
+        readUsedClassInFile(paths[i].path, paths[i], resolve1);
+    }));
     }
+    Promise.all(deferedList).then(()=>{
+        resolve();
+});
 });
     return defered;
 }
@@ -129,12 +135,12 @@ function createdUsedClass(nodes, usedClasses, out, unresolved) {
         }
         console.log("Generate Used Class File", out);
     });
-    fs.writeFile(unresolved,unresolvedClasses.join('\n'), function (err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Generate Unresolved Class File", unresolved);
-    });
+    // fs.writeFile(unresolved,unresolvedClasses.join('\n'), function (err) {
+    //     if (err) {
+    //         return console.log(err);
+    //     }
+    //     console.log("Generate Unresolved Class File", unresolved);
+    // });
 }
 var reduceCSS = {
     initConfig: initConfig,
