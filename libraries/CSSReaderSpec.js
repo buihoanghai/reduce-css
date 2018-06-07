@@ -88,6 +88,17 @@
             var nodes = cssReader.parse(rawStr);
             expect(nodes.length).toBe(12);
         });
+        it("should return correct structure 4", function () {
+            var rawStr = ".left-05 { left: .5rem; }\n" +
+                "\n" +
+                "@media screen and (min-width: 60em) {\n" +
+                "    .top-05-l{ top:.5rem;}\n" +
+                "    .top-08-l{top: .8rem;}\n" +
+                "    .top-nav-100vh-l { top: -100vh;}\n" +
+                "}";
+            var nodes = cssReader.parse(rawStr);
+            expect(nodes.length).toBe(4);
+        });
 
     });
 

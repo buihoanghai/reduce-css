@@ -15,11 +15,11 @@ function run() {
     console.time("Reduce-CSS");
     Promise.all([deferedReadBaseCSS, deferedReadUsedClass]).then(() => {
         for (var i = 0; i < paths.length; i++) {
-            createdUsedClass(css, paths[i].usedClass, paths[i].out, paths[i].unresolved);
-        }
-        createMixin();
-        console.timeEnd("Reduce-CSS");
-    });
+        createdUsedClass(css, paths[i].usedClass, paths[i].out, paths[i].unresolved);
+    }
+    createMixin();
+    console.timeEnd("Reduce-CSS");
+});
 }
 function readUsedClass() {
     let defered = new Promise((resolve, reject) => {
@@ -51,11 +51,11 @@ function getFiles(path){
 function readUsedClassInFile(path, p, resolve) {
     var filePaths = getFiles(path);
     let deferedList = [];
-    filePaths.forEach(file => {
+    const classReader = new ClassReader();
+    _.each(filePaths, file =>{
         deferedList.push(new Promise((resolve1, reject1) => {
         fs.readFile(file, 'utf8', function (err, data) {
         if (err) throw err;
-        const classReader = new ClassReader();
         p.usedClass = p.usedClass.concat(classReader.parse(data));
         resolve1();
     });
@@ -68,19 +68,19 @@ function readUsedClassInFile(path, p, resolve) {
 }
 function readBaseCSS(){
     let defered = new Promise((resolve, reject) => {
-        const cssReader = new CSSReader();
-    const baseCSS = config.baseCSS;
+        const filePaths = getFiles(config.baseCSS);
     let deferedList = [];
-    for(let i = 0; i < baseCSS.length; i++) {
-        const filename = baseCSS[i];
+    _.each(filePaths, file =>{
         deferedList.push(new Promise((resolve1, reject1) => {
-            fs.readFile(filename, 'utf8', function (err, data) {
-            if (err) throw err;
-            css = css.concat(cssReader.parse(data));
-            resolve1();
-        });
-    }));
-    }
+        fs.readFile(file, 'utf8', function (err, data) {
+        const cssReader = new CSSReader();
+        var newNodes = cssReader.parse(data);
+        if (err) throw err;
+        css = css.concat(newNodes);
+        resolve1();
+    });
+}));
+});
     Promise.all(deferedList).then(()=>{
         resolve();
 });

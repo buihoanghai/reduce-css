@@ -4,7 +4,7 @@ function BlockMedia() {
         var arr = str.split("{");
         this.query = arr[0];
         var cssReader = new CSSReader();
-        var cssBlocksStr = str.slice(this.query.length, str.length - 1);
+        var cssBlocksStr = str.slice(this.query.length + 1, str.length - 1);
         return  cssReader.parse(cssBlocksStr, this);
     };
     this.isMatchEnd = function (str) {

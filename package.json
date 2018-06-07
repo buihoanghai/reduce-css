@@ -1,6 +1,6 @@
 {
   "name": "reduce-css-hai-bui",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/buihoanghai/reduce-css#readme",
   "devDependencies": {
-    "jasmine": "^3.0.0"
+    "jasmine": "^3.1.0"
   },
   "dependencies": {
     "globule": "^1.2.0",
