@@ -99,6 +99,21 @@
             var nodes = cssReader.parse(rawStr);
             expect(nodes.length).toBe(4);
         });
+            it("should return correct structure 5", function () {
+          var origin = "/*\n"+
+   "LINKS\n"+
+   "Docs: http://tachyons.io/docs/elements/links/\n"+
+"*/\n"+
+".link { text-decoration: none; transition: color .15s ease-in; }\n"+
+".link:link, .link:visited { transition: color .15s ease-in; }\n"+
+".link:hover { transition: color .15s ease-in; }\n"+
+".link:active { transition: color .15s ease-in; }\n"+
+".link:focus { transition: color .15s ease-in; outline: 1px dotted currentColor; }\n";
+          var nodes = cssReader.parse(origin);
+          var child0 = nodes[0];
+          expect(nodes.length).toBe(6);
+          expect(child0.query).toBe(".link");
+      });
 
     });
 

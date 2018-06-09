@@ -43,6 +43,7 @@
           expect(child0.mediaQuery).toBe(expMedia);
           expect(child0.comment).toBe(expComment);
       });
+   
   });
   
 });

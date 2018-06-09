@@ -88,10 +88,6 @@ function CSSNode(query, attributes, mediaQuery, comment) {
     result = "" + result + this.query + "{";
     for (var i = 0; i < attributes.length; i++) {
       var attribute = attributes[i];
-
-      if(attribute.name.indexOf("color")>-1 || attribute.value.indexOf("color")>-1) {
-        return "";
-      }
       result = "" + result + attribute.name + ":" + attribute.value + ";";
     }
     result = result + '}';
