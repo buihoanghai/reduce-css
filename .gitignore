@@ -5,3 +5,6 @@ lib/
 package-lock.json
 spec/helpers/
 spec/jasmine_examples/
+example/**/*used.scss
+example/**/*mixin.scss
+
