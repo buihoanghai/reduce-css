@@ -1,4 +1,5 @@
-function ClassReader() {
+function ClassReader(startClasses) {
+  this.startClasses = startClasses || [];
   this.getClassFromStr = function (str) {
     var result = [];
     const classes = str.split(' ');
@@ -11,7 +12,8 @@ function ClassReader() {
     return result;
   };
   this.isStartClass = function (str) {
-    const arr = ["class=\"", "class='", "Class= \"", "Class = \"", "className= \"", "className=\""];
+    let arr = ["class=\"", "class='", "Class= \"", "Class = \"", "className= \"", "className=\""];
+    arr = arr.concat(this.startClasses);
     for (var i = 0; i < arr.length; i++) {
       const item = arr[i];
       if (str.slice(-item.length) === item) {

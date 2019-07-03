@@ -9,6 +9,7 @@ function initConfig(c){
     config = c;
 }
 function run() {
+    console.log("start");
     var paths = _.clone(config.paths);
     var deferedReadBaseCSS = readBaseCSS();
     var deferedReadUsedClass = readUsedClass();
@@ -51,7 +52,7 @@ function getFiles(path){
 function readUsedClassInFile(path, p, resolve) {
     var filePaths = getFiles(path);
     let deferedList = [];
-    const classReader = new ClassReader();
+    const classReader = new ClassReader(config.startClass);
     _.each(filePaths, file =>{
         deferedList.push(new Promise((resolve1, reject1) => {
         fs.readFile(file, 'utf8', function (err, data) {

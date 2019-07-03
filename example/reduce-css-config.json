@@ -1,7 +1,9 @@
 {
   "paths": [
     {
-      "path": ["example/view/article/**/*.jsx"],
+      "path": [
+        "example/view/article/**/*.jsx"
+      ],
       "out": "example/view/article/used.scss",
       "unresolved": "example/view/article/unresolved.scss"
     }
@@ -9,5 +11,6 @@
   "baseCSS": [
     "example/styles/base-tachyon.scss"
   ],
-  "baseMixin": "example/styles/mixin.scss"
+  "baseMixin": "example/styles/mixin.scss",
+  "startClass": "className1=\""
 }

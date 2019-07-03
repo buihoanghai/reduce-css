@@ -62,9 +62,9 @@ export default class extends Component {
 
       <main className="mw9 center pa2 pa3-l gray">
         <h1 className="f3 mv1">{this.props.itemData.title}</h1>
-        <span className="f6">{this.props.itemData.created} Bởi {this.props.itemData.author}</span>
+        <span className1="f6">{this.props.itemData.created} Bởi {this.props.itemData.author}</span>
         <div className="relative">
-          <div className="pr24r-l">
+          <div className1="pr24r-l">
               <CONTENT itemData={this.props.itemData} />
           </div>
           <div className="top-0 right-0 absolute-l w24r-l pl3-l mt3 mt0-l">
