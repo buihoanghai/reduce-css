@@ -43,7 +43,35 @@
           expect(child0.mediaQuery).toBe(expMedia);
           expect(child0.comment).toBe(expComment);
       });
-   
+
   });
-  
+	describe("createMixin", function () {
+		it("should return correct data 1", function () {
+			var origin = ".h3 { height: 1rem; }";
+			var nodes = CSSNode.parse(origin);
+			var child0 = nodes[0];
+			expect(child0.createMixin()).toBe("@mixin tachyon-h3{.h3{height:1rem;}}");
+		});
+		it("should return correct data 2", function () {
+			var origin = ".h3 { height: 1rem; }";
+			var nodes = CSSNode.parse(origin, "screen and (min-width: 30em)");
+			var child0 = nodes[0];
+			expect(child0.createMixin()).toBe("@mixin tachyon-h3{@include breakpoint-ns(){.h3{height:1rem;}}}");
+		});
+	});
+	describe("createPropertyMixin", function () {
+		it("should return correct data 1", function () {
+			var origin = ".h3 { height: 1rem; }";
+			var nodes = CSSNode.parse(origin);
+			var child0 = nodes[0];
+			expect(child0.createPropertyMixin()).toBe("@mixin property-h3{height:1rem;}");
+		});
+		it("should return correct data 2", function () {
+			var origin = ".h3 { height: 1rem; }";
+			var nodes = CSSNode.parse(origin, "screen and (min-width: 30em)");
+			var child0 = nodes[0];
+			expect(child0.createPropertyMixin()).toBe("@mixin property-h3{@include breakpoint-ns(){height:1rem;}}");
+		});
+	});
+
 });

@@ -5,6 +5,7 @@
         "example/view/article/**/*.jsx"
       ],
       "out": "example/view/article/used.scss",
+      "combine": "example/view/article/combine.scss",
       "unresolved": "example/view/article/unresolved.scss"
     }
   ],
@@ -12,5 +13,6 @@
     "example/styles/base-tachyon.scss"
   ],
   "baseMixin": "example/styles/mixin.scss",
+  "propertyMixin": "example/styles/property-mixin.scss",
   "startClass": "className1=\""
 }

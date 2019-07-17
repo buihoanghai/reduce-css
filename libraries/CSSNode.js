@@ -97,8 +97,29 @@ function CSSNode(query, attributes, mediaQuery, comment) {
     result = result + '}';
     return result;
   };
+	this.createPropertyMixin = function () {
+		var nameMixin = this.getPropertyMixinName();
+		var mediaQuery = this.mediaQuery;
+		var attributes = this.attributes;
+		var result = "@mixin " + nameMixin + "{";
+		if (mediaQuery) {
+			result = result + mediaQuery + "{";
+		}
+		for (var i = 0; i < attributes.length; i++) {
+			var attribute = attributes[i];
+			result = "" + result + attribute.name + ":" + attribute.value + ";";
+		}
+		result = result + '}';
+		if (mediaQuery) {
+			result = result + '}';
+		}
+		return result;
+	};
   this.getMixinName = function () {
     return "tachyon-" + this.query.replace(/[&\/\\#,+()$~%.'":*?<>{} =\[\]]/g, '');
+  };
+  this.getPropertyMixinName = function () {
+    return "property-" + this.query.replace(/[&\/\\#,+()$~%.'":*?<>{} =\[\]]/g, '');
   };
   this.getCSS =function() {
     var attributes = this.attributes;

@@ -74,7 +74,9 @@ describe("ClassReader", function () {
         "        <div class=\"back\">\n" +
         "            <i class=\"iprice-listing-icons-sprite icon i-back-button\"></i>";
       var classes = classReader.parse(rawStr);
-      expect(classes.length).toBe(6);
+      expect(classes.combineClass[0]).toBe("iprice-listing-icons-sprite icon i-back-button");
+
+      expect(classes.classes.length).toBe(6);
     })
     it("should return correct data 2",function () {
       var rawStr ="<?php\n" +
@@ -196,7 +198,7 @@ describe("ClassReader", function () {
         "    </figure>\n" +
         "</div>\n";
       var classes = classReader.parse(rawStr);
-      expect(classes.length).toBe(88);
+      expect(classes.classes.length).toBe(88);
     })
   })
 });
