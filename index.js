@@ -144,7 +144,7 @@ function createMixin() {
 }
 
 function createdUsedCombineClass(combineClasses, out) {
-	if (!combineClasses) {
+	if (!combineClasses || !out) {
 		return;
 	}
 	let result = "";
