@@ -48,6 +48,7 @@ function ClassReader(startClasses) {
 				tempStr = tempStr.slice(0, tempStr.length - 1);
 				let classes = this.getClassFromStr(tempStr);
 				if(classes.length > 1){
+					classes = classes.sort();
 					result.combineClass.push(classes.join(' '));
 				}
 				result.classes = result.classes.concat(classes);

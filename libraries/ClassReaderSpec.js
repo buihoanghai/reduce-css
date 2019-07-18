@@ -74,10 +74,16 @@ describe("ClassReader", function () {
         "        <div class=\"back\">\n" +
         "            <i class=\"iprice-listing-icons-sprite icon i-back-button\"></i>";
       var classes = classReader.parse(rawStr);
-      expect(classes.combineClass[0]).toBe("iprice-listing-icons-sprite icon i-back-button");
+      expect(classes.combineClass[0]).toBe("i-back-button icon iprice-listing-icons-sprite");
 
       expect(classes.classes.length).toBe(6);
     })
+		it("should return correct data 1",function () {
+			var rawStr =`<i class="a c b"`;
+			var classes = classReader.parse(rawStr);
+			expect(classes.combineClass[0]).toBe("a b c");
+
+		})
     it("should return correct data 2",function () {
       var rawStr ="<?php\n" +
         "use \\iprice\\frontend\\Helpers\\TrackingUrlBuilder;\n" +
