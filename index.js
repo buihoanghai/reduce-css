@@ -10,6 +10,7 @@ let classDictionary = {};
 function initConfig(c, d) {
     config = c ? c : {};
     classDictionary = d ? d : {};
+    css = [];
 }
 
 function run() {
@@ -25,10 +26,17 @@ function run() {
             }
             createMixin();
             createPropertyMixin();
-			resolve();
+            resolve();
             console.timeEnd("Reduce-CSS");
         });
     });
+}
+function generateUsedClass(){
+    var paths = _.clone(config.paths);
+    for (var i = 0; i < paths.length; i++) {
+        createdUsedClass(css, paths[i].usedClass, paths[i].out, paths[i].unresolved);
+        createdUsedCombineClass(paths[i].combineClass, paths[i].combine, paths[i].unresolved);
+    }
 }
 
 function readUsedClass() {
@@ -175,6 +183,8 @@ function createdUsedCombineClass(combineClasses, out) {
 function createdUsedClass(nodes, usedClasses, out) {
     let result = "";
     var used = [];
+    console.log("createdUsedClass", usedClasses.length);
+    console.log("nodes", nodes.length);
     for (let i = 0; i < nodes.length; i++) {
         for (var j = 0; j < usedClasses.length; j++) {
             if (nodes[i].query === "." + usedClasses[j]) {
@@ -209,6 +219,8 @@ var reduceCSS = {
     run: run,
     readBaseCSS: readBaseCSS,
     createMixinExample: createMixinExample,
+    generateUsedClass: generateUsedClass,
+    readUsedClass: readUsedClass,
     createMixin: createMixin
 };
 module.exports = reduceCSS;
