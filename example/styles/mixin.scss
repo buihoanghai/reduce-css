@@ -1,0 +1,1790 @@
+
+@mixin tachyon-aspect-ratio{.aspect-ratio{height:0;position:relative;}}
+@mixin tachyon-aspect-ratio--16x9{.aspect-ratio--16x9{padding-bottom:56.25%;}}
+@mixin tachyon-aspect-ratio--9x16{.aspect-ratio--9x16{padding-bottom:177.77%;}}
+@mixin tachyon-aspect-ratio--4x3{.aspect-ratio--4x3{padding-bottom:75%;}}
+@mixin tachyon-aspect-ratio--3x4{.aspect-ratio--3x4{padding-bottom:133.33%;}}
+@mixin tachyon-aspect-ratio--6x4{.aspect-ratio--6x4{padding-bottom:66.6%;}}
+@mixin tachyon-aspect-ratio--4x6{.aspect-ratio--4x6{padding-bottom:150%;}}
+@mixin tachyon-aspect-ratio--8x5{.aspect-ratio--8x5{padding-bottom:62.5%;}}
+@mixin tachyon-aspect-ratio--5x8{.aspect-ratio--5x8{padding-bottom:160%;}}
+@mixin tachyon-aspect-ratio--7x5{.aspect-ratio--7x5{padding-bottom:71.42%;}}
+@mixin tachyon-aspect-ratio--5x7{.aspect-ratio--5x7{padding-bottom:140%;}}
+@mixin tachyon-aspect-ratio--1x1{.aspect-ratio--1x1{padding-bottom:100%;}}
+@mixin tachyon-aspect-ratio--object{.aspect-ratio--object{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100;}}
+@mixin tachyon-img{img{max-width:100%;}}
+@mixin tachyon-cover{.cover{background-size:cover !important;}}
+@mixin tachyon-contain{.contain{background-size:contain !important;}}
+@mixin tachyon-bg-center{.bg-center{background-repeat:no-repeat;background-position:center center;}}
+@mixin tachyon-bg-top{.bg-top{background-repeat:no-repeat;background-position:top center;}}
+@mixin tachyon-bg-right{.bg-right{background-repeat:no-repeat;background-position:center right;}}
+@mixin tachyon-bg-bottom{.bg-bottom{background-repeat:no-repeat;background-position:bottom center;}}
+@mixin tachyon-bg-left{.bg-left{background-repeat:no-repeat;background-position:center left;}}
+@mixin tachyon-outline{.outline{outline:1px solid;}}
+@mixin tachyon-outline-transparent{.outline-transparent{outline:1px solid transparent;}}
+@mixin tachyon-outline-0{.outline-0{outline:0;}}
+@mixin tachyon-ba{.ba{border-style:solid;border-width:1px;}}
+@mixin tachyon-bt{.bt{border-top-style:solid;border-top-width:1px;}}
+@mixin tachyon-br{.br{border-right-style:solid;border-right-width:1px;}}
+@mixin tachyon-bb{.bb{border-bottom-style:solid;border-bottom-width:1px;}}
+@mixin tachyon-bl{.bl{border-left-style:solid;border-left-width:1px;}}
+@mixin tachyon-bn{.bn{border-style:none;border-width:0;}}
+@mixin tachyon-br0{.br0{border-radius:0;}}
+@mixin tachyon-br1{.br1{border-radius:.125rem;}}
+@mixin tachyon-br2{.br2{border-radius:.25rem;}}
+@mixin tachyon-br3{.br3{border-radius:.5rem;}}
+@mixin tachyon-br4{.br4{border-radius:1rem;}}
+@mixin tachyon-br-100{.br-100{border-radius:100%;}}
+@mixin tachyon-br-pill{.br-pill{border-radius:9999px;}}
+@mixin tachyon-br--bottom{.br--bottom{border-top-left-radius:0;border-top-right-radius:0;}}
+@mixin tachyon-br--top{.br--top{border-bottom-left-radius:0;border-bottom-right-radius:0;}}
+@mixin tachyon-br--right{.br--right{border-top-left-radius:0;border-bottom-left-radius:0;}}
+@mixin tachyon-br--left{.br--left{border-top-right-radius:0;border-bottom-right-radius:0;}}
+@mixin tachyon-b--dotted{.b--dotted{border-style:dotted;}}
+@mixin tachyon-b--dashed{.b--dashed{border-style:dashed;}}
+@mixin tachyon-b--solid{.b--solid{border-style:solid;}}
+@mixin tachyon-b--none{.b--none{border-style:none;}}
+@mixin tachyon-bw0{.bw0{border-width:0;}}
+@mixin tachyon-bw1{.bw1{border-width:.125rem;}}
+@mixin tachyon-bw2{.bw2{border-width:.25rem;}}
+@mixin tachyon-bw3{.bw3{border-width:.5rem;}}
+@mixin tachyon-bw4{.bw4{border-width:1rem;}}
+@mixin tachyon-bw5{.bw5{border-width:2rem;}}
+@mixin tachyon-bt-0{.bt-0{border-top-width:0;}}
+@mixin tachyon-br-0{.br-0{border-right-width:0;}}
+@mixin tachyon-bb-0{.bb-0{border-bottom-width:0;}}
+@mixin tachyon-bl-0{.bl-0{border-left-width:0;}}
+@mixin tachyon-shadow-1{.shadow-1{box-shadow:0 0 4px 2px rgba( 0, 0, 0, .2 );}}
+@mixin tachyon-shadow-2{.shadow-2{box-shadow:0 0 8px 2px rgba( 0, 0, 0, .2 );}}
+@mixin tachyon-shadow-3{.shadow-3{box-shadow:2px 2px 4px 2px rgba( 0, 0, 0, .2 );}}
+@mixin tachyon-shadow-4{.shadow-4{box-shadow:2px 2px 8px 0 rgba( 0, 0, 0, .2 );}}
+@mixin tachyon-shadow-5{.shadow-5{box-shadow:4px 4px 8px 0 rgba( 0, 0, 0, .2 );}}
+@mixin tachyon-pre{.pre{overflow-x:auto;overflow-y:hidden;overflow:scroll;}}
+@mixin tachyon-top-0{.top-0{top:0;}}
+@mixin tachyon-right-0{.right-0{right:0;}}
+@mixin tachyon-bottom-0{.bottom-0{bottom:0;}}
+@mixin tachyon-left-0{.left-0{left:0;}}
+@mixin tachyon-top-1{.top-1{top:1rem;}}
+@mixin tachyon-right-1{.right-1{right:1rem;}}
+@mixin tachyon-bottom-1{.bottom-1{bottom:1rem;}}
+@mixin tachyon-left-1{.left-1{left:1rem;}}
+@mixin tachyon-top-2{.top-2{top:2rem;}}
+@mixin tachyon-right-2{.right-2{right:2rem;}}
+@mixin tachyon-bottom-2{.bottom-2{bottom:2rem;}}
+@mixin tachyon-left-2{.left-2{left:2rem;}}
+@mixin tachyon-top--1{.top--1{top:-1rem;}}
+@mixin tachyon-right--1{.right--1{right:-1rem;}}
+@mixin tachyon-bottom--1{.bottom--1{bottom:-1rem;}}
+@mixin tachyon-left--1{.left--1{left:-1rem;}}
+@mixin tachyon-top--2{.top--2{top:-2rem;}}
+@mixin tachyon-right--2{.right--2{right:-2rem;}}
+@mixin tachyon-bottom--2{.bottom--2{bottom:-2rem;}}
+@mixin tachyon-left--2{.left--2{left:-2rem;}}
+@mixin tachyon-absolute--fill{.absolute--fill{top:0;right:0;bottom:0;left:0;}}
+@mixin tachyon-cfbefore{.cf:before{content:" ";display:table;}}
+@mixin tachyon-cfafter{.cf:after{content:" ";display:table;}}
+@mixin tachyon-cfafter{.cf:after{clear:both;}}
+@mixin tachyon-cf{.cf{*zoom:1;}}
+@mixin tachyon-cl{.cl{clear:left;}}
+@mixin tachyon-cr{.cr{clear:right;}}
+@mixin tachyon-cb{.cb{clear:both;}}
+@mixin tachyon-cn{.cn{clear:none;}}
+@mixin tachyon-dn{.dn{display:none;}}
+@mixin tachyon-di{.di{display:inline;}}
+@mixin tachyon-db{.db{display:block;}}
+@mixin tachyon-dib{.dib{display:inline-block;}}
+@mixin tachyon-dit{.dit{display:inline-table;}}
+@mixin tachyon-dt{.dt{display:table;}}
+@mixin tachyon-dtc{.dtc{display:table-cell;}}
+@mixin tachyon-dt-row{.dt-row{display:table-row;}}
+@mixin tachyon-dt-row-group{.dt-row-group{display:table-row-group;}}
+@mixin tachyon-dt-column{.dt-column{display:table-column;}}
+@mixin tachyon-dt-column-group{.dt-column-group{display:table-column-group;}}
+@mixin tachyon-dt--fixed{.dt--fixed{table-layout:fixed;width:100%;}}
+@mixin tachyon-flex{.flex{display:-webkit-box;display:-ms-flexbox;display:flex;}}
+@mixin tachyon-inline-flex{.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;}}
+@mixin tachyon-flex-auto{.flex-auto{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0;}}
+@mixin tachyon-flex-none{.flex-none{-webkit-box-flex:0;-ms-flex:none;flex:none;}}
+@mixin tachyon-flex-column{.flex-column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}}
+@mixin tachyon-flex-row{.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}
+@mixin tachyon-flex-wrap{.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}}
+@mixin tachyon-flex-nowrap{.flex-nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}}
+@mixin tachyon-flex-wrap-reverse{.flex-wrap-reverse{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;}}
+@mixin tachyon-flex-column-reverse{.flex-column-reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}}
+@mixin tachyon-flex-row-reverse{.flex-row-reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;}}
+@mixin tachyon-items-start{.items-start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}}
+@mixin tachyon-items-end{.items-end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}}
+@mixin tachyon-items-center{.items-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}
+@mixin tachyon-items-baseline{.items-baseline{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;}}
+@mixin tachyon-items-stretch{.items-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;}}
+@mixin tachyon-self-start{.self-start{-ms-flex-item-align:start;align-self:flex-start;}}
+@mixin tachyon-self-end{.self-end{-ms-flex-item-align:end;align-self:flex-end;}}
+@mixin tachyon-self-center{.self-center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;}}
+@mixin tachyon-self-baseline{.self-baseline{-ms-flex-item-align:baseline;align-self:baseline;}}
+@mixin tachyon-self-stretch{.self-stretch{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch;}}
+@mixin tachyon-justify-start{.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}}
+@mixin tachyon-justify-end{.justify-end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}}
+@mixin tachyon-justify-center{.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}}
+@mixin tachyon-justify-between{.justify-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}}
+@mixin tachyon-justify-around{.justify-around{-ms-flex-pack:distribute;justify-content:space-around;}}
+@mixin tachyon-content-start{.content-start{-ms-flex-line-pack:start;align-content:flex-start;}}
+@mixin tachyon-content-end{.content-end{-ms-flex-line-pack:end;align-content:flex-end;}}
+@mixin tachyon-content-center{.content-center{-ms-flex-line-pack:center;align-content:center;}}
+@mixin tachyon-content-between{.content-between{-ms-flex-line-pack:justify;align-content:space-between;}}
+@mixin tachyon-content-around{.content-around{-ms-flex-line-pack:distribute;align-content:space-around;}}
+@mixin tachyon-content-stretch{.content-stretch{-ms-flex-line-pack:stretch;align-content:stretch;}}
+@mixin tachyon-order-0{.order-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;}}
+@mixin tachyon-order-1{.order-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;}}
+@mixin tachyon-order-2{.order-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;}}
+@mixin tachyon-order-3{.order-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;}}
+@mixin tachyon-order-4{.order-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;}}
+@mixin tachyon-order-5{.order-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5;}}
+@mixin tachyon-order-6{.order-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6;}}
+@mixin tachyon-order-7{.order-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7;}}
+@mixin tachyon-order-8{.order-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8;}}
+@mixin tachyon-order-last{.order-last{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999;}}
+@mixin tachyon-flex-grow-0{.flex-grow-0{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;}}
+@mixin tachyon-flex-grow-1{.flex-grow-1{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;}}
+@mixin tachyon-flex-shrink-0{.flex-shrink-0{-ms-flex-negative:0;flex-shrink:0;}}
+@mixin tachyon-flex-shrink-1{.flex-shrink-1{-ms-flex-negative:1;flex-shrink:1;}}
+@mixin tachyon-fl{.fl{float:left;_display:inline;}}
+@mixin tachyon-fr{.fr{float:right;_display:inline;}}
+@mixin tachyon-fn{.fn{float:none;}}
+@mixin tachyon-sans-serif{.sans-serif{font-family:-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;}}
+@mixin tachyon-serif{.serif{font-family:georgia, times, serif;}}
+@mixin tachyon-system-sans-serif{.system-sans-serif{font-family:sans-serif;}}
+@mixin tachyon-system-serif{.system-serif{font-family:serif;}}
+@mixin tachyon-code{code{font-family:Consolas, monaco, monospace;}}
+@mixin tachyon-code{.code{font-family:Consolas, monaco, monospace;}}
+@mixin tachyon-courier{.courier{font-family:'Courier Next', courier, monospace;}}
+@mixin tachyon-helvetica{.helvetica{font-family:'helvetica neue', helvetica, sans-serif;}}
+@mixin tachyon-avenir{.avenir{font-family:'avenir next', avenir, sans-serif;}}
+@mixin tachyon-athelas{.athelas{font-family:athelas, georgia, serif;}}
+@mixin tachyon-georgia{.georgia{font-family:georgia, serif;}}
+@mixin tachyon-times{.times{font-family:times, serif;}}
+@mixin tachyon-bodoni{.bodoni{font-family:"Bodoni MT", serif;}}
+@mixin tachyon-calisto{.calisto{font-family:"Calisto MT", serif;}}
+@mixin tachyon-garamond{.garamond{font-family:garamond, serif;}}
+@mixin tachyon-baskerville{.baskerville{font-family:baskerville, serif;}}
+@mixin tachyon-i{.i{font-style:italic;}}
+@mixin tachyon-fs-normal{.fs-normal{font-style:normal;}}
+@mixin tachyon-normal{.normal{font-weight:normal;}}
+@mixin tachyon-b{.b{font-weight:bold;}}
+@mixin tachyon-fw1{.fw1{font-weight:100;}}
+@mixin tachyon-fw2{.fw2{font-weight:200;}}
+@mixin tachyon-fw3{.fw3{font-weight:300;}}
+@mixin tachyon-fw4{.fw4{font-weight:400;}}
+@mixin tachyon-fw5{.fw5{font-weight:500;}}
+@mixin tachyon-fw6{.fw6{font-weight:600;}}
+@mixin tachyon-fw7{.fw7{font-weight:700;}}
+@mixin tachyon-fw8{.fw8{font-weight:800;}}
+@mixin tachyon-fw9{.fw9{font-weight:900;}}
+@mixin tachyon-input-reset{.input-reset{-webkit-appearance:none;-moz-appearance:none;}}
+@mixin tachyon-button-reset-moz-focus-inner{.button-reset::-moz-focus-inner{border:0;padding:0;}}
+@mixin tachyon-input-reset-moz-focus-inner{.input-reset::-moz-focus-inner{border:0;padding:0;}}
+@mixin tachyon-h1{.h1{height:1rem;}}
+@mixin tachyon-h2{.h2{height:2rem;}}
+@mixin tachyon-h3{.h3{height:4rem;}}
+@mixin tachyon-h4{.h4{height:8rem;}}
+@mixin tachyon-h5{.h5{height:16rem;}}
+@mixin tachyon-h-25{.h-25{height:25%;}}
+@mixin tachyon-h-50{.h-50{height:50%;}}
+@mixin tachyon-h-75{.h-75{height:75%;}}
+@mixin tachyon-h-100{.h-100{height:100%;}}
+@mixin tachyon-min-h-100{.min-h-100{min-height:100%;}}
+@mixin tachyon-vh-25{.vh-25{height:25vh;}}
+@mixin tachyon-vh-50{.vh-50{height:50vh;}}
+@mixin tachyon-vh-75{.vh-75{height:75vh;}}
+@mixin tachyon-vh-100{.vh-100{height:100vh;}}
+@mixin tachyon-min-vh-100{.min-vh-100{min-height:100vh;}}
+@mixin tachyon-h-auto{.h-auto{height:auto;}}
+@mixin tachyon-h-inherit{.h-inherit{height:inherit;}}
+@mixin tachyon-tracked{.tracked{letter-spacing:.1em;}}
+@mixin tachyon-tracked-tight{.tracked-tight{letter-spacing:-.05em;}}
+@mixin tachyon-tracked-mega{.tracked-mega{letter-spacing:.25em;}}
+@mixin tachyon-lh-solid{.lh-solid{line-height:1;}}
+@mixin tachyon-lh-title{.lh-title{line-height:1.25;}}
+@mixin tachyon-lh-copy{.lh-copy{line-height:1.5;}}
+@mixin tachyon-list{.list{list-style-type:none;}}
+@mixin tachyon-mw-100{.mw-100{max-width:100%;}}
+@mixin tachyon-mw1{.mw1{max-width:1rem;}}
+@mixin tachyon-mw2{.mw2{max-width:2rem;}}
+@mixin tachyon-mw3{.mw3{max-width:4rem;}}
+@mixin tachyon-mw4{.mw4{max-width:8rem;}}
+@mixin tachyon-mw5{.mw5{max-width:16rem;}}
+@mixin tachyon-mw6{.mw6{max-width:32rem;}}
+@mixin tachyon-mw7{.mw7{max-width:48rem;}}
+@mixin tachyon-mw8{.mw8{max-width:64rem;}}
+@mixin tachyon-mw9{.mw9{max-width:96rem;}}
+@mixin tachyon-mw-none{.mw-none{max-width:none;}}
+@mixin tachyon-w1{.w1{width:1rem;}}
+@mixin tachyon-w2{.w2{width:2rem;}}
+@mixin tachyon-w3{.w3{width:4rem;}}
+@mixin tachyon-w4{.w4{width:8rem;}}
+@mixin tachyon-w5{.w5{width:16rem;}}
+@mixin tachyon-w-10{.w-10{width:10%;}}
+@mixin tachyon-w-20{.w-20{width:20%;}}
+@mixin tachyon-w-25{.w-25{width:25%;}}
+@mixin tachyon-w-30{.w-30{width:30%;}}
+@mixin tachyon-w-33{.w-33{width:33%;}}
+@mixin tachyon-w-34{.w-34{width:34%;}}
+@mixin tachyon-w-40{.w-40{width:40%;}}
+@mixin tachyon-w-50{.w-50{width:50%;}}
+@mixin tachyon-w-60{.w-60{width:60%;}}
+@mixin tachyon-w-70{.w-70{width:70%;}}
+@mixin tachyon-w-75{.w-75{width:75%;}}
+@mixin tachyon-w-80{.w-80{width:80%;}}
+@mixin tachyon-w-90{.w-90{width:90%;}}
+@mixin tachyon-w-100{.w-100{width:100%;}}
+@mixin tachyon-w-third{.w-third{width:calc( 100% / 3 );}}
+@mixin tachyon-w-two-thirds{.w-two-thirds{width:calc( 100% / 1.5 );}}
+@mixin tachyon-w-auto{.w-auto{width:auto;}}
+@mixin tachyon-overflow-visible{.overflow-visible{overflow:visible;}}
+@mixin tachyon-overflow-hidden{.overflow-hidden{overflow:hidden;}}
+@mixin tachyon-overflow-scroll{.overflow-scroll{overflow:scroll;}}
+@mixin tachyon-overflow-auto{.overflow-auto{overflow:auto;}}
+@mixin tachyon-overflow-x-visible{.overflow-x-visible{overflow-x:visible;}}
+@mixin tachyon-overflow-x-hidden{.overflow-x-hidden{overflow-x:hidden;}}
+@mixin tachyon-overflow-x-scroll{.overflow-x-scroll{overflow-x:scroll;}}
+@mixin tachyon-overflow-x-auto{.overflow-x-auto{overflow-x:auto;}}
+@mixin tachyon-overflow-y-visible{.overflow-y-visible{overflow-y:visible;}}
+@mixin tachyon-overflow-y-hidden{.overflow-y-hidden{overflow-y:hidden;}}
+@mixin tachyon-overflow-y-scroll{.overflow-y-scroll{overflow-y:scroll;}}
+@mixin tachyon-overflow-y-auto{.overflow-y-auto{overflow-y:auto;}}
+@mixin tachyon-static{.static{position:static;}}
+@mixin tachyon-relative{.relative{position:relative;}}
+@mixin tachyon-absolute{.absolute{position:absolute;}}
+@mixin tachyon-fixed{.fixed{position:fixed;}}
+@mixin tachyon-o-100{.o-100{opacity:1;}}
+@mixin tachyon-o-90{.o-90{opacity:.9;}}
+@mixin tachyon-o-80{.o-80{opacity:.8;}}
+@mixin tachyon-o-70{.o-70{opacity:.7;}}
+@mixin tachyon-o-60{.o-60{opacity:.6;}}
+@mixin tachyon-o-50{.o-50{opacity:.5;}}
+@mixin tachyon-o-40{.o-40{opacity:.4;}}
+@mixin tachyon-o-30{.o-30{opacity:.3;}}
+@mixin tachyon-o-20{.o-20{opacity:.2;}}
+@mixin tachyon-o-10{.o-10{opacity:.1;}}
+@mixin tachyon-o-05{.o-05{opacity:.05;}}
+@mixin tachyon-o-025{.o-025{opacity:.025;}}
+@mixin tachyon-o-0{.o-0{opacity:0;}}
+@mixin tachyon-rotate-45{.rotate-45{-webkit-transform:rotate( 45deg );transform:rotate( 45deg );}}
+@mixin tachyon-rotate-90{.rotate-90{-webkit-transform:rotate( 90deg );transform:rotate( 90deg );}}
+@mixin tachyon-rotate-135{.rotate-135{-webkit-transform:rotate( 135deg );transform:rotate( 135deg );}}
+@mixin tachyon-rotate-180{.rotate-180{-webkit-transform:rotate( 180deg );transform:rotate( 180deg );}}
+@mixin tachyon-rotate-225{.rotate-225{-webkit-transform:rotate( 225deg );transform:rotate( 225deg );}}
+@mixin tachyon-rotate-270{.rotate-270{-webkit-transform:rotate( 270deg );transform:rotate( 270deg );}}
+@mixin tachyon-rotate-315{.rotate-315{-webkit-transform:rotate( 315deg );transform:rotate( 315deg );}}
+@mixin tachyon-pa0{.pa0{padding:0;}}
+@mixin tachyon-pa1{.pa1{padding:.25rem;}}
+@mixin tachyon-pa2{.pa2{padding:.5rem;}}
+@mixin tachyon-pa3{.pa3{padding:1rem;}}
+@mixin tachyon-pa4{.pa4{padding:2rem;}}
+@mixin tachyon-pa5{.pa5{padding:4rem;}}
+@mixin tachyon-pa6{.pa6{padding:8rem;}}
+@mixin tachyon-pa7{.pa7{padding:16rem;}}
+@mixin tachyon-pl0{.pl0{padding-left:0;}}
+@mixin tachyon-pl1{.pl1{padding-left:.25rem;}}
+@mixin tachyon-pl2{.pl2{padding-left:.5rem;}}
+@mixin tachyon-pl3{.pl3{padding-left:1rem;}}
+@mixin tachyon-pl4{.pl4{padding-left:2rem;}}
+@mixin tachyon-pl5{.pl5{padding-left:4rem;}}
+@mixin tachyon-pl6{.pl6{padding-left:8rem;}}
+@mixin tachyon-pl7{.pl7{padding-left:16rem;}}
+@mixin tachyon-pr0{.pr0{padding-right:0;}}
+@mixin tachyon-pr1{.pr1{padding-right:.25rem;}}
+@mixin tachyon-pr2{.pr2{padding-right:.5rem;}}
+@mixin tachyon-pr3{.pr3{padding-right:1rem;}}
+@mixin tachyon-pr4{.pr4{padding-right:2rem;}}
+@mixin tachyon-pr5{.pr5{padding-right:4rem;}}
+@mixin tachyon-pr6{.pr6{padding-right:8rem;}}
+@mixin tachyon-pr7{.pr7{padding-right:16rem;}}
+@mixin tachyon-pb0{.pb0{padding-bottom:0;}}
+@mixin tachyon-pb1{.pb1{padding-bottom:.25rem;}}
+@mixin tachyon-pb2{.pb2{padding-bottom:.5rem;}}
+@mixin tachyon-pb3{.pb3{padding-bottom:1rem;}}
+@mixin tachyon-pb4{.pb4{padding-bottom:2rem;}}
+@mixin tachyon-pb5{.pb5{padding-bottom:4rem;}}
+@mixin tachyon-pb6{.pb6{padding-bottom:8rem;}}
+@mixin tachyon-pb7{.pb7{padding-bottom:16rem;}}
+@mixin tachyon-pt0{.pt0{padding-top:0;}}
+@mixin tachyon-pt1{.pt1{padding-top:.25rem;}}
+@mixin tachyon-pt2{.pt2{padding-top:.5rem;}}
+@mixin tachyon-pt3{.pt3{padding-top:1rem;}}
+@mixin tachyon-pt4{.pt4{padding-top:2rem;}}
+@mixin tachyon-pt5{.pt5{padding-top:4rem;}}
+@mixin tachyon-pt6{.pt6{padding-top:8rem;}}
+@mixin tachyon-pt7{.pt7{padding-top:16rem;}}
+@mixin tachyon-pv0{.pv0{padding-top:0;padding-bottom:0;}}
+@mixin tachyon-pv1{.pv1{padding-top:.25rem;padding-bottom:.25rem;}}
+@mixin tachyon-pv2{.pv2{padding-top:.5rem;padding-bottom:.5rem;}}
+@mixin tachyon-pv3{.pv3{padding-top:1rem;padding-bottom:1rem;}}
+@mixin tachyon-pv4{.pv4{padding-top:2rem;padding-bottom:2rem;}}
+@mixin tachyon-pv5{.pv5{padding-top:4rem;padding-bottom:4rem;}}
+@mixin tachyon-pv6{.pv6{padding-top:8rem;padding-bottom:8rem;}}
+@mixin tachyon-pv7{.pv7{padding-top:16rem;padding-bottom:16rem;}}
+@mixin tachyon-ph0{.ph0{padding-left:0;padding-right:0;}}
+@mixin tachyon-ph1{.ph1{padding-left:.25rem;padding-right:.25rem;}}
+@mixin tachyon-ph2{.ph2{padding-left:.5rem;padding-right:.5rem;}}
+@mixin tachyon-ph3{.ph3{padding-left:1rem;padding-right:1rem;}}
+@mixin tachyon-ph4{.ph4{padding-left:2rem;padding-right:2rem;}}
+@mixin tachyon-ph5{.ph5{padding-left:4rem;padding-right:4rem;}}
+@mixin tachyon-ph6{.ph6{padding-left:8rem;padding-right:8rem;}}
+@mixin tachyon-ph7{.ph7{padding-left:16rem;padding-right:16rem;}}
+@mixin tachyon-ma0{.ma0{margin:0;}}
+@mixin tachyon-ma1{.ma1{margin:.25rem;}}
+@mixin tachyon-ma2{.ma2{margin:.5rem;}}
+@mixin tachyon-ma3{.ma3{margin:1rem;}}
+@mixin tachyon-ma4{.ma4{margin:2rem;}}
+@mixin tachyon-ma5{.ma5{margin:4rem;}}
+@mixin tachyon-ma6{.ma6{margin:8rem;}}
+@mixin tachyon-ma7{.ma7{margin:16rem;}}
+@mixin tachyon-ml0{.ml0{margin-left:0;}}
+@mixin tachyon-ml1{.ml1{margin-left:.25rem;}}
+@mixin tachyon-ml2{.ml2{margin-left:.5rem;}}
+@mixin tachyon-ml3{.ml3{margin-left:1rem;}}
+@mixin tachyon-ml4{.ml4{margin-left:2rem;}}
+@mixin tachyon-ml5{.ml5{margin-left:4rem;}}
+@mixin tachyon-ml6{.ml6{margin-left:8rem;}}
+@mixin tachyon-ml7{.ml7{margin-left:16rem;}}
+@mixin tachyon-mr0{.mr0{margin-right:0;}}
+@mixin tachyon-mr1{.mr1{margin-right:.25rem;}}
+@mixin tachyon-mr2{.mr2{margin-right:.5rem;}}
+@mixin tachyon-mr3{.mr3{margin-right:1rem;}}
+@mixin tachyon-mr4{.mr4{margin-right:2rem;}}
+@mixin tachyon-mr5{.mr5{margin-right:4rem;}}
+@mixin tachyon-mr6{.mr6{margin-right:8rem;}}
+@mixin tachyon-mr7{.mr7{margin-right:16rem;}}
+@mixin tachyon-mb0{.mb0{margin-bottom:0;}}
+@mixin tachyon-mb1{.mb1{margin-bottom:.25rem;}}
+@mixin tachyon-mb2{.mb2{margin-bottom:.5rem;}}
+@mixin tachyon-mb3{.mb3{margin-bottom:1rem;}}
+@mixin tachyon-mb4{.mb4{margin-bottom:2rem;}}
+@mixin tachyon-mb5{.mb5{margin-bottom:4rem;}}
+@mixin tachyon-mb6{.mb6{margin-bottom:8rem;}}
+@mixin tachyon-mb7{.mb7{margin-bottom:16rem;}}
+@mixin tachyon-mt0{.mt0{margin-top:0;}}
+@mixin tachyon-mt1{.mt1{margin-top:.25rem;}}
+@mixin tachyon-mt2{.mt2{margin-top:.5rem;}}
+@mixin tachyon-mt3{.mt3{margin-top:1rem;}}
+@mixin tachyon-mt4{.mt4{margin-top:2rem;}}
+@mixin tachyon-mt5{.mt5{margin-top:4rem;}}
+@mixin tachyon-mt6{.mt6{margin-top:8rem;}}
+@mixin tachyon-mt7{.mt7{margin-top:16rem;}}
+@mixin tachyon-mv0{.mv0{margin-top:0;margin-bottom:0;}}
+@mixin tachyon-mv1{.mv1{margin-top:.25rem;margin-bottom:.25rem;}}
+@mixin tachyon-mv2{.mv2{margin-top:.5rem;margin-bottom:.5rem;}}
+@mixin tachyon-mv3{.mv3{margin-top:1rem;margin-bottom:1rem;}}
+@mixin tachyon-mv4{.mv4{margin-top:2rem;margin-bottom:2rem;}}
+@mixin tachyon-mv5{.mv5{margin-top:4rem;margin-bottom:4rem;}}
+@mixin tachyon-mv6{.mv6{margin-top:8rem;margin-bottom:8rem;}}
+@mixin tachyon-mv7{.mv7{margin-top:16rem;margin-bottom:16rem;}}
+@mixin tachyon-mh0{.mh0{margin-left:0;margin-right:0;}}
+@mixin tachyon-mh1{.mh1{margin-left:.25rem;margin-right:.25rem;}}
+@mixin tachyon-mh2{.mh2{margin-left:.5rem;margin-right:.5rem;}}
+@mixin tachyon-mh3{.mh3{margin-left:1rem;margin-right:1rem;}}
+@mixin tachyon-mh4{.mh4{margin-left:2rem;margin-right:2rem;}}
+@mixin tachyon-mh5{.mh5{margin-left:4rem;margin-right:4rem;}}
+@mixin tachyon-mh6{.mh6{margin-left:8rem;margin-right:8rem;}}
+@mixin tachyon-mh7{.mh7{margin-left:16rem;margin-right:16rem;}}
+@mixin tachyon-na1{.na1{margin:-.25rem;}}
+@mixin tachyon-na2{.na2{margin:-.5rem;}}
+@mixin tachyon-na3{.na3{margin:-1rem;}}
+@mixin tachyon-na4{.na4{margin:-2rem;}}
+@mixin tachyon-na5{.na5{margin:-4rem;}}
+@mixin tachyon-na6{.na6{margin:-8rem;}}
+@mixin tachyon-na7{.na7{margin:-16rem;}}
+@mixin tachyon-nl1{.nl1{margin-left:-.25rem;}}
+@mixin tachyon-nl2{.nl2{margin-left:-.5rem;}}
+@mixin tachyon-nl3{.nl3{margin-left:-1rem;}}
+@mixin tachyon-nl4{.nl4{margin-left:-2rem;}}
+@mixin tachyon-nl5{.nl5{margin-left:-4rem;}}
+@mixin tachyon-nl6{.nl6{margin-left:-8rem;}}
+@mixin tachyon-nl7{.nl7{margin-left:-16rem;}}
+@mixin tachyon-nr1{.nr1{margin-right:-.25rem;}}
+@mixin tachyon-nr2{.nr2{margin-right:-.5rem;}}
+@mixin tachyon-nr3{.nr3{margin-right:-1rem;}}
+@mixin tachyon-nr4{.nr4{margin-right:-2rem;}}
+@mixin tachyon-nr5{.nr5{margin-right:-4rem;}}
+@mixin tachyon-nr6{.nr6{margin-right:-8rem;}}
+@mixin tachyon-nr7{.nr7{margin-right:-16rem;}}
+@mixin tachyon-nb1{.nb1{margin-bottom:-.25rem;}}
+@mixin tachyon-nb2{.nb2{margin-bottom:-.5rem;}}
+@mixin tachyon-nb3{.nb3{margin-bottom:-1rem;}}
+@mixin tachyon-nb4{.nb4{margin-bottom:-2rem;}}
+@mixin tachyon-nb5{.nb5{margin-bottom:-4rem;}}
+@mixin tachyon-nb6{.nb6{margin-bottom:-8rem;}}
+@mixin tachyon-nb7{.nb7{margin-bottom:-16rem;}}
+@mixin tachyon-nt1{.nt1{margin-top:-.25rem;}}
+@mixin tachyon-nt2{.nt2{margin-top:-.5rem;}}
+@mixin tachyon-nt3{.nt3{margin-top:-1rem;}}
+@mixin tachyon-nt4{.nt4{margin-top:-2rem;}}
+@mixin tachyon-nt5{.nt5{margin-top:-4rem;}}
+@mixin tachyon-nt6{.nt6{margin-top:-8rem;}}
+@mixin tachyon-nt7{.nt7{margin-top:-16rem;}}
+@mixin tachyon-collapse{.collapse{border-collapse:collapse;border-spacing:0;}}
+@mixin tachyon-strike{.strike{text-decoration:line-through;}}
+@mixin tachyon-underline{.underline{text-decoration:underline;}}
+@mixin tachyon-no-underline{.no-underline{text-decoration:none;}}
+@mixin tachyon-tl{.tl{text-align:left;}}
+@mixin tachyon-tr{.tr{text-align:right;}}
+@mixin tachyon-tc{.tc{text-align:center;}}
+@mixin tachyon-tj{.tj{text-align:justify;}}
+@mixin tachyon-ttc{.ttc{text-transform:capitalize;}}
+@mixin tachyon-ttl{.ttl{text-transform:lowercase;}}
+@mixin tachyon-ttu{.ttu{text-transform:uppercase;}}
+@mixin tachyon-ttn{.ttn{text-transform:none;}}
+@mixin tachyon-f-6{.f-6{font-size:6rem;}}
+@mixin tachyon-f-headline{.f-headline{font-size:6rem;}}
+@mixin tachyon-f-5{.f-5{font-size:5rem;}}
+@mixin tachyon-f-subheadline{.f-subheadline{font-size:5rem;}}
+@mixin tachyon-f1{.f1{font-size:3rem;}}
+@mixin tachyon-f2{.f2{font-size:2.25rem;}}
+@mixin tachyon-f3{.f3{font-size:1.5rem;}}
+@mixin tachyon-f4{.f4{font-size:1.25rem;}}
+@mixin tachyon-f5{.f5{font-size:1rem;}}
+@mixin tachyon-f6{.f6{font-size:.875rem;}}
+@mixin tachyon-f7{.f7{font-size:.75rem;}}
+@mixin tachyon-measure{.measure{max-width:30em;}}
+@mixin tachyon-measure-wide{.measure-wide{max-width:34em;}}
+@mixin tachyon-measure-narrow{.measure-narrow{max-width:20em;}}
+@mixin tachyon-indent{.indent{text-indent:1em;margin-top:0;margin-bottom:0;}}
+@mixin tachyon-small-caps{.small-caps{font-variant:small-caps;}}
+@mixin tachyon-truncate{.truncate{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}
+@mixin tachyon-overflow-container{.overflow-container{overflow-y:scroll;}}
+@mixin tachyon-center{.center{margin-right:auto;margin-left:auto;}}
+@mixin tachyon-mr-auto{.mr-auto{margin-right:auto;}}
+@mixin tachyon-ml-auto{.ml-auto{margin-left:auto;}}
+@mixin tachyon-clip{.clip{position:fixed !important;_position:absolute !important;clip:rect( 1px 1px 1px 1px );clip:rect( 1px, 1px, 1px, 1px );}}
+@mixin tachyon-ws-normal{.ws-normal{white-space:normal;}}
+@mixin tachyon-nowrap{.nowrap{white-space:nowrap;}}
+@mixin tachyon-pre{.pre{white-space:pre;}}
+@mixin tachyon-v-base{.v-base{vertical-align:baseline;}}
+@mixin tachyon-v-mid{.v-mid{vertical-align:middle;}}
+@mixin tachyon-v-top{.v-top{vertical-align:top;}}
+@mixin tachyon-v-btm{.v-btm{vertical-align:bottom;}}
+@mixin tachyon-dim{.dim{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-dimhover{.dim:hover{opacity:.5;transition:opacity .15s ease-in;}}
+@mixin tachyon-dimfocus{.dim:focus{opacity:.5;transition:opacity .15s ease-in;}}
+@mixin tachyon-dimactive{.dim:active{opacity:.8;transition:opacity .15s ease-out;}}
+@mixin tachyon-glow{.glow{transition:opacity .15s ease-in;}}
+@mixin tachyon-glowhover{.glow:hover{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-glowfocus{.glow:focus{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-hide-childchild{.hide-child .child{opacity:0;transition:opacity .15s ease-in;}}
+@mixin tachyon-hide-childhoverchild{.hide-child:hover  .child{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-hide-childfocuschild{.hide-child:focus  .child{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-hide-childactivechild{.hide-child:active .child{opacity:1;transition:opacity .15s ease-in;}}
+@mixin tachyon-underline-hoverhover{.underline-hover:hover{text-decoration:underline;}}
+@mixin tachyon-underline-hoverfocus{.underline-hover:focus{text-decoration:underline;}}
+@mixin tachyon-grow{.grow{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ( 0 );transform:translateZ( 0 );transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out, -webkit-transform .25s ease-out;}}
+@mixin tachyon-growhover{.grow:hover{-webkit-transform:scale( 1.05 );transform:scale( 1.05 );}}
+@mixin tachyon-growfocus{.grow:focus{-webkit-transform:scale( 1.05 );transform:scale( 1.05 );}}
+@mixin tachyon-growactive{.grow:active{-webkit-transform:scale( .90 );transform:scale( .90 );}}
+@mixin tachyon-grow-large{.grow-large{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ( 0 );transform:translateZ( 0 );transition:-webkit-transform .25s ease-in-out;transition:transform .25s ease-in-out;transition:transform .25s ease-in-out, -webkit-transform .25s ease-in-out;}}
+@mixin tachyon-grow-largehover{.grow-large:hover{-webkit-transform:scale( 1.2 );transform:scale( 1.2 );}}
+@mixin tachyon-grow-largefocus{.grow-large:focus{-webkit-transform:scale( 1.2 );transform:scale( 1.2 );}}
+@mixin tachyon-grow-largeactive{.grow-large:active{-webkit-transform:scale( .95 );transform:scale( .95 );}}
+@mixin tachyon-pointerhover{.pointer:hover{cursor:pointer;}}
+@mixin tachyon-shadow-hover{.shadow-hover{cursor:pointer;position:relative;transition:all .5s cubic-bezier( .165, .84, .44, 1 );}}
+@mixin tachyon-shadow-hoverafter{.shadow-hover::after{content:'';box-shadow:0 0 16px 2px rgba( 0, 0, 0, .2 );border-radius:inherit;opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;transition:opacity .5s cubic-bezier( .165, .84, .44, 1 );}}
+@mixin tachyon-shadow-hoverhoverafter{.shadow-hover:hover::after{opacity:1;}}
+@mixin tachyon-shadow-hoverfocusafter{.shadow-hover:focus::after{opacity:1;}}
+@mixin tachyon-z-0{.z-0{z-index:0;}}
+@mixin tachyon-z-1{.z-1{z-index:1;}}
+@mixin tachyon-z-2{.z-2{z-index:2;}}
+@mixin tachyon-z-3{.z-3{z-index:3;}}
+@mixin tachyon-z-4{.z-4{z-index:4;}}
+@mixin tachyon-z-5{.z-5{z-index:5;}}
+@mixin tachyon-z-999{.z-999{z-index:999;}}
+@mixin tachyon-z-9999{.z-9999{z-index:9999;}}
+@mixin tachyon-z-max{.z-max{z-index:2147483647;}}
+@mixin tachyon-z-inherit{.z-inherit{z-index:inherit;}}
+@mixin tachyon-z-initial{.z-initial{z-index:initial;}}
+@mixin tachyon-z-unset{.z-unset{z-index:unset;}}
+@mixin tachyon-nested-copy-line-heightp{.nested-copy-line-height p{line-height:1.5;}}
+@mixin tachyon-nested-copy-line-heightul{.nested-copy-line-height ul{line-height:1.5;}}
+@mixin tachyon-nested-copy-line-heightol{.nested-copy-line-height ol{line-height:1.5;}}
+@mixin tachyon-nested-headline-line-heighth1{.nested-headline-line-height h1{line-height:1.25;}}
+@mixin tachyon-nested-headline-line-heighth2{.nested-headline-line-height h2{line-height:1.25;}}
+@mixin tachyon-nested-headline-line-heighth3{.nested-headline-line-height h3{line-height:1.25;}}
+@mixin tachyon-nested-headline-line-heighth4{.nested-headline-line-height h4{line-height:1.25;}}
+@mixin tachyon-nested-headline-line-heighth5{.nested-headline-line-height h5{line-height:1.25;}}
+@mixin tachyon-nested-headline-line-heighth6{.nested-headline-line-height h6{line-height:1.25;}}
+@mixin tachyon-nested-list-resetul{.nested-list-reset ul{padding-left:0;margin-left:0;list-style-type:none;}}
+@mixin tachyon-nested-list-resetol{.nested-list-reset ol{padding-left:0;margin-left:0;list-style-type:none;}}
+@mixin tachyon-nested-copy-indentpp{.nested-copy-indent p+p{text-indent:1em;margin-top:0;margin-bottom:0;}}
+@mixin tachyon-nested-copy-seperatorpp{.nested-copy-seperator p+p{margin-top:1.5em;}}
+@mixin tachyon-nested-imgimg{.nested-img img{width:100%;max-width:100%;display:block;}}
+@mixin tachyon-debug{.debug *{outline:1px solid gold;}}
+@mixin tachyon-debug-white{.debug-white *{outline:1px solid white;}}
+@mixin tachyon-debug-black{.debug-black *{outline:1px solid black;}}
+@mixin tachyon-debug-grid{.debug-grid{}}
+@mixin tachyon-debug-grid-16{.debug-grid-16{}}
+@mixin tachyon-debug-grid-8-solid{.debug-grid-8-solid{}}
+@mixin tachyon-debug-grid-16-solid{.debug-grid-16-solid{}}
+@mixin tachyon-aspect-ratio--16x9-ns{@include breakpoint-ns(){.aspect-ratio--16x9-ns{padding-bottom:56.25%;}}}
+@mixin tachyon-aspect-ratio--9x16-ns{@include breakpoint-ns(){.aspect-ratio--9x16-ns{padding-bottom:177.77%;}}}
+@mixin tachyon-aspect-ratio--4x3-ns{@include breakpoint-ns(){.aspect-ratio--4x3-ns{padding-bottom:75%;}}}
+@mixin tachyon-aspect-ratio--3x4-ns{@include breakpoint-ns(){.aspect-ratio--3x4-ns{padding-bottom:133.33%;}}}
+@mixin tachyon-aspect-ratio--6x4-ns{@include breakpoint-ns(){.aspect-ratio--6x4-ns{padding-bottom:66.6%;}}}
+@mixin tachyon-aspect-ratio--4x6-ns{@include breakpoint-ns(){.aspect-ratio--4x6-ns{padding-bottom:150%;}}}
+@mixin tachyon-aspect-ratio--8x5-ns{@include breakpoint-ns(){.aspect-ratio--8x5-ns{padding-bottom:62.5%;}}}
+@mixin tachyon-aspect-ratio--5x8-ns{@include breakpoint-ns(){.aspect-ratio--5x8-ns{padding-bottom:160%;}}}
+@mixin tachyon-aspect-ratio--7x5-ns{@include breakpoint-ns(){.aspect-ratio--7x5-ns{padding-bottom:71.42%;}}}
+@mixin tachyon-aspect-ratio--5x7-ns{@include breakpoint-ns(){.aspect-ratio--5x7-ns{padding-bottom:140%;}}}
+@mixin tachyon-aspect-ratio--1x1-ns{@include breakpoint-ns(){.aspect-ratio--1x1-ns{padding-bottom:100%;}}}
+@mixin tachyon-aspect-ratio--object-ns{@include breakpoint-ns(){.aspect-ratio--object-ns{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100;}}}
+@mixin tachyon-cover-ns{@include breakpoint-ns(){.cover-ns{background-size:cover !important;}}}
+@mixin tachyon-contain-ns{@include breakpoint-ns(){.contain-ns{background-size:contain !important;}}}
+@mixin tachyon-bg-center-ns{@include breakpoint-ns(){.bg-center-ns{background-repeat:no-repeat;background-position:center center;}}}
+@mixin tachyon-bg-top-ns{@include breakpoint-ns(){.bg-top-ns{background-repeat:no-repeat;background-position:top center;}}}
+@mixin tachyon-bg-right-ns{@include breakpoint-ns(){.bg-right-ns{background-repeat:no-repeat;background-position:center right;}}}
+@mixin tachyon-bg-bottom-ns{@include breakpoint-ns(){.bg-bottom-ns{background-repeat:no-repeat;background-position:bottom center;}}}
+@mixin tachyon-bg-left-ns{@include breakpoint-ns(){.bg-left-ns{background-repeat:no-repeat;background-position:center left;}}}
+@mixin tachyon-outline-ns{@include breakpoint-ns(){.outline-ns{outline:1px solid;}}}
+@mixin tachyon-outline-transparent-ns{@include breakpoint-ns(){.outline-transparent-ns{outline:1px solid transparent;}}}
+@mixin tachyon-outline-0-ns{@include breakpoint-ns(){.outline-0-ns{outline:0;}}}
+@mixin tachyon-ba-ns{@include breakpoint-ns(){.ba-ns{border-style:solid;border-width:1px;}}}
+@mixin tachyon-bt-ns{@include breakpoint-ns(){.bt-ns{border-top-style:solid;border-top-width:1px;}}}
+@mixin tachyon-br-ns{@include breakpoint-ns(){.br-ns{border-right-style:solid;border-right-width:1px;}}}
+@mixin tachyon-bb-ns{@include breakpoint-ns(){.bb-ns{border-bottom-style:solid;border-bottom-width:1px;}}}
+@mixin tachyon-bl-ns{@include breakpoint-ns(){.bl-ns{border-left-style:solid;border-left-width:1px;}}}
+@mixin tachyon-bn-ns{@include breakpoint-ns(){.bn-ns{border-style:none;border-width:0;}}}
+@mixin tachyon-br0-ns{@include breakpoint-ns(){.br0-ns{border-radius:0;}}}
+@mixin tachyon-br1-ns{@include breakpoint-ns(){.br1-ns{border-radius:.125rem;}}}
+@mixin tachyon-br2-ns{@include breakpoint-ns(){.br2-ns{border-radius:.25rem;}}}
+@mixin tachyon-br3-ns{@include breakpoint-ns(){.br3-ns{border-radius:.5rem;}}}
+@mixin tachyon-br4-ns{@include breakpoint-ns(){.br4-ns{border-radius:1rem;}}}
+@mixin tachyon-br-100-ns{@include breakpoint-ns(){.br-100-ns{border-radius:100%;}}}
+@mixin tachyon-br-pill-ns{@include breakpoint-ns(){.br-pill-ns{border-radius:9999px;}}}
+@mixin tachyon-br--bottom-ns{@include breakpoint-ns(){.br--bottom-ns{border-top-left-radius:0;border-top-right-radius:0;}}}
+@mixin tachyon-br--top-ns{@include breakpoint-ns(){.br--top-ns{border-bottom-left-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-br--right-ns{@include breakpoint-ns(){.br--right-ns{border-top-left-radius:0;border-bottom-left-radius:0;}}}
+@mixin tachyon-br--left-ns{@include breakpoint-ns(){.br--left-ns{border-top-right-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-b--dotted-ns{@include breakpoint-ns(){.b--dotted-ns{border-style:dotted;}}}
+@mixin tachyon-b--dashed-ns{@include breakpoint-ns(){.b--dashed-ns{border-style:dashed;}}}
+@mixin tachyon-b--solid-ns{@include breakpoint-ns(){.b--solid-ns{border-style:solid;}}}
+@mixin tachyon-b--none-ns{@include breakpoint-ns(){.b--none-ns{border-style:none;}}}
+@mixin tachyon-bw0-ns{@include breakpoint-ns(){.bw0-ns{border-width:0;}}}
+@mixin tachyon-bw1-ns{@include breakpoint-ns(){.bw1-ns{border-width:.125rem;}}}
+@mixin tachyon-bw2-ns{@include breakpoint-ns(){.bw2-ns{border-width:.25rem;}}}
+@mixin tachyon-bw3-ns{@include breakpoint-ns(){.bw3-ns{border-width:.5rem;}}}
+@mixin tachyon-bw4-ns{@include breakpoint-ns(){.bw4-ns{border-width:1rem;}}}
+@mixin tachyon-bw5-ns{@include breakpoint-ns(){.bw5-ns{border-width:2rem;}}}
+@mixin tachyon-bt-0-ns{@include breakpoint-ns(){.bt-0-ns{border-top-width:0;}}}
+@mixin tachyon-br-0-ns{@include breakpoint-ns(){.br-0-ns{border-right-width:0;}}}
+@mixin tachyon-bb-0-ns{@include breakpoint-ns(){.bb-0-ns{border-bottom-width:0;}}}
+@mixin tachyon-bl-0-ns{@include breakpoint-ns(){.bl-0-ns{border-left-width:0;}}}
+@mixin tachyon-shadow-1-ns{@include breakpoint-ns(){.shadow-1-ns{box-shadow:0 0 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-2-ns{@include breakpoint-ns(){.shadow-2-ns{box-shadow:0 0 8px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-3-ns{@include breakpoint-ns(){.shadow-3-ns{box-shadow:2px 2px 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-4-ns{@include breakpoint-ns(){.shadow-4-ns{box-shadow:2px 2px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-5-ns{@include breakpoint-ns(){.shadow-5-ns{box-shadow:4px 4px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-top-0-ns{@include breakpoint-ns(){.top-0-ns{top:0;}}}
+@mixin tachyon-left-0-ns{@include breakpoint-ns(){.left-0-ns{left:0;}}}
+@mixin tachyon-right-0-ns{@include breakpoint-ns(){.right-0-ns{right:0;}}}
+@mixin tachyon-bottom-0-ns{@include breakpoint-ns(){.bottom-0-ns{bottom:0;}}}
+@mixin tachyon-top-1-ns{@include breakpoint-ns(){.top-1-ns{top:1rem;}}}
+@mixin tachyon-left-1-ns{@include breakpoint-ns(){.left-1-ns{left:1rem;}}}
+@mixin tachyon-right-1-ns{@include breakpoint-ns(){.right-1-ns{right:1rem;}}}
+@mixin tachyon-bottom-1-ns{@include breakpoint-ns(){.bottom-1-ns{bottom:1rem;}}}
+@mixin tachyon-top-2-ns{@include breakpoint-ns(){.top-2-ns{top:2rem;}}}
+@mixin tachyon-left-2-ns{@include breakpoint-ns(){.left-2-ns{left:2rem;}}}
+@mixin tachyon-right-2-ns{@include breakpoint-ns(){.right-2-ns{right:2rem;}}}
+@mixin tachyon-bottom-2-ns{@include breakpoint-ns(){.bottom-2-ns{bottom:2rem;}}}
+@mixin tachyon-top--1-ns{@include breakpoint-ns(){.top--1-ns{top:-1rem;}}}
+@mixin tachyon-right--1-ns{@include breakpoint-ns(){.right--1-ns{right:-1rem;}}}
+@mixin tachyon-bottom--1-ns{@include breakpoint-ns(){.bottom--1-ns{bottom:-1rem;}}}
+@mixin tachyon-left--1-ns{@include breakpoint-ns(){.left--1-ns{left:-1rem;}}}
+@mixin tachyon-top--2-ns{@include breakpoint-ns(){.top--2-ns{top:-2rem;}}}
+@mixin tachyon-right--2-ns{@include breakpoint-ns(){.right--2-ns{right:-2rem;}}}
+@mixin tachyon-bottom--2-ns{@include breakpoint-ns(){.bottom--2-ns{bottom:-2rem;}}}
+@mixin tachyon-left--2-ns{@include breakpoint-ns(){.left--2-ns{left:-2rem;}}}
+@mixin tachyon-absolute--fill-ns{@include breakpoint-ns(){.absolute--fill-ns{top:0;right:0;bottom:0;left:0;}}}
+@mixin tachyon-cl-ns{@include breakpoint-ns(){.cl-ns{clear:left;}}}
+@mixin tachyon-cr-ns{@include breakpoint-ns(){.cr-ns{clear:right;}}}
+@mixin tachyon-cb-ns{@include breakpoint-ns(){.cb-ns{clear:both;}}}
+@mixin tachyon-cn-ns{@include breakpoint-ns(){.cn-ns{clear:none;}}}
+@mixin tachyon-dn-ns{@include breakpoint-ns(){.dn-ns{display:none;}}}
+@mixin tachyon-di-ns{@include breakpoint-ns(){.di-ns{display:inline;}}}
+@mixin tachyon-db-ns{@include breakpoint-ns(){.db-ns{display:block;}}}
+@mixin tachyon-dib-ns{@include breakpoint-ns(){.dib-ns{display:inline-block;}}}
+@mixin tachyon-dit-ns{@include breakpoint-ns(){.dit-ns{display:inline-table;}}}
+@mixin tachyon-dt-ns{@include breakpoint-ns(){.dt-ns{display:table;}}}
+@mixin tachyon-dtc-ns{@include breakpoint-ns(){.dtc-ns{display:table-cell;}}}
+@mixin tachyon-dt-row-ns{@include breakpoint-ns(){.dt-row-ns{display:table-row;}}}
+@mixin tachyon-dt-row-group-ns{@include breakpoint-ns(){.dt-row-group-ns{display:table-row-group;}}}
+@mixin tachyon-dt-column-ns{@include breakpoint-ns(){.dt-column-ns{display:table-column;}}}
+@mixin tachyon-dt-column-group-ns{@include breakpoint-ns(){.dt-column-group-ns{display:table-column-group;}}}
+@mixin tachyon-dt--fixed-ns{@include breakpoint-ns(){.dt--fixed-ns{table-layout:fixed;width:100%;}}}
+@mixin tachyon-flex-ns{@include breakpoint-ns(){.flex-ns{display:-webkit-box;display:-ms-flexbox;display:flex;}}}
+@mixin tachyon-inline-flex-ns{@include breakpoint-ns(){.inline-flex-ns{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;}}}
+@mixin tachyon-flex-auto-ns{@include breakpoint-ns(){.flex-auto-ns{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0;}}}
+@mixin tachyon-flex-none-ns{@include breakpoint-ns(){.flex-none-ns{-webkit-box-flex:0;-ms-flex:none;flex:none;}}}
+@mixin tachyon-flex-column-ns{@include breakpoint-ns(){.flex-column-ns{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}}}
+@mixin tachyon-flex-row-ns{@include breakpoint-ns(){.flex-row-ns{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}}
+@mixin tachyon-flex-wrap-ns{@include breakpoint-ns(){.flex-wrap-ns{-ms-flex-wrap:wrap;flex-wrap:wrap;}}}
+@mixin tachyon-flex-nowrap-ns{@include breakpoint-ns(){.flex-nowrap-ns{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}}}
+@mixin tachyon-flex-wrap-reverse-ns{@include breakpoint-ns(){.flex-wrap-reverse-ns{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;}}}
+@mixin tachyon-flex-column-reverse-ns{@include breakpoint-ns(){.flex-column-reverse-ns{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}}}
+@mixin tachyon-flex-row-reverse-ns{@include breakpoint-ns(){.flex-row-reverse-ns{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;}}}
+@mixin tachyon-items-start-ns{@include breakpoint-ns(){.items-start-ns{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}}}
+@mixin tachyon-items-end-ns{@include breakpoint-ns(){.items-end-ns{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}}}
+@mixin tachyon-items-center-ns{@include breakpoint-ns(){.items-center-ns{-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}}
+@mixin tachyon-items-baseline-ns{@include breakpoint-ns(){.items-baseline-ns{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;}}}
+@mixin tachyon-items-stretch-ns{@include breakpoint-ns(){.items-stretch-ns{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;}}}
+@mixin tachyon-self-start-ns{@include breakpoint-ns(){.self-start-ns{-ms-flex-item-align:start;align-self:flex-start;}}}
+@mixin tachyon-self-end-ns{@include breakpoint-ns(){.self-end-ns{-ms-flex-item-align:end;align-self:flex-end;}}}
+@mixin tachyon-self-center-ns{@include breakpoint-ns(){.self-center-ns{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;}}}
+@mixin tachyon-self-baseline-ns{@include breakpoint-ns(){.self-baseline-ns{-ms-flex-item-align:baseline;align-self:baseline;}}}
+@mixin tachyon-self-stretch-ns{@include breakpoint-ns(){.self-stretch-ns{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch;}}}
+@mixin tachyon-justify-start-ns{@include breakpoint-ns(){.justify-start-ns{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}}}
+@mixin tachyon-justify-end-ns{@include breakpoint-ns(){.justify-end-ns{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}}}
+@mixin tachyon-justify-center-ns{@include breakpoint-ns(){.justify-center-ns{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}}}
+@mixin tachyon-justify-between-ns{@include breakpoint-ns(){.justify-between-ns{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}}}
+@mixin tachyon-justify-around-ns{@include breakpoint-ns(){.justify-around-ns{-ms-flex-pack:distribute;justify-content:space-around;}}}
+@mixin tachyon-content-start-ns{@include breakpoint-ns(){.content-start-ns{-ms-flex-line-pack:start;align-content:flex-start;}}}
+@mixin tachyon-content-end-ns{@include breakpoint-ns(){.content-end-ns{-ms-flex-line-pack:end;align-content:flex-end;}}}
+@mixin tachyon-content-center-ns{@include breakpoint-ns(){.content-center-ns{-ms-flex-line-pack:center;align-content:center;}}}
+@mixin tachyon-content-between-ns{@include breakpoint-ns(){.content-between-ns{-ms-flex-line-pack:justify;align-content:space-between;}}}
+@mixin tachyon-content-around-ns{@include breakpoint-ns(){.content-around-ns{-ms-flex-line-pack:distribute;align-content:space-around;}}}
+@mixin tachyon-content-stretch-ns{@include breakpoint-ns(){.content-stretch-ns{-ms-flex-line-pack:stretch;align-content:stretch;}}}
+@mixin tachyon-order-0-ns{@include breakpoint-ns(){.order-0-ns{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;}}}
+@mixin tachyon-order-1-ns{@include breakpoint-ns(){.order-1-ns{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;}}}
+@mixin tachyon-order-2-ns{@include breakpoint-ns(){.order-2-ns{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;}}}
+@mixin tachyon-order-3-ns{@include breakpoint-ns(){.order-3-ns{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;}}}
+@mixin tachyon-order-4-ns{@include breakpoint-ns(){.order-4-ns{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;}}}
+@mixin tachyon-order-5-ns{@include breakpoint-ns(){.order-5-ns{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5;}}}
+@mixin tachyon-order-6-ns{@include breakpoint-ns(){.order-6-ns{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6;}}}
+@mixin tachyon-order-7-ns{@include breakpoint-ns(){.order-7-ns{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7;}}}
+@mixin tachyon-order-8-ns{@include breakpoint-ns(){.order-8-ns{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8;}}}
+@mixin tachyon-order-last-ns{@include breakpoint-ns(){.order-last-ns{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999;}}}
+@mixin tachyon-flex-grow-0-ns{@include breakpoint-ns(){.flex-grow-0-ns{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;}}}
+@mixin tachyon-flex-grow-1-ns{@include breakpoint-ns(){.flex-grow-1-ns{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;}}}
+@mixin tachyon-flex-shrink-0-ns{@include breakpoint-ns(){.flex-shrink-0-ns{-ms-flex-negative:0;flex-shrink:0;}}}
+@mixin tachyon-flex-shrink-1-ns{@include breakpoint-ns(){.flex-shrink-1-ns{-ms-flex-negative:1;flex-shrink:1;}}}
+@mixin tachyon-fl-ns{@include breakpoint-ns(){.fl-ns{float:left;display:inline;}}}
+@mixin tachyon-fr-ns{@include breakpoint-ns(){.fr-ns{float:right;display:inline;}}}
+@mixin tachyon-fn-ns{@include breakpoint-ns(){.fn-ns{float:none;}}}
+@mixin tachyon-i-ns{@include breakpoint-ns(){.i-ns{font-style:italic;}}}
+@mixin tachyon-fs-normal-ns{@include breakpoint-ns(){.fs-normal-ns{font-style:normal;}}}
+@mixin tachyon-normal-ns{@include breakpoint-ns(){.normal-ns{font-weight:normal;}}}
+@mixin tachyon-b-ns{@include breakpoint-ns(){.b-ns{font-weight:bold;}}}
+@mixin tachyon-fw1-ns{@include breakpoint-ns(){.fw1-ns{font-weight:100;}}}
+@mixin tachyon-fw2-ns{@include breakpoint-ns(){.fw2-ns{font-weight:200;}}}
+@mixin tachyon-fw3-ns{@include breakpoint-ns(){.fw3-ns{font-weight:300;}}}
+@mixin tachyon-fw4-ns{@include breakpoint-ns(){.fw4-ns{font-weight:400;}}}
+@mixin tachyon-fw5-ns{@include breakpoint-ns(){.fw5-ns{font-weight:500;}}}
+@mixin tachyon-fw6-ns{@include breakpoint-ns(){.fw6-ns{font-weight:600;}}}
+@mixin tachyon-fw7-ns{@include breakpoint-ns(){.fw7-ns{font-weight:700;}}}
+@mixin tachyon-fw8-ns{@include breakpoint-ns(){.fw8-ns{font-weight:800;}}}
+@mixin tachyon-fw9-ns{@include breakpoint-ns(){.fw9-ns{font-weight:900;}}}
+@mixin tachyon-h1-ns{@include breakpoint-ns(){.h1-ns{height:1rem;}}}
+@mixin tachyon-h2-ns{@include breakpoint-ns(){.h2-ns{height:2rem;}}}
+@mixin tachyon-h3-ns{@include breakpoint-ns(){.h3-ns{height:4rem;}}}
+@mixin tachyon-h4-ns{@include breakpoint-ns(){.h4-ns{height:8rem;}}}
+@mixin tachyon-h5-ns{@include breakpoint-ns(){.h5-ns{height:16rem;}}}
+@mixin tachyon-h-25-ns{@include breakpoint-ns(){.h-25-ns{height:25%;}}}
+@mixin tachyon-h-50-ns{@include breakpoint-ns(){.h-50-ns{height:50%;}}}
+@mixin tachyon-h-75-ns{@include breakpoint-ns(){.h-75-ns{height:75%;}}}
+@mixin tachyon-h-100-ns{@include breakpoint-ns(){.h-100-ns{height:100%;}}}
+@mixin tachyon-min-h-100-ns{@include breakpoint-ns(){.min-h-100-ns{min-height:100%;}}}
+@mixin tachyon-vh-25-ns{@include breakpoint-ns(){.vh-25-ns{height:25vh;}}}
+@mixin tachyon-vh-50-ns{@include breakpoint-ns(){.vh-50-ns{height:50vh;}}}
+@mixin tachyon-vh-75-ns{@include breakpoint-ns(){.vh-75-ns{height:75vh;}}}
+@mixin tachyon-vh-100-ns{@include breakpoint-ns(){.vh-100-ns{height:100vh;}}}
+@mixin tachyon-min-vh-100-ns{@include breakpoint-ns(){.min-vh-100-ns{min-height:100vh;}}}
+@mixin tachyon-h-auto-ns{@include breakpoint-ns(){.h-auto-ns{height:auto;}}}
+@mixin tachyon-h-inherit-ns{@include breakpoint-ns(){.h-inherit-ns{height:inherit;}}}
+@mixin tachyon-tracked-ns{@include breakpoint-ns(){.tracked-ns{letter-spacing:.1em;}}}
+@mixin tachyon-tracked-tight-ns{@include breakpoint-ns(){.tracked-tight-ns{letter-spacing:-.05em;}}}
+@mixin tachyon-tracked-mega-ns{@include breakpoint-ns(){.tracked-mega-ns{letter-spacing:.25em;}}}
+@mixin tachyon-lh-solid-ns{@include breakpoint-ns(){.lh-solid-ns{line-height:1;}}}
+@mixin tachyon-lh-title-ns{@include breakpoint-ns(){.lh-title-ns{line-height:1.25;}}}
+@mixin tachyon-lh-copy-ns{@include breakpoint-ns(){.lh-copy-ns{line-height:1.5;}}}
+@mixin tachyon-mw-100-ns{@include breakpoint-ns(){.mw-100-ns{max-width:100%;}}}
+@mixin tachyon-mw1-ns{@include breakpoint-ns(){.mw1-ns{max-width:1rem;}}}
+@mixin tachyon-mw2-ns{@include breakpoint-ns(){.mw2-ns{max-width:2rem;}}}
+@mixin tachyon-mw3-ns{@include breakpoint-ns(){.mw3-ns{max-width:4rem;}}}
+@mixin tachyon-mw4-ns{@include breakpoint-ns(){.mw4-ns{max-width:8rem;}}}
+@mixin tachyon-mw5-ns{@include breakpoint-ns(){.mw5-ns{max-width:16rem;}}}
+@mixin tachyon-mw6-ns{@include breakpoint-ns(){.mw6-ns{max-width:32rem;}}}
+@mixin tachyon-mw7-ns{@include breakpoint-ns(){.mw7-ns{max-width:48rem;}}}
+@mixin tachyon-mw8-ns{@include breakpoint-ns(){.mw8-ns{max-width:64rem;}}}
+@mixin tachyon-mw9-ns{@include breakpoint-ns(){.mw9-ns{max-width:96rem;}}}
+@mixin tachyon-mw-none-ns{@include breakpoint-ns(){.mw-none-ns{max-width:none;}}}
+@mixin tachyon-w1-ns{@include breakpoint-ns(){.w1-ns{width:1rem;}}}
+@mixin tachyon-w2-ns{@include breakpoint-ns(){.w2-ns{width:2rem;}}}
+@mixin tachyon-w3-ns{@include breakpoint-ns(){.w3-ns{width:4rem;}}}
+@mixin tachyon-w4-ns{@include breakpoint-ns(){.w4-ns{width:8rem;}}}
+@mixin tachyon-w5-ns{@include breakpoint-ns(){.w5-ns{width:16rem;}}}
+@mixin tachyon-w-10-ns{@include breakpoint-ns(){.w-10-ns{width:10%;}}}
+@mixin tachyon-w-20-ns{@include breakpoint-ns(){.w-20-ns{width:20%;}}}
+@mixin tachyon-w-25-ns{@include breakpoint-ns(){.w-25-ns{width:25%;}}}
+@mixin tachyon-w-30-ns{@include breakpoint-ns(){.w-30-ns{width:30%;}}}
+@mixin tachyon-w-33-ns{@include breakpoint-ns(){.w-33-ns{width:33%;}}}
+@mixin tachyon-w-34-ns{@include breakpoint-ns(){.w-34-ns{width:34%;}}}
+@mixin tachyon-w-40-ns{@include breakpoint-ns(){.w-40-ns{width:40%;}}}
+@mixin tachyon-w-50-ns{@include breakpoint-ns(){.w-50-ns{width:50%;}}}
+@mixin tachyon-w-60-ns{@include breakpoint-ns(){.w-60-ns{width:60%;}}}
+@mixin tachyon-w-70-ns{@include breakpoint-ns(){.w-70-ns{width:70%;}}}
+@mixin tachyon-w-75-ns{@include breakpoint-ns(){.w-75-ns{width:75%;}}}
+@mixin tachyon-w-80-ns{@include breakpoint-ns(){.w-80-ns{width:80%;}}}
+@mixin tachyon-w-90-ns{@include breakpoint-ns(){.w-90-ns{width:90%;}}}
+@mixin tachyon-w-100-ns{@include breakpoint-ns(){.w-100-ns{width:100%;}}}
+@mixin tachyon-w-third-ns{@include breakpoint-ns(){.w-third-ns{width:calc( 100% / 3 );}}}
+@mixin tachyon-w-two-thirds-ns{@include breakpoint-ns(){.w-two-thirds-ns{width:calc( 100% / 1.5 );}}}
+@mixin tachyon-w-auto-ns{@include breakpoint-ns(){.w-auto-ns{width:auto;}}}
+@mixin tachyon-overflow-visible-ns{@include breakpoint-ns(){.overflow-visible-ns{overflow:visible;}}}
+@mixin tachyon-overflow-hidden-ns{@include breakpoint-ns(){.overflow-hidden-ns{overflow:hidden;}}}
+@mixin tachyon-overflow-scroll-ns{@include breakpoint-ns(){.overflow-scroll-ns{overflow:scroll;}}}
+@mixin tachyon-overflow-auto-ns{@include breakpoint-ns(){.overflow-auto-ns{overflow:auto;}}}
+@mixin tachyon-overflow-x-visible-ns{@include breakpoint-ns(){.overflow-x-visible-ns{overflow-x:visible;}}}
+@mixin tachyon-overflow-x-hidden-ns{@include breakpoint-ns(){.overflow-x-hidden-ns{overflow-x:hidden;}}}
+@mixin tachyon-overflow-x-scroll-ns{@include breakpoint-ns(){.overflow-x-scroll-ns{overflow-x:scroll;}}}
+@mixin tachyon-overflow-x-auto-ns{@include breakpoint-ns(){.overflow-x-auto-ns{overflow-x:auto;}}}
+@mixin tachyon-overflow-y-visible-ns{@include breakpoint-ns(){.overflow-y-visible-ns{overflow-y:visible;}}}
+@mixin tachyon-overflow-y-hidden-ns{@include breakpoint-ns(){.overflow-y-hidden-ns{overflow-y:hidden;}}}
+@mixin tachyon-overflow-y-scroll-ns{@include breakpoint-ns(){.overflow-y-scroll-ns{overflow-y:scroll;}}}
+@mixin tachyon-overflow-y-auto-ns{@include breakpoint-ns(){.overflow-y-auto-ns{overflow-y:auto;}}}
+@mixin tachyon-static-ns{@include breakpoint-ns(){.static-ns{position:static;}}}
+@mixin tachyon-relative-ns{@include breakpoint-ns(){.relative-ns{position:relative;}}}
+@mixin tachyon-absolute-ns{@include breakpoint-ns(){.absolute-ns{position:absolute;}}}
+@mixin tachyon-fixed-ns{@include breakpoint-ns(){.fixed-ns{position:fixed;}}}
+@mixin tachyon-rotate-45-ns{@include breakpoint-ns(){.rotate-45-ns{-webkit-transform:rotate( 45deg );transform:rotate( 45deg );}}}
+@mixin tachyon-rotate-90-ns{@include breakpoint-ns(){.rotate-90-ns{-webkit-transform:rotate( 90deg );transform:rotate( 90deg );}}}
+@mixin tachyon-rotate-135-ns{@include breakpoint-ns(){.rotate-135-ns{-webkit-transform:rotate( 135deg );transform:rotate( 135deg );}}}
+@mixin tachyon-rotate-180-ns{@include breakpoint-ns(){.rotate-180-ns{-webkit-transform:rotate( 180deg );transform:rotate( 180deg );}}}
+@mixin tachyon-rotate-225-ns{@include breakpoint-ns(){.rotate-225-ns{-webkit-transform:rotate( 225deg );transform:rotate( 225deg );}}}
+@mixin tachyon-rotate-270-ns{@include breakpoint-ns(){.rotate-270-ns{-webkit-transform:rotate( 270deg );transform:rotate( 270deg );}}}
+@mixin tachyon-rotate-315-ns{@include breakpoint-ns(){.rotate-315-ns{-webkit-transform:rotate( 315deg );transform:rotate( 315deg );}}}
+@mixin tachyon-pa0-ns{@include breakpoint-ns(){.pa0-ns{padding:0;}}}
+@mixin tachyon-pa1-ns{@include breakpoint-ns(){.pa1-ns{padding:.25rem;}}}
+@mixin tachyon-pa2-ns{@include breakpoint-ns(){.pa2-ns{padding:.5rem;}}}
+@mixin tachyon-pa3-ns{@include breakpoint-ns(){.pa3-ns{padding:1rem;}}}
+@mixin tachyon-pa4-ns{@include breakpoint-ns(){.pa4-ns{padding:2rem;}}}
+@mixin tachyon-pa5-ns{@include breakpoint-ns(){.pa5-ns{padding:4rem;}}}
+@mixin tachyon-pa6-ns{@include breakpoint-ns(){.pa6-ns{padding:8rem;}}}
+@mixin tachyon-pa7-ns{@include breakpoint-ns(){.pa7-ns{padding:16rem;}}}
+@mixin tachyon-pl0-ns{@include breakpoint-ns(){.pl0-ns{padding-left:0;}}}
+@mixin tachyon-pl1-ns{@include breakpoint-ns(){.pl1-ns{padding-left:.25rem;}}}
+@mixin tachyon-pl2-ns{@include breakpoint-ns(){.pl2-ns{padding-left:.5rem;}}}
+@mixin tachyon-pl3-ns{@include breakpoint-ns(){.pl3-ns{padding-left:1rem;}}}
+@mixin tachyon-pl4-ns{@include breakpoint-ns(){.pl4-ns{padding-left:2rem;}}}
+@mixin tachyon-pl5-ns{@include breakpoint-ns(){.pl5-ns{padding-left:4rem;}}}
+@mixin tachyon-pl6-ns{@include breakpoint-ns(){.pl6-ns{padding-left:8rem;}}}
+@mixin tachyon-pl7-ns{@include breakpoint-ns(){.pl7-ns{padding-left:16rem;}}}
+@mixin tachyon-pr0-ns{@include breakpoint-ns(){.pr0-ns{padding-right:0;}}}
+@mixin tachyon-pr1-ns{@include breakpoint-ns(){.pr1-ns{padding-right:.25rem;}}}
+@mixin tachyon-pr2-ns{@include breakpoint-ns(){.pr2-ns{padding-right:.5rem;}}}
+@mixin tachyon-pr3-ns{@include breakpoint-ns(){.pr3-ns{padding-right:1rem;}}}
+@mixin tachyon-pr4-ns{@include breakpoint-ns(){.pr4-ns{padding-right:2rem;}}}
+@mixin tachyon-pr5-ns{@include breakpoint-ns(){.pr5-ns{padding-right:4rem;}}}
+@mixin tachyon-pr6-ns{@include breakpoint-ns(){.pr6-ns{padding-right:8rem;}}}
+@mixin tachyon-pr7-ns{@include breakpoint-ns(){.pr7-ns{padding-right:16rem;}}}
+@mixin tachyon-pb0-ns{@include breakpoint-ns(){.pb0-ns{padding-bottom:0;}}}
+@mixin tachyon-pb1-ns{@include breakpoint-ns(){.pb1-ns{padding-bottom:.25rem;}}}
+@mixin tachyon-pb2-ns{@include breakpoint-ns(){.pb2-ns{padding-bottom:.5rem;}}}
+@mixin tachyon-pb3-ns{@include breakpoint-ns(){.pb3-ns{padding-bottom:1rem;}}}
+@mixin tachyon-pb4-ns{@include breakpoint-ns(){.pb4-ns{padding-bottom:2rem;}}}
+@mixin tachyon-pb5-ns{@include breakpoint-ns(){.pb5-ns{padding-bottom:4rem;}}}
+@mixin tachyon-pb6-ns{@include breakpoint-ns(){.pb6-ns{padding-bottom:8rem;}}}
+@mixin tachyon-pb7-ns{@include breakpoint-ns(){.pb7-ns{padding-bottom:16rem;}}}
+@mixin tachyon-pt0-ns{@include breakpoint-ns(){.pt0-ns{padding-top:0;}}}
+@mixin tachyon-pt1-ns{@include breakpoint-ns(){.pt1-ns{padding-top:.25rem;}}}
+@mixin tachyon-pt2-ns{@include breakpoint-ns(){.pt2-ns{padding-top:.5rem;}}}
+@mixin tachyon-pt3-ns{@include breakpoint-ns(){.pt3-ns{padding-top:1rem;}}}
+@mixin tachyon-pt4-ns{@include breakpoint-ns(){.pt4-ns{padding-top:2rem;}}}
+@mixin tachyon-pt5-ns{@include breakpoint-ns(){.pt5-ns{padding-top:4rem;}}}
+@mixin tachyon-pt6-ns{@include breakpoint-ns(){.pt6-ns{padding-top:8rem;}}}
+@mixin tachyon-pt7-ns{@include breakpoint-ns(){.pt7-ns{padding-top:16rem;}}}
+@mixin tachyon-pv0-ns{@include breakpoint-ns(){.pv0-ns{padding-top:0;padding-bottom:0;}}}
+@mixin tachyon-pv1-ns{@include breakpoint-ns(){.pv1-ns{padding-top:.25rem;padding-bottom:.25rem;}}}
+@mixin tachyon-pv2-ns{@include breakpoint-ns(){.pv2-ns{padding-top:.5rem;padding-bottom:.5rem;}}}
+@mixin tachyon-pv3-ns{@include breakpoint-ns(){.pv3-ns{padding-top:1rem;padding-bottom:1rem;}}}
+@mixin tachyon-pv4-ns{@include breakpoint-ns(){.pv4-ns{padding-top:2rem;padding-bottom:2rem;}}}
+@mixin tachyon-pv5-ns{@include breakpoint-ns(){.pv5-ns{padding-top:4rem;padding-bottom:4rem;}}}
+@mixin tachyon-pv6-ns{@include breakpoint-ns(){.pv6-ns{padding-top:8rem;padding-bottom:8rem;}}}
+@mixin tachyon-pv7-ns{@include breakpoint-ns(){.pv7-ns{padding-top:16rem;padding-bottom:16rem;}}}
+@mixin tachyon-ph0-ns{@include breakpoint-ns(){.ph0-ns{padding-left:0;padding-right:0;}}}
+@mixin tachyon-ph1-ns{@include breakpoint-ns(){.ph1-ns{padding-left:.25rem;padding-right:.25rem;}}}
+@mixin tachyon-ph2-ns{@include breakpoint-ns(){.ph2-ns{padding-left:.5rem;padding-right:.5rem;}}}
+@mixin tachyon-ph3-ns{@include breakpoint-ns(){.ph3-ns{padding-left:1rem;padding-right:1rem;}}}
+@mixin tachyon-ph4-ns{@include breakpoint-ns(){.ph4-ns{padding-left:2rem;padding-right:2rem;}}}
+@mixin tachyon-ph5-ns{@include breakpoint-ns(){.ph5-ns{padding-left:4rem;padding-right:4rem;}}}
+@mixin tachyon-ph6-ns{@include breakpoint-ns(){.ph6-ns{padding-left:8rem;padding-right:8rem;}}}
+@mixin tachyon-ph7-ns{@include breakpoint-ns(){.ph7-ns{padding-left:16rem;padding-right:16rem;}}}
+@mixin tachyon-ma0-ns{@include breakpoint-ns(){.ma0-ns{margin:0;}}}
+@mixin tachyon-ma1-ns{@include breakpoint-ns(){.ma1-ns{margin:.25rem;}}}
+@mixin tachyon-ma2-ns{@include breakpoint-ns(){.ma2-ns{margin:.5rem;}}}
+@mixin tachyon-ma3-ns{@include breakpoint-ns(){.ma3-ns{margin:1rem;}}}
+@mixin tachyon-ma4-ns{@include breakpoint-ns(){.ma4-ns{margin:2rem;}}}
+@mixin tachyon-ma5-ns{@include breakpoint-ns(){.ma5-ns{margin:4rem;}}}
+@mixin tachyon-ma6-ns{@include breakpoint-ns(){.ma6-ns{margin:8rem;}}}
+@mixin tachyon-ma7-ns{@include breakpoint-ns(){.ma7-ns{margin:16rem;}}}
+@mixin tachyon-ml0-ns{@include breakpoint-ns(){.ml0-ns{margin-left:0;}}}
+@mixin tachyon-ml1-ns{@include breakpoint-ns(){.ml1-ns{margin-left:.25rem;}}}
+@mixin tachyon-ml2-ns{@include breakpoint-ns(){.ml2-ns{margin-left:.5rem;}}}
+@mixin tachyon-ml3-ns{@include breakpoint-ns(){.ml3-ns{margin-left:1rem;}}}
+@mixin tachyon-ml4-ns{@include breakpoint-ns(){.ml4-ns{margin-left:2rem;}}}
+@mixin tachyon-ml5-ns{@include breakpoint-ns(){.ml5-ns{margin-left:4rem;}}}
+@mixin tachyon-ml6-ns{@include breakpoint-ns(){.ml6-ns{margin-left:8rem;}}}
+@mixin tachyon-ml7-ns{@include breakpoint-ns(){.ml7-ns{margin-left:16rem;}}}
+@mixin tachyon-mr0-ns{@include breakpoint-ns(){.mr0-ns{margin-right:0;}}}
+@mixin tachyon-mr1-ns{@include breakpoint-ns(){.mr1-ns{margin-right:.25rem;}}}
+@mixin tachyon-mr2-ns{@include breakpoint-ns(){.mr2-ns{margin-right:.5rem;}}}
+@mixin tachyon-mr3-ns{@include breakpoint-ns(){.mr3-ns{margin-right:1rem;}}}
+@mixin tachyon-mr4-ns{@include breakpoint-ns(){.mr4-ns{margin-right:2rem;}}}
+@mixin tachyon-mr5-ns{@include breakpoint-ns(){.mr5-ns{margin-right:4rem;}}}
+@mixin tachyon-mr6-ns{@include breakpoint-ns(){.mr6-ns{margin-right:8rem;}}}
+@mixin tachyon-mr7-ns{@include breakpoint-ns(){.mr7-ns{margin-right:16rem;}}}
+@mixin tachyon-mb0-ns{@include breakpoint-ns(){.mb0-ns{margin-bottom:0;}}}
+@mixin tachyon-mb1-ns{@include breakpoint-ns(){.mb1-ns{margin-bottom:.25rem;}}}
+@mixin tachyon-mb2-ns{@include breakpoint-ns(){.mb2-ns{margin-bottom:.5rem;}}}
+@mixin tachyon-mb3-ns{@include breakpoint-ns(){.mb3-ns{margin-bottom:1rem;}}}
+@mixin tachyon-mb4-ns{@include breakpoint-ns(){.mb4-ns{margin-bottom:2rem;}}}
+@mixin tachyon-mb5-ns{@include breakpoint-ns(){.mb5-ns{margin-bottom:4rem;}}}
+@mixin tachyon-mb6-ns{@include breakpoint-ns(){.mb6-ns{margin-bottom:8rem;}}}
+@mixin tachyon-mb7-ns{@include breakpoint-ns(){.mb7-ns{margin-bottom:16rem;}}}
+@mixin tachyon-mt0-ns{@include breakpoint-ns(){.mt0-ns{margin-top:0;}}}
+@mixin tachyon-mt1-ns{@include breakpoint-ns(){.mt1-ns{margin-top:.25rem;}}}
+@mixin tachyon-mt2-ns{@include breakpoint-ns(){.mt2-ns{margin-top:.5rem;}}}
+@mixin tachyon-mt3-ns{@include breakpoint-ns(){.mt3-ns{margin-top:1rem;}}}
+@mixin tachyon-mt4-ns{@include breakpoint-ns(){.mt4-ns{margin-top:2rem;}}}
+@mixin tachyon-mt5-ns{@include breakpoint-ns(){.mt5-ns{margin-top:4rem;}}}
+@mixin tachyon-mt6-ns{@include breakpoint-ns(){.mt6-ns{margin-top:8rem;}}}
+@mixin tachyon-mt7-ns{@include breakpoint-ns(){.mt7-ns{margin-top:16rem;}}}
+@mixin tachyon-mv0-ns{@include breakpoint-ns(){.mv0-ns{margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-mv1-ns{@include breakpoint-ns(){.mv1-ns{margin-top:.25rem;margin-bottom:.25rem;}}}
+@mixin tachyon-mv2-ns{@include breakpoint-ns(){.mv2-ns{margin-top:.5rem;margin-bottom:.5rem;}}}
+@mixin tachyon-mv3-ns{@include breakpoint-ns(){.mv3-ns{margin-top:1rem;margin-bottom:1rem;}}}
+@mixin tachyon-mv4-ns{@include breakpoint-ns(){.mv4-ns{margin-top:2rem;margin-bottom:2rem;}}}
+@mixin tachyon-mv5-ns{@include breakpoint-ns(){.mv5-ns{margin-top:4rem;margin-bottom:4rem;}}}
+@mixin tachyon-mv6-ns{@include breakpoint-ns(){.mv6-ns{margin-top:8rem;margin-bottom:8rem;}}}
+@mixin tachyon-mv7-ns{@include breakpoint-ns(){.mv7-ns{margin-top:16rem;margin-bottom:16rem;}}}
+@mixin tachyon-mh0-ns{@include breakpoint-ns(){.mh0-ns{margin-left:0;margin-right:0;}}}
+@mixin tachyon-mh1-ns{@include breakpoint-ns(){.mh1-ns{margin-left:.25rem;margin-right:.25rem;}}}
+@mixin tachyon-mh2-ns{@include breakpoint-ns(){.mh2-ns{margin-left:.5rem;margin-right:.5rem;}}}
+@mixin tachyon-mh3-ns{@include breakpoint-ns(){.mh3-ns{margin-left:1rem;margin-right:1rem;}}}
+@mixin tachyon-mh4-ns{@include breakpoint-ns(){.mh4-ns{margin-left:2rem;margin-right:2rem;}}}
+@mixin tachyon-mh5-ns{@include breakpoint-ns(){.mh5-ns{margin-left:4rem;margin-right:4rem;}}}
+@mixin tachyon-mh6-ns{@include breakpoint-ns(){.mh6-ns{margin-left:8rem;margin-right:8rem;}}}
+@mixin tachyon-mh7-ns{@include breakpoint-ns(){.mh7-ns{margin-left:16rem;margin-right:16rem;}}}
+@mixin tachyon-na1-ns{@include breakpoint-ns(){.na1-ns{margin:-.25rem;}}}
+@mixin tachyon-na2-ns{@include breakpoint-ns(){.na2-ns{margin:-.5rem;}}}
+@mixin tachyon-na3-ns{@include breakpoint-ns(){.na3-ns{margin:-1rem;}}}
+@mixin tachyon-na4-ns{@include breakpoint-ns(){.na4-ns{margin:-2rem;}}}
+@mixin tachyon-na5-ns{@include breakpoint-ns(){.na5-ns{margin:-4rem;}}}
+@mixin tachyon-na6-ns{@include breakpoint-ns(){.na6-ns{margin:-8rem;}}}
+@mixin tachyon-na7-ns{@include breakpoint-ns(){.na7-ns{margin:-16rem;}}}
+@mixin tachyon-nl1-ns{@include breakpoint-ns(){.nl1-ns{margin-left:-.25rem;}}}
+@mixin tachyon-nl2-ns{@include breakpoint-ns(){.nl2-ns{margin-left:-.5rem;}}}
+@mixin tachyon-nl3-ns{@include breakpoint-ns(){.nl3-ns{margin-left:-1rem;}}}
+@mixin tachyon-nl4-ns{@include breakpoint-ns(){.nl4-ns{margin-left:-2rem;}}}
+@mixin tachyon-nl5-ns{@include breakpoint-ns(){.nl5-ns{margin-left:-4rem;}}}
+@mixin tachyon-nl6-ns{@include breakpoint-ns(){.nl6-ns{margin-left:-8rem;}}}
+@mixin tachyon-nl7-ns{@include breakpoint-ns(){.nl7-ns{margin-left:-16rem;}}}
+@mixin tachyon-nr1-ns{@include breakpoint-ns(){.nr1-ns{margin-right:-.25rem;}}}
+@mixin tachyon-nr2-ns{@include breakpoint-ns(){.nr2-ns{margin-right:-.5rem;}}}
+@mixin tachyon-nr3-ns{@include breakpoint-ns(){.nr3-ns{margin-right:-1rem;}}}
+@mixin tachyon-nr4-ns{@include breakpoint-ns(){.nr4-ns{margin-right:-2rem;}}}
+@mixin tachyon-nr5-ns{@include breakpoint-ns(){.nr5-ns{margin-right:-4rem;}}}
+@mixin tachyon-nr6-ns{@include breakpoint-ns(){.nr6-ns{margin-right:-8rem;}}}
+@mixin tachyon-nr7-ns{@include breakpoint-ns(){.nr7-ns{margin-right:-16rem;}}}
+@mixin tachyon-nb1-ns{@include breakpoint-ns(){.nb1-ns{margin-bottom:-.25rem;}}}
+@mixin tachyon-nb2-ns{@include breakpoint-ns(){.nb2-ns{margin-bottom:-.5rem;}}}
+@mixin tachyon-nb3-ns{@include breakpoint-ns(){.nb3-ns{margin-bottom:-1rem;}}}
+@mixin tachyon-nb4-ns{@include breakpoint-ns(){.nb4-ns{margin-bottom:-2rem;}}}
+@mixin tachyon-nb5-ns{@include breakpoint-ns(){.nb5-ns{margin-bottom:-4rem;}}}
+@mixin tachyon-nb6-ns{@include breakpoint-ns(){.nb6-ns{margin-bottom:-8rem;}}}
+@mixin tachyon-nb7-ns{@include breakpoint-ns(){.nb7-ns{margin-bottom:-16rem;}}}
+@mixin tachyon-nt1-ns{@include breakpoint-ns(){.nt1-ns{margin-top:-.25rem;}}}
+@mixin tachyon-nt2-ns{@include breakpoint-ns(){.nt2-ns{margin-top:-.5rem;}}}
+@mixin tachyon-nt3-ns{@include breakpoint-ns(){.nt3-ns{margin-top:-1rem;}}}
+@mixin tachyon-nt4-ns{@include breakpoint-ns(){.nt4-ns{margin-top:-2rem;}}}
+@mixin tachyon-nt5-ns{@include breakpoint-ns(){.nt5-ns{margin-top:-4rem;}}}
+@mixin tachyon-nt6-ns{@include breakpoint-ns(){.nt6-ns{margin-top:-8rem;}}}
+@mixin tachyon-nt7-ns{@include breakpoint-ns(){.nt7-ns{margin-top:-16rem;}}}
+@mixin tachyon-strike-ns{@include breakpoint-ns(){.strike-ns{text-decoration:line-through;}}}
+@mixin tachyon-underline-ns{@include breakpoint-ns(){.underline-ns{text-decoration:underline;}}}
+@mixin tachyon-no-underline-ns{@include breakpoint-ns(){.no-underline-ns{text-decoration:none;}}}
+@mixin tachyon-tl-ns{@include breakpoint-ns(){.tl-ns{text-align:left;}}}
+@mixin tachyon-tr-ns{@include breakpoint-ns(){.tr-ns{text-align:right;}}}
+@mixin tachyon-tc-ns{@include breakpoint-ns(){.tc-ns{text-align:center;}}}
+@mixin tachyon-tj-ns{@include breakpoint-ns(){.tj-ns{text-align:justify;}}}
+@mixin tachyon-ttc-ns{@include breakpoint-ns(){.ttc-ns{text-transform:capitalize;}}}
+@mixin tachyon-ttl-ns{@include breakpoint-ns(){.ttl-ns{text-transform:lowercase;}}}
+@mixin tachyon-ttu-ns{@include breakpoint-ns(){.ttu-ns{text-transform:uppercase;}}}
+@mixin tachyon-ttn-ns{@include breakpoint-ns(){.ttn-ns{text-transform:none;}}}
+@mixin tachyon-f-6-ns{@include breakpoint-ns(){.f-6-ns{font-size:6rem;}}}
+@mixin tachyon-f-headline-ns{@include breakpoint-ns(){.f-headline-ns{font-size:6rem;}}}
+@mixin tachyon-f-5-ns{@include breakpoint-ns(){.f-5-ns{font-size:5rem;}}}
+@mixin tachyon-f-subheadline-ns{@include breakpoint-ns(){.f-subheadline-ns{font-size:5rem;}}}
+@mixin tachyon-f1-ns{@include breakpoint-ns(){.f1-ns{font-size:3rem;}}}
+@mixin tachyon-f2-ns{@include breakpoint-ns(){.f2-ns{font-size:2.25rem;}}}
+@mixin tachyon-f3-ns{@include breakpoint-ns(){.f3-ns{font-size:1.5rem;}}}
+@mixin tachyon-f4-ns{@include breakpoint-ns(){.f4-ns{font-size:1.25rem;}}}
+@mixin tachyon-f5-ns{@include breakpoint-ns(){.f5-ns{font-size:1rem;}}}
+@mixin tachyon-f6-ns{@include breakpoint-ns(){.f6-ns{font-size:.875rem;}}}
+@mixin tachyon-f7-ns{@include breakpoint-ns(){.f7-ns{font-size:.75rem;}}}
+@mixin tachyon-measure-ns{@include breakpoint-ns(){.measure-ns{max-width:30em;}}}
+@mixin tachyon-measure-wide-ns{@include breakpoint-ns(){.measure-wide-ns{max-width:34em;}}}
+@mixin tachyon-measure-narrow-ns{@include breakpoint-ns(){.measure-narrow-ns{max-width:20em;}}}
+@mixin tachyon-indent-ns{@include breakpoint-ns(){.indent-ns{text-indent:1em;margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-small-caps-ns{@include breakpoint-ns(){.small-caps-ns{font-variant:small-caps;}}}
+@mixin tachyon-truncate-ns{@include breakpoint-ns(){.truncate-ns{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}}
+@mixin tachyon-center-ns{@include breakpoint-ns(){.center-ns{margin-right:auto;margin-left:auto;}}}
+@mixin tachyon-mr-auto-ns{@include breakpoint-ns(){.mr-auto-ns{margin-right:auto;}}}
+@mixin tachyon-ml-auto-ns{@include breakpoint-ns(){.ml-auto-ns{margin-left:auto;}}}
+@mixin tachyon-clip-ns{@include breakpoint-ns(){.clip-ns{position:fixed !important;position:absolute !important;clip:rect( 1px 1px 1px 1px );clip:rect( 1px, 1px, 1px, 1px );}}}
+@mixin tachyon-ws-normal-ns{@include breakpoint-ns(){.ws-normal-ns{white-space:normal;}}}
+@mixin tachyon-nowrap-ns{@include breakpoint-ns(){.nowrap-ns{white-space:nowrap;}}}
+@mixin tachyon-pre-ns{@include breakpoint-ns(){.pre-ns{white-space:pre;}}}
+@mixin tachyon-v-base-ns{@include breakpoint-ns(){.v-base-ns{vertical-align:baseline;}}}
+@mixin tachyon-v-mid-ns{@include breakpoint-ns(){.v-mid-ns{vertical-align:middle;}}}
+@mixin tachyon-v-top-ns{@include breakpoint-ns(){.v-top-ns{vertical-align:top;}}}
+@mixin tachyon-v-btm-ns{@include breakpoint-ns(){.v-btm-ns{vertical-align:bottom;}}}
+@mixin tachyon-aspect-ratio--16x9-m{@include breakpoint-m(){.aspect-ratio--16x9-m{padding-bottom:56.25%;}}}
+@mixin tachyon-aspect-ratio--9x16-m{@include breakpoint-m(){.aspect-ratio--9x16-m{padding-bottom:177.77%;}}}
+@mixin tachyon-aspect-ratio--4x3-m{@include breakpoint-m(){.aspect-ratio--4x3-m{padding-bottom:75%;}}}
+@mixin tachyon-aspect-ratio--3x4-m{@include breakpoint-m(){.aspect-ratio--3x4-m{padding-bottom:133.33%;}}}
+@mixin tachyon-aspect-ratio--6x4-m{@include breakpoint-m(){.aspect-ratio--6x4-m{padding-bottom:66.6%;}}}
+@mixin tachyon-aspect-ratio--4x6-m{@include breakpoint-m(){.aspect-ratio--4x6-m{padding-bottom:150%;}}}
+@mixin tachyon-aspect-ratio--8x5-m{@include breakpoint-m(){.aspect-ratio--8x5-m{padding-bottom:62.5%;}}}
+@mixin tachyon-aspect-ratio--5x8-m{@include breakpoint-m(){.aspect-ratio--5x8-m{padding-bottom:160%;}}}
+@mixin tachyon-aspect-ratio--7x5-m{@include breakpoint-m(){.aspect-ratio--7x5-m{padding-bottom:71.42%;}}}
+@mixin tachyon-aspect-ratio--5x7-m{@include breakpoint-m(){.aspect-ratio--5x7-m{padding-bottom:140%;}}}
+@mixin tachyon-aspect-ratio--1x1-m{@include breakpoint-m(){.aspect-ratio--1x1-m{padding-bottom:100%;}}}
+@mixin tachyon-aspect-ratio--object-m{@include breakpoint-m(){.aspect-ratio--object-m{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100;}}}
+@mixin tachyon-cover-m{@include breakpoint-m(){.cover-m{background-size:cover !important;}}}
+@mixin tachyon-contain-m{@include breakpoint-m(){.contain-m{background-size:contain !important;}}}
+@mixin tachyon-bg-center-m{@include breakpoint-m(){.bg-center-m{background-repeat:no-repeat;background-position:center center;}}}
+@mixin tachyon-bg-top-m{@include breakpoint-m(){.bg-top-m{background-repeat:no-repeat;background-position:top center;}}}
+@mixin tachyon-bg-right-m{@include breakpoint-m(){.bg-right-m{background-repeat:no-repeat;background-position:center right;}}}
+@mixin tachyon-bg-bottom-m{@include breakpoint-m(){.bg-bottom-m{background-repeat:no-repeat;background-position:bottom center;}}}
+@mixin tachyon-bg-left-m{@include breakpoint-m(){.bg-left-m{background-repeat:no-repeat;background-position:center left;}}}
+@mixin tachyon-outline-m{@include breakpoint-m(){.outline-m{outline:1px solid;}}}
+@mixin tachyon-outline-transparent-m{@include breakpoint-m(){.outline-transparent-m{outline:1px solid transparent;}}}
+@mixin tachyon-outline-0-m{@include breakpoint-m(){.outline-0-m{outline:0;}}}
+@mixin tachyon-ba-m{@include breakpoint-m(){.ba-m{border-style:solid;border-width:1px;}}}
+@mixin tachyon-bt-m{@include breakpoint-m(){.bt-m{border-top-style:solid;border-top-width:1px;}}}
+@mixin tachyon-br-m{@include breakpoint-m(){.br-m{border-right-style:solid;border-right-width:1px;}}}
+@mixin tachyon-bb-m{@include breakpoint-m(){.bb-m{border-bottom-style:solid;border-bottom-width:1px;}}}
+@mixin tachyon-bl-m{@include breakpoint-m(){.bl-m{border-left-style:solid;border-left-width:1px;}}}
+@mixin tachyon-bn-m{@include breakpoint-m(){.bn-m{border-style:none;border-width:0;}}}
+@mixin tachyon-br0-m{@include breakpoint-m(){.br0-m{border-radius:0;}}}
+@mixin tachyon-br1-m{@include breakpoint-m(){.br1-m{border-radius:.125rem;}}}
+@mixin tachyon-br2-m{@include breakpoint-m(){.br2-m{border-radius:.25rem;}}}
+@mixin tachyon-br3-m{@include breakpoint-m(){.br3-m{border-radius:.5rem;}}}
+@mixin tachyon-br4-m{@include breakpoint-m(){.br4-m{border-radius:1rem;}}}
+@mixin tachyon-br-100-m{@include breakpoint-m(){.br-100-m{border-radius:100%;}}}
+@mixin tachyon-br-pill-m{@include breakpoint-m(){.br-pill-m{border-radius:9999px;}}}
+@mixin tachyon-br--bottom-m{@include breakpoint-m(){.br--bottom-m{border-top-left-radius:0;border-top-right-radius:0;}}}
+@mixin tachyon-br--top-m{@include breakpoint-m(){.br--top-m{border-bottom-left-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-br--right-m{@include breakpoint-m(){.br--right-m{border-top-left-radius:0;border-bottom-left-radius:0;}}}
+@mixin tachyon-br--left-m{@include breakpoint-m(){.br--left-m{border-top-right-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-b--dotted-m{@include breakpoint-m(){.b--dotted-m{border-style:dotted;}}}
+@mixin tachyon-b--dashed-m{@include breakpoint-m(){.b--dashed-m{border-style:dashed;}}}
+@mixin tachyon-b--solid-m{@include breakpoint-m(){.b--solid-m{border-style:solid;}}}
+@mixin tachyon-b--none-m{@include breakpoint-m(){.b--none-m{border-style:none;}}}
+@mixin tachyon-bw0-m{@include breakpoint-m(){.bw0-m{border-width:0;}}}
+@mixin tachyon-bw1-m{@include breakpoint-m(){.bw1-m{border-width:.125rem;}}}
+@mixin tachyon-bw2-m{@include breakpoint-m(){.bw2-m{border-width:.25rem;}}}
+@mixin tachyon-bw3-m{@include breakpoint-m(){.bw3-m{border-width:.5rem;}}}
+@mixin tachyon-bw4-m{@include breakpoint-m(){.bw4-m{border-width:1rem;}}}
+@mixin tachyon-bw5-m{@include breakpoint-m(){.bw5-m{border-width:2rem;}}}
+@mixin tachyon-bt-0-m{@include breakpoint-m(){.bt-0-m{border-top-width:0;}}}
+@mixin tachyon-br-0-m{@include breakpoint-m(){.br-0-m{border-right-width:0;}}}
+@mixin tachyon-bb-0-m{@include breakpoint-m(){.bb-0-m{border-bottom-width:0;}}}
+@mixin tachyon-bl-0-m{@include breakpoint-m(){.bl-0-m{border-left-width:0;}}}
+@mixin tachyon-shadow-1-m{@include breakpoint-m(){.shadow-1-m{box-shadow:0 0 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-2-m{@include breakpoint-m(){.shadow-2-m{box-shadow:0 0 8px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-3-m{@include breakpoint-m(){.shadow-3-m{box-shadow:2px 2px 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-4-m{@include breakpoint-m(){.shadow-4-m{box-shadow:2px 2px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-5-m{@include breakpoint-m(){.shadow-5-m{box-shadow:4px 4px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-top-0-m{@include breakpoint-m(){.top-0-m{top:0;}}}
+@mixin tachyon-left-0-m{@include breakpoint-m(){.left-0-m{left:0;}}}
+@mixin tachyon-right-0-m{@include breakpoint-m(){.right-0-m{right:0;}}}
+@mixin tachyon-bottom-0-m{@include breakpoint-m(){.bottom-0-m{bottom:0;}}}
+@mixin tachyon-top-1-m{@include breakpoint-m(){.top-1-m{top:1rem;}}}
+@mixin tachyon-left-1-m{@include breakpoint-m(){.left-1-m{left:1rem;}}}
+@mixin tachyon-right-1-m{@include breakpoint-m(){.right-1-m{right:1rem;}}}
+@mixin tachyon-bottom-1-m{@include breakpoint-m(){.bottom-1-m{bottom:1rem;}}}
+@mixin tachyon-top-2-m{@include breakpoint-m(){.top-2-m{top:2rem;}}}
+@mixin tachyon-left-2-m{@include breakpoint-m(){.left-2-m{left:2rem;}}}
+@mixin tachyon-right-2-m{@include breakpoint-m(){.right-2-m{right:2rem;}}}
+@mixin tachyon-bottom-2-m{@include breakpoint-m(){.bottom-2-m{bottom:2rem;}}}
+@mixin tachyon-top--1-m{@include breakpoint-m(){.top--1-m{top:-1rem;}}}
+@mixin tachyon-right--1-m{@include breakpoint-m(){.right--1-m{right:-1rem;}}}
+@mixin tachyon-bottom--1-m{@include breakpoint-m(){.bottom--1-m{bottom:-1rem;}}}
+@mixin tachyon-left--1-m{@include breakpoint-m(){.left--1-m{left:-1rem;}}}
+@mixin tachyon-top--2-m{@include breakpoint-m(){.top--2-m{top:-2rem;}}}
+@mixin tachyon-right--2-m{@include breakpoint-m(){.right--2-m{right:-2rem;}}}
+@mixin tachyon-bottom--2-m{@include breakpoint-m(){.bottom--2-m{bottom:-2rem;}}}
+@mixin tachyon-left--2-m{@include breakpoint-m(){.left--2-m{left:-2rem;}}}
+@mixin tachyon-absolute--fill-m{@include breakpoint-m(){.absolute--fill-m{top:0;right:0;bottom:0;left:0;}}}
+@mixin tachyon-cl-m{@include breakpoint-m(){.cl-m{clear:left;}}}
+@mixin tachyon-cr-m{@include breakpoint-m(){.cr-m{clear:right;}}}
+@mixin tachyon-cb-m{@include breakpoint-m(){.cb-m{clear:both;}}}
+@mixin tachyon-cn-m{@include breakpoint-m(){.cn-m{clear:none;}}}
+@mixin tachyon-dn-m{@include breakpoint-m(){.dn-m{display:none;}}}
+@mixin tachyon-di-m{@include breakpoint-m(){.di-m{display:inline;}}}
+@mixin tachyon-db-m{@include breakpoint-m(){.db-m{display:block;}}}
+@mixin tachyon-dib-m{@include breakpoint-m(){.dib-m{display:inline-block;}}}
+@mixin tachyon-dit-m{@include breakpoint-m(){.dit-m{display:inline-table;}}}
+@mixin tachyon-dt-m{@include breakpoint-m(){.dt-m{display:table;}}}
+@mixin tachyon-dtc-m{@include breakpoint-m(){.dtc-m{display:table-cell;}}}
+@mixin tachyon-dt-row-m{@include breakpoint-m(){.dt-row-m{display:table-row;}}}
+@mixin tachyon-dt-row-group-m{@include breakpoint-m(){.dt-row-group-m{display:table-row-group;}}}
+@mixin tachyon-dt-column-m{@include breakpoint-m(){.dt-column-m{display:table-column;}}}
+@mixin tachyon-dt-column-group-m{@include breakpoint-m(){.dt-column-group-m{display:table-column-group;}}}
+@mixin tachyon-dt--fixed-m{@include breakpoint-m(){.dt--fixed-m{table-layout:fixed;width:100%;}}}
+@mixin tachyon-flex-m{@include breakpoint-m(){.flex-m{display:-webkit-box;display:-ms-flexbox;display:flex;}}}
+@mixin tachyon-inline-flex-m{@include breakpoint-m(){.inline-flex-m{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;}}}
+@mixin tachyon-flex-auto-m{@include breakpoint-m(){.flex-auto-m{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0;}}}
+@mixin tachyon-flex-none-m{@include breakpoint-m(){.flex-none-m{-webkit-box-flex:0;-ms-flex:none;flex:none;}}}
+@mixin tachyon-flex-column-m{@include breakpoint-m(){.flex-column-m{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}}}
+@mixin tachyon-flex-row-m{@include breakpoint-m(){.flex-row-m{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}}
+@mixin tachyon-flex-wrap-m{@include breakpoint-m(){.flex-wrap-m{-ms-flex-wrap:wrap;flex-wrap:wrap;}}}
+@mixin tachyon-flex-nowrap-m{@include breakpoint-m(){.flex-nowrap-m{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}}}
+@mixin tachyon-flex-wrap-reverse-m{@include breakpoint-m(){.flex-wrap-reverse-m{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;}}}
+@mixin tachyon-flex-column-reverse-m{@include breakpoint-m(){.flex-column-reverse-m{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}}}
+@mixin tachyon-flex-row-reverse-m{@include breakpoint-m(){.flex-row-reverse-m{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;}}}
+@mixin tachyon-items-start-m{@include breakpoint-m(){.items-start-m{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}}}
+@mixin tachyon-items-end-m{@include breakpoint-m(){.items-end-m{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}}}
+@mixin tachyon-items-center-m{@include breakpoint-m(){.items-center-m{-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}}
+@mixin tachyon-items-baseline-m{@include breakpoint-m(){.items-baseline-m{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;}}}
+@mixin tachyon-items-stretch-m{@include breakpoint-m(){.items-stretch-m{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;}}}
+@mixin tachyon-self-start-m{@include breakpoint-m(){.self-start-m{-ms-flex-item-align:start;align-self:flex-start;}}}
+@mixin tachyon-self-end-m{@include breakpoint-m(){.self-end-m{-ms-flex-item-align:end;align-self:flex-end;}}}
+@mixin tachyon-self-center-m{@include breakpoint-m(){.self-center-m{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;}}}
+@mixin tachyon-self-baseline-m{@include breakpoint-m(){.self-baseline-m{-ms-flex-item-align:baseline;align-self:baseline;}}}
+@mixin tachyon-self-stretch-m{@include breakpoint-m(){.self-stretch-m{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch;}}}
+@mixin tachyon-justify-start-m{@include breakpoint-m(){.justify-start-m{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}}}
+@mixin tachyon-justify-end-m{@include breakpoint-m(){.justify-end-m{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}}}
+@mixin tachyon-justify-center-m{@include breakpoint-m(){.justify-center-m{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}}}
+@mixin tachyon-justify-between-m{@include breakpoint-m(){.justify-between-m{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}}}
+@mixin tachyon-justify-around-m{@include breakpoint-m(){.justify-around-m{-ms-flex-pack:distribute;justify-content:space-around;}}}
+@mixin tachyon-content-start-m{@include breakpoint-m(){.content-start-m{-ms-flex-line-pack:start;align-content:flex-start;}}}
+@mixin tachyon-content-end-m{@include breakpoint-m(){.content-end-m{-ms-flex-line-pack:end;align-content:flex-end;}}}
+@mixin tachyon-content-center-m{@include breakpoint-m(){.content-center-m{-ms-flex-line-pack:center;align-content:center;}}}
+@mixin tachyon-content-between-m{@include breakpoint-m(){.content-between-m{-ms-flex-line-pack:justify;align-content:space-between;}}}
+@mixin tachyon-content-around-m{@include breakpoint-m(){.content-around-m{-ms-flex-line-pack:distribute;align-content:space-around;}}}
+@mixin tachyon-content-stretch-m{@include breakpoint-m(){.content-stretch-m{-ms-flex-line-pack:stretch;align-content:stretch;}}}
+@mixin tachyon-order-0-m{@include breakpoint-m(){.order-0-m{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;}}}
+@mixin tachyon-order-1-m{@include breakpoint-m(){.order-1-m{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;}}}
+@mixin tachyon-order-2-m{@include breakpoint-m(){.order-2-m{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;}}}
+@mixin tachyon-order-3-m{@include breakpoint-m(){.order-3-m{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;}}}
+@mixin tachyon-order-4-m{@include breakpoint-m(){.order-4-m{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;}}}
+@mixin tachyon-order-5-m{@include breakpoint-m(){.order-5-m{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5;}}}
+@mixin tachyon-order-6-m{@include breakpoint-m(){.order-6-m{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6;}}}
+@mixin tachyon-order-7-m{@include breakpoint-m(){.order-7-m{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7;}}}
+@mixin tachyon-order-8-m{@include breakpoint-m(){.order-8-m{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8;}}}
+@mixin tachyon-order-last-m{@include breakpoint-m(){.order-last-m{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999;}}}
+@mixin tachyon-flex-grow-0-m{@include breakpoint-m(){.flex-grow-0-m{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;}}}
+@mixin tachyon-flex-grow-1-m{@include breakpoint-m(){.flex-grow-1-m{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;}}}
+@mixin tachyon-flex-shrink-0-m{@include breakpoint-m(){.flex-shrink-0-m{-ms-flex-negative:0;flex-shrink:0;}}}
+@mixin tachyon-flex-shrink-1-m{@include breakpoint-m(){.flex-shrink-1-m{-ms-flex-negative:1;flex-shrink:1;}}}
+@mixin tachyon-fl-m{@include breakpoint-m(){.fl-m{float:left;display:inline;}}}
+@mixin tachyon-fr-m{@include breakpoint-m(){.fr-m{float:right;display:inline;}}}
+@mixin tachyon-fn-m{@include breakpoint-m(){.fn-m{float:none;}}}
+@mixin tachyon-i-m{@include breakpoint-m(){.i-m{font-style:italic;}}}
+@mixin tachyon-fs-normal-m{@include breakpoint-m(){.fs-normal-m{font-style:normal;}}}
+@mixin tachyon-normal-m{@include breakpoint-m(){.normal-m{font-weight:normal;}}}
+@mixin tachyon-b-m{@include breakpoint-m(){.b-m{font-weight:bold;}}}
+@mixin tachyon-fw1-m{@include breakpoint-m(){.fw1-m{font-weight:100;}}}
+@mixin tachyon-fw2-m{@include breakpoint-m(){.fw2-m{font-weight:200;}}}
+@mixin tachyon-fw3-m{@include breakpoint-m(){.fw3-m{font-weight:300;}}}
+@mixin tachyon-fw4-m{@include breakpoint-m(){.fw4-m{font-weight:400;}}}
+@mixin tachyon-fw5-m{@include breakpoint-m(){.fw5-m{font-weight:500;}}}
+@mixin tachyon-fw6-m{@include breakpoint-m(){.fw6-m{font-weight:600;}}}
+@mixin tachyon-fw7-m{@include breakpoint-m(){.fw7-m{font-weight:700;}}}
+@mixin tachyon-fw8-m{@include breakpoint-m(){.fw8-m{font-weight:800;}}}
+@mixin tachyon-fw9-m{@include breakpoint-m(){.fw9-m{font-weight:900;}}}
+@mixin tachyon-h1-m{@include breakpoint-m(){.h1-m{height:1rem;}}}
+@mixin tachyon-h2-m{@include breakpoint-m(){.h2-m{height:2rem;}}}
+@mixin tachyon-h3-m{@include breakpoint-m(){.h3-m{height:4rem;}}}
+@mixin tachyon-h4-m{@include breakpoint-m(){.h4-m{height:8rem;}}}
+@mixin tachyon-h5-m{@include breakpoint-m(){.h5-m{height:16rem;}}}
+@mixin tachyon-h-25-m{@include breakpoint-m(){.h-25-m{height:25%;}}}
+@mixin tachyon-h-50-m{@include breakpoint-m(){.h-50-m{height:50%;}}}
+@mixin tachyon-h-75-m{@include breakpoint-m(){.h-75-m{height:75%;}}}
+@mixin tachyon-h-100-m{@include breakpoint-m(){.h-100-m{height:100%;}}}
+@mixin tachyon-min-h-100-m{@include breakpoint-m(){.min-h-100-m{min-height:100%;}}}
+@mixin tachyon-vh-25-m{@include breakpoint-m(){.vh-25-m{height:25vh;}}}
+@mixin tachyon-vh-50-m{@include breakpoint-m(){.vh-50-m{height:50vh;}}}
+@mixin tachyon-vh-75-m{@include breakpoint-m(){.vh-75-m{height:75vh;}}}
+@mixin tachyon-vh-100-m{@include breakpoint-m(){.vh-100-m{height:100vh;}}}
+@mixin tachyon-min-vh-100-m{@include breakpoint-m(){.min-vh-100-m{min-height:100vh;}}}
+@mixin tachyon-h-auto-m{@include breakpoint-m(){.h-auto-m{height:auto;}}}
+@mixin tachyon-h-inherit-m{@include breakpoint-m(){.h-inherit-m{height:inherit;}}}
+@mixin tachyon-tracked-m{@include breakpoint-m(){.tracked-m{letter-spacing:.1em;}}}
+@mixin tachyon-tracked-tight-m{@include breakpoint-m(){.tracked-tight-m{letter-spacing:-.05em;}}}
+@mixin tachyon-tracked-mega-m{@include breakpoint-m(){.tracked-mega-m{letter-spacing:.25em;}}}
+@mixin tachyon-lh-solid-m{@include breakpoint-m(){.lh-solid-m{line-height:1;}}}
+@mixin tachyon-lh-title-m{@include breakpoint-m(){.lh-title-m{line-height:1.25;}}}
+@mixin tachyon-lh-copy-m{@include breakpoint-m(){.lh-copy-m{line-height:1.5;}}}
+@mixin tachyon-mw-100-m{@include breakpoint-m(){.mw-100-m{max-width:100%;}}}
+@mixin tachyon-mw1-m{@include breakpoint-m(){.mw1-m{max-width:1rem;}}}
+@mixin tachyon-mw2-m{@include breakpoint-m(){.mw2-m{max-width:2rem;}}}
+@mixin tachyon-mw3-m{@include breakpoint-m(){.mw3-m{max-width:4rem;}}}
+@mixin tachyon-mw4-m{@include breakpoint-m(){.mw4-m{max-width:8rem;}}}
+@mixin tachyon-mw5-m{@include breakpoint-m(){.mw5-m{max-width:16rem;}}}
+@mixin tachyon-mw6-m{@include breakpoint-m(){.mw6-m{max-width:32rem;}}}
+@mixin tachyon-mw7-m{@include breakpoint-m(){.mw7-m{max-width:48rem;}}}
+@mixin tachyon-mw8-m{@include breakpoint-m(){.mw8-m{max-width:64rem;}}}
+@mixin tachyon-mw9-m{@include breakpoint-m(){.mw9-m{max-width:96rem;}}}
+@mixin tachyon-mw-none-m{@include breakpoint-m(){.mw-none-m{max-width:none;}}}
+@mixin tachyon-w1-m{@include breakpoint-m(){.w1-m{width:1rem;}}}
+@mixin tachyon-w2-m{@include breakpoint-m(){.w2-m{width:2rem;}}}
+@mixin tachyon-w3-m{@include breakpoint-m(){.w3-m{width:4rem;}}}
+@mixin tachyon-w4-m{@include breakpoint-m(){.w4-m{width:8rem;}}}
+@mixin tachyon-w5-m{@include breakpoint-m(){.w5-m{width:16rem;}}}
+@mixin tachyon-w-10-m{@include breakpoint-m(){.w-10-m{width:10%;}}}
+@mixin tachyon-w-20-m{@include breakpoint-m(){.w-20-m{width:20%;}}}
+@mixin tachyon-w-25-m{@include breakpoint-m(){.w-25-m{width:25%;}}}
+@mixin tachyon-w-30-m{@include breakpoint-m(){.w-30-m{width:30%;}}}
+@mixin tachyon-w-33-m{@include breakpoint-m(){.w-33-m{width:33%;}}}
+@mixin tachyon-w-34-m{@include breakpoint-m(){.w-34-m{width:34%;}}}
+@mixin tachyon-w-40-m{@include breakpoint-m(){.w-40-m{width:40%;}}}
+@mixin tachyon-w-50-m{@include breakpoint-m(){.w-50-m{width:50%;}}}
+@mixin tachyon-w-60-m{@include breakpoint-m(){.w-60-m{width:60%;}}}
+@mixin tachyon-w-70-m{@include breakpoint-m(){.w-70-m{width:70%;}}}
+@mixin tachyon-w-75-m{@include breakpoint-m(){.w-75-m{width:75%;}}}
+@mixin tachyon-w-80-m{@include breakpoint-m(){.w-80-m{width:80%;}}}
+@mixin tachyon-w-90-m{@include breakpoint-m(){.w-90-m{width:90%;}}}
+@mixin tachyon-w-100-m{@include breakpoint-m(){.w-100-m{width:100%;}}}
+@mixin tachyon-w-third-m{@include breakpoint-m(){.w-third-m{width:calc( 100% / 3 );}}}
+@mixin tachyon-w-two-thirds-m{@include breakpoint-m(){.w-two-thirds-m{width:calc( 100% / 1.5 );}}}
+@mixin tachyon-w-auto-m{@include breakpoint-m(){.w-auto-m{width:auto;}}}
+@mixin tachyon-overflow-visible-m{@include breakpoint-m(){.overflow-visible-m{overflow:visible;}}}
+@mixin tachyon-overflow-hidden-m{@include breakpoint-m(){.overflow-hidden-m{overflow:hidden;}}}
+@mixin tachyon-overflow-scroll-m{@include breakpoint-m(){.overflow-scroll-m{overflow:scroll;}}}
+@mixin tachyon-overflow-auto-m{@include breakpoint-m(){.overflow-auto-m{overflow:auto;}}}
+@mixin tachyon-overflow-x-visible-m{@include breakpoint-m(){.overflow-x-visible-m{overflow-x:visible;}}}
+@mixin tachyon-overflow-x-hidden-m{@include breakpoint-m(){.overflow-x-hidden-m{overflow-x:hidden;}}}
+@mixin tachyon-overflow-x-scroll-m{@include breakpoint-m(){.overflow-x-scroll-m{overflow-x:scroll;}}}
+@mixin tachyon-overflow-x-auto-m{@include breakpoint-m(){.overflow-x-auto-m{overflow-x:auto;}}}
+@mixin tachyon-overflow-y-visible-m{@include breakpoint-m(){.overflow-y-visible-m{overflow-y:visible;}}}
+@mixin tachyon-overflow-y-hidden-m{@include breakpoint-m(){.overflow-y-hidden-m{overflow-y:hidden;}}}
+@mixin tachyon-overflow-y-scroll-m{@include breakpoint-m(){.overflow-y-scroll-m{overflow-y:scroll;}}}
+@mixin tachyon-overflow-y-auto-m{@include breakpoint-m(){.overflow-y-auto-m{overflow-y:auto;}}}
+@mixin tachyon-static-m{@include breakpoint-m(){.static-m{position:static;}}}
+@mixin tachyon-relative-m{@include breakpoint-m(){.relative-m{position:relative;}}}
+@mixin tachyon-absolute-m{@include breakpoint-m(){.absolute-m{position:absolute;}}}
+@mixin tachyon-fixed-m{@include breakpoint-m(){.fixed-m{position:fixed;}}}
+@mixin tachyon-rotate-45-m{@include breakpoint-m(){.rotate-45-m{-webkit-transform:rotate( 45deg );transform:rotate( 45deg );}}}
+@mixin tachyon-rotate-90-m{@include breakpoint-m(){.rotate-90-m{-webkit-transform:rotate( 90deg );transform:rotate( 90deg );}}}
+@mixin tachyon-rotate-135-m{@include breakpoint-m(){.rotate-135-m{-webkit-transform:rotate( 135deg );transform:rotate( 135deg );}}}
+@mixin tachyon-rotate-180-m{@include breakpoint-m(){.rotate-180-m{-webkit-transform:rotate( 180deg );transform:rotate( 180deg );}}}
+@mixin tachyon-rotate-225-m{@include breakpoint-m(){.rotate-225-m{-webkit-transform:rotate( 225deg );transform:rotate( 225deg );}}}
+@mixin tachyon-rotate-270-m{@include breakpoint-m(){.rotate-270-m{-webkit-transform:rotate( 270deg );transform:rotate( 270deg );}}}
+@mixin tachyon-rotate-315-m{@include breakpoint-m(){.rotate-315-m{-webkit-transform:rotate( 315deg );transform:rotate( 315deg );}}}
+@mixin tachyon-pa0-m{@include breakpoint-m(){.pa0-m{padding:0;}}}
+@mixin tachyon-pa1-m{@include breakpoint-m(){.pa1-m{padding:.25rem;}}}
+@mixin tachyon-pa2-m{@include breakpoint-m(){.pa2-m{padding:.5rem;}}}
+@mixin tachyon-pa3-m{@include breakpoint-m(){.pa3-m{padding:1rem;}}}
+@mixin tachyon-pa4-m{@include breakpoint-m(){.pa4-m{padding:2rem;}}}
+@mixin tachyon-pa5-m{@include breakpoint-m(){.pa5-m{padding:4rem;}}}
+@mixin tachyon-pa6-m{@include breakpoint-m(){.pa6-m{padding:8rem;}}}
+@mixin tachyon-pa7-m{@include breakpoint-m(){.pa7-m{padding:16rem;}}}
+@mixin tachyon-pl0-m{@include breakpoint-m(){.pl0-m{padding-left:0;}}}
+@mixin tachyon-pl1-m{@include breakpoint-m(){.pl1-m{padding-left:.25rem;}}}
+@mixin tachyon-pl2-m{@include breakpoint-m(){.pl2-m{padding-left:.5rem;}}}
+@mixin tachyon-pl3-m{@include breakpoint-m(){.pl3-m{padding-left:1rem;}}}
+@mixin tachyon-pl4-m{@include breakpoint-m(){.pl4-m{padding-left:2rem;}}}
+@mixin tachyon-pl5-m{@include breakpoint-m(){.pl5-m{padding-left:4rem;}}}
+@mixin tachyon-pl6-m{@include breakpoint-m(){.pl6-m{padding-left:8rem;}}}
+@mixin tachyon-pl7-m{@include breakpoint-m(){.pl7-m{padding-left:16rem;}}}
+@mixin tachyon-pr0-m{@include breakpoint-m(){.pr0-m{padding-right:0;}}}
+@mixin tachyon-pr1-m{@include breakpoint-m(){.pr1-m{padding-right:.25rem;}}}
+@mixin tachyon-pr2-m{@include breakpoint-m(){.pr2-m{padding-right:.5rem;}}}
+@mixin tachyon-pr3-m{@include breakpoint-m(){.pr3-m{padding-right:1rem;}}}
+@mixin tachyon-pr4-m{@include breakpoint-m(){.pr4-m{padding-right:2rem;}}}
+@mixin tachyon-pr5-m{@include breakpoint-m(){.pr5-m{padding-right:4rem;}}}
+@mixin tachyon-pr6-m{@include breakpoint-m(){.pr6-m{padding-right:8rem;}}}
+@mixin tachyon-pr7-m{@include breakpoint-m(){.pr7-m{padding-right:16rem;}}}
+@mixin tachyon-pb0-m{@include breakpoint-m(){.pb0-m{padding-bottom:0;}}}
+@mixin tachyon-pb1-m{@include breakpoint-m(){.pb1-m{padding-bottom:.25rem;}}}
+@mixin tachyon-pb2-m{@include breakpoint-m(){.pb2-m{padding-bottom:.5rem;}}}
+@mixin tachyon-pb3-m{@include breakpoint-m(){.pb3-m{padding-bottom:1rem;}}}
+@mixin tachyon-pb4-m{@include breakpoint-m(){.pb4-m{padding-bottom:2rem;}}}
+@mixin tachyon-pb5-m{@include breakpoint-m(){.pb5-m{padding-bottom:4rem;}}}
+@mixin tachyon-pb6-m{@include breakpoint-m(){.pb6-m{padding-bottom:8rem;}}}
+@mixin tachyon-pb7-m{@include breakpoint-m(){.pb7-m{padding-bottom:16rem;}}}
+@mixin tachyon-pt0-m{@include breakpoint-m(){.pt0-m{padding-top:0;}}}
+@mixin tachyon-pt1-m{@include breakpoint-m(){.pt1-m{padding-top:.25rem;}}}
+@mixin tachyon-pt2-m{@include breakpoint-m(){.pt2-m{padding-top:.5rem;}}}
+@mixin tachyon-pt3-m{@include breakpoint-m(){.pt3-m{padding-top:1rem;}}}
+@mixin tachyon-pt4-m{@include breakpoint-m(){.pt4-m{padding-top:2rem;}}}
+@mixin tachyon-pt5-m{@include breakpoint-m(){.pt5-m{padding-top:4rem;}}}
+@mixin tachyon-pt6-m{@include breakpoint-m(){.pt6-m{padding-top:8rem;}}}
+@mixin tachyon-pt7-m{@include breakpoint-m(){.pt7-m{padding-top:16rem;}}}
+@mixin tachyon-pv0-m{@include breakpoint-m(){.pv0-m{padding-top:0;padding-bottom:0;}}}
+@mixin tachyon-pv1-m{@include breakpoint-m(){.pv1-m{padding-top:.25rem;padding-bottom:.25rem;}}}
+@mixin tachyon-pv2-m{@include breakpoint-m(){.pv2-m{padding-top:.5rem;padding-bottom:.5rem;}}}
+@mixin tachyon-pv3-m{@include breakpoint-m(){.pv3-m{padding-top:1rem;padding-bottom:1rem;}}}
+@mixin tachyon-pv4-m{@include breakpoint-m(){.pv4-m{padding-top:2rem;padding-bottom:2rem;}}}
+@mixin tachyon-pv5-m{@include breakpoint-m(){.pv5-m{padding-top:4rem;padding-bottom:4rem;}}}
+@mixin tachyon-pv6-m{@include breakpoint-m(){.pv6-m{padding-top:8rem;padding-bottom:8rem;}}}
+@mixin tachyon-pv7-m{@include breakpoint-m(){.pv7-m{padding-top:16rem;padding-bottom:16rem;}}}
+@mixin tachyon-ph0-m{@include breakpoint-m(){.ph0-m{padding-left:0;padding-right:0;}}}
+@mixin tachyon-ph1-m{@include breakpoint-m(){.ph1-m{padding-left:.25rem;padding-right:.25rem;}}}
+@mixin tachyon-ph2-m{@include breakpoint-m(){.ph2-m{padding-left:.5rem;padding-right:.5rem;}}}
+@mixin tachyon-ph3-m{@include breakpoint-m(){.ph3-m{padding-left:1rem;padding-right:1rem;}}}
+@mixin tachyon-ph4-m{@include breakpoint-m(){.ph4-m{padding-left:2rem;padding-right:2rem;}}}
+@mixin tachyon-ph5-m{@include breakpoint-m(){.ph5-m{padding-left:4rem;padding-right:4rem;}}}
+@mixin tachyon-ph6-m{@include breakpoint-m(){.ph6-m{padding-left:8rem;padding-right:8rem;}}}
+@mixin tachyon-ph7-m{@include breakpoint-m(){.ph7-m{padding-left:16rem;padding-right:16rem;}}}
+@mixin tachyon-ma0-m{@include breakpoint-m(){.ma0-m{margin:0;}}}
+@mixin tachyon-ma1-m{@include breakpoint-m(){.ma1-m{margin:.25rem;}}}
+@mixin tachyon-ma2-m{@include breakpoint-m(){.ma2-m{margin:.5rem;}}}
+@mixin tachyon-ma3-m{@include breakpoint-m(){.ma3-m{margin:1rem;}}}
+@mixin tachyon-ma4-m{@include breakpoint-m(){.ma4-m{margin:2rem;}}}
+@mixin tachyon-ma5-m{@include breakpoint-m(){.ma5-m{margin:4rem;}}}
+@mixin tachyon-ma6-m{@include breakpoint-m(){.ma6-m{margin:8rem;}}}
+@mixin tachyon-ma7-m{@include breakpoint-m(){.ma7-m{margin:16rem;}}}
+@mixin tachyon-ml0-m{@include breakpoint-m(){.ml0-m{margin-left:0;}}}
+@mixin tachyon-ml1-m{@include breakpoint-m(){.ml1-m{margin-left:.25rem;}}}
+@mixin tachyon-ml2-m{@include breakpoint-m(){.ml2-m{margin-left:.5rem;}}}
+@mixin tachyon-ml3-m{@include breakpoint-m(){.ml3-m{margin-left:1rem;}}}
+@mixin tachyon-ml4-m{@include breakpoint-m(){.ml4-m{margin-left:2rem;}}}
+@mixin tachyon-ml5-m{@include breakpoint-m(){.ml5-m{margin-left:4rem;}}}
+@mixin tachyon-ml6-m{@include breakpoint-m(){.ml6-m{margin-left:8rem;}}}
+@mixin tachyon-ml7-m{@include breakpoint-m(){.ml7-m{margin-left:16rem;}}}
+@mixin tachyon-mr0-m{@include breakpoint-m(){.mr0-m{margin-right:0;}}}
+@mixin tachyon-mr1-m{@include breakpoint-m(){.mr1-m{margin-right:.25rem;}}}
+@mixin tachyon-mr2-m{@include breakpoint-m(){.mr2-m{margin-right:.5rem;}}}
+@mixin tachyon-mr3-m{@include breakpoint-m(){.mr3-m{margin-right:1rem;}}}
+@mixin tachyon-mr4-m{@include breakpoint-m(){.mr4-m{margin-right:2rem;}}}
+@mixin tachyon-mr5-m{@include breakpoint-m(){.mr5-m{margin-right:4rem;}}}
+@mixin tachyon-mr6-m{@include breakpoint-m(){.mr6-m{margin-right:8rem;}}}
+@mixin tachyon-mr7-m{@include breakpoint-m(){.mr7-m{margin-right:16rem;}}}
+@mixin tachyon-mb0-m{@include breakpoint-m(){.mb0-m{margin-bottom:0;}}}
+@mixin tachyon-mb1-m{@include breakpoint-m(){.mb1-m{margin-bottom:.25rem;}}}
+@mixin tachyon-mb2-m{@include breakpoint-m(){.mb2-m{margin-bottom:.5rem;}}}
+@mixin tachyon-mb3-m{@include breakpoint-m(){.mb3-m{margin-bottom:1rem;}}}
+@mixin tachyon-mb4-m{@include breakpoint-m(){.mb4-m{margin-bottom:2rem;}}}
+@mixin tachyon-mb5-m{@include breakpoint-m(){.mb5-m{margin-bottom:4rem;}}}
+@mixin tachyon-mb6-m{@include breakpoint-m(){.mb6-m{margin-bottom:8rem;}}}
+@mixin tachyon-mb7-m{@include breakpoint-m(){.mb7-m{margin-bottom:16rem;}}}
+@mixin tachyon-mt0-m{@include breakpoint-m(){.mt0-m{margin-top:0;}}}
+@mixin tachyon-mt1-m{@include breakpoint-m(){.mt1-m{margin-top:.25rem;}}}
+@mixin tachyon-mt2-m{@include breakpoint-m(){.mt2-m{margin-top:.5rem;}}}
+@mixin tachyon-mt3-m{@include breakpoint-m(){.mt3-m{margin-top:1rem;}}}
+@mixin tachyon-mt4-m{@include breakpoint-m(){.mt4-m{margin-top:2rem;}}}
+@mixin tachyon-mt5-m{@include breakpoint-m(){.mt5-m{margin-top:4rem;}}}
+@mixin tachyon-mt6-m{@include breakpoint-m(){.mt6-m{margin-top:8rem;}}}
+@mixin tachyon-mt7-m{@include breakpoint-m(){.mt7-m{margin-top:16rem;}}}
+@mixin tachyon-mv0-m{@include breakpoint-m(){.mv0-m{margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-mv1-m{@include breakpoint-m(){.mv1-m{margin-top:.25rem;margin-bottom:.25rem;}}}
+@mixin tachyon-mv2-m{@include breakpoint-m(){.mv2-m{margin-top:.5rem;margin-bottom:.5rem;}}}
+@mixin tachyon-mv3-m{@include breakpoint-m(){.mv3-m{margin-top:1rem;margin-bottom:1rem;}}}
+@mixin tachyon-mv4-m{@include breakpoint-m(){.mv4-m{margin-top:2rem;margin-bottom:2rem;}}}
+@mixin tachyon-mv5-m{@include breakpoint-m(){.mv5-m{margin-top:4rem;margin-bottom:4rem;}}}
+@mixin tachyon-mv6-m{@include breakpoint-m(){.mv6-m{margin-top:8rem;margin-bottom:8rem;}}}
+@mixin tachyon-mv7-m{@include breakpoint-m(){.mv7-m{margin-top:16rem;margin-bottom:16rem;}}}
+@mixin tachyon-mh0-m{@include breakpoint-m(){.mh0-m{margin-left:0;margin-right:0;}}}
+@mixin tachyon-mh1-m{@include breakpoint-m(){.mh1-m{margin-left:.25rem;margin-right:.25rem;}}}
+@mixin tachyon-mh2-m{@include breakpoint-m(){.mh2-m{margin-left:.5rem;margin-right:.5rem;}}}
+@mixin tachyon-mh3-m{@include breakpoint-m(){.mh3-m{margin-left:1rem;margin-right:1rem;}}}
+@mixin tachyon-mh4-m{@include breakpoint-m(){.mh4-m{margin-left:2rem;margin-right:2rem;}}}
+@mixin tachyon-mh5-m{@include breakpoint-m(){.mh5-m{margin-left:4rem;margin-right:4rem;}}}
+@mixin tachyon-mh6-m{@include breakpoint-m(){.mh6-m{margin-left:8rem;margin-right:8rem;}}}
+@mixin tachyon-mh7-m{@include breakpoint-m(){.mh7-m{margin-left:16rem;margin-right:16rem;}}}
+@mixin tachyon-na1-m{@include breakpoint-m(){.na1-m{margin:-.25rem;}}}
+@mixin tachyon-na2-m{@include breakpoint-m(){.na2-m{margin:-.5rem;}}}
+@mixin tachyon-na3-m{@include breakpoint-m(){.na3-m{margin:-1rem;}}}
+@mixin tachyon-na4-m{@include breakpoint-m(){.na4-m{margin:-2rem;}}}
+@mixin tachyon-na5-m{@include breakpoint-m(){.na5-m{margin:-4rem;}}}
+@mixin tachyon-na6-m{@include breakpoint-m(){.na6-m{margin:-8rem;}}}
+@mixin tachyon-na7-m{@include breakpoint-m(){.na7-m{margin:-16rem;}}}
+@mixin tachyon-nl1-m{@include breakpoint-m(){.nl1-m{margin-left:-.25rem;}}}
+@mixin tachyon-nl2-m{@include breakpoint-m(){.nl2-m{margin-left:-.5rem;}}}
+@mixin tachyon-nl3-m{@include breakpoint-m(){.nl3-m{margin-left:-1rem;}}}
+@mixin tachyon-nl4-m{@include breakpoint-m(){.nl4-m{margin-left:-2rem;}}}
+@mixin tachyon-nl5-m{@include breakpoint-m(){.nl5-m{margin-left:-4rem;}}}
+@mixin tachyon-nl6-m{@include breakpoint-m(){.nl6-m{margin-left:-8rem;}}}
+@mixin tachyon-nl7-m{@include breakpoint-m(){.nl7-m{margin-left:-16rem;}}}
+@mixin tachyon-nr1-m{@include breakpoint-m(){.nr1-m{margin-right:-.25rem;}}}
+@mixin tachyon-nr2-m{@include breakpoint-m(){.nr2-m{margin-right:-.5rem;}}}
+@mixin tachyon-nr3-m{@include breakpoint-m(){.nr3-m{margin-right:-1rem;}}}
+@mixin tachyon-nr4-m{@include breakpoint-m(){.nr4-m{margin-right:-2rem;}}}
+@mixin tachyon-nr5-m{@include breakpoint-m(){.nr5-m{margin-right:-4rem;}}}
+@mixin tachyon-nr6-m{@include breakpoint-m(){.nr6-m{margin-right:-8rem;}}}
+@mixin tachyon-nr7-m{@include breakpoint-m(){.nr7-m{margin-right:-16rem;}}}
+@mixin tachyon-nb1-m{@include breakpoint-m(){.nb1-m{margin-bottom:-.25rem;}}}
+@mixin tachyon-nb2-m{@include breakpoint-m(){.nb2-m{margin-bottom:-.5rem;}}}
+@mixin tachyon-nb3-m{@include breakpoint-m(){.nb3-m{margin-bottom:-1rem;}}}
+@mixin tachyon-nb4-m{@include breakpoint-m(){.nb4-m{margin-bottom:-2rem;}}}
+@mixin tachyon-nb5-m{@include breakpoint-m(){.nb5-m{margin-bottom:-4rem;}}}
+@mixin tachyon-nb6-m{@include breakpoint-m(){.nb6-m{margin-bottom:-8rem;}}}
+@mixin tachyon-nb7-m{@include breakpoint-m(){.nb7-m{margin-bottom:-16rem;}}}
+@mixin tachyon-nt1-m{@include breakpoint-m(){.nt1-m{margin-top:-.25rem;}}}
+@mixin tachyon-nt2-m{@include breakpoint-m(){.nt2-m{margin-top:-.5rem;}}}
+@mixin tachyon-nt3-m{@include breakpoint-m(){.nt3-m{margin-top:-1rem;}}}
+@mixin tachyon-nt4-m{@include breakpoint-m(){.nt4-m{margin-top:-2rem;}}}
+@mixin tachyon-nt5-m{@include breakpoint-m(){.nt5-m{margin-top:-4rem;}}}
+@mixin tachyon-nt6-m{@include breakpoint-m(){.nt6-m{margin-top:-8rem;}}}
+@mixin tachyon-nt7-m{@include breakpoint-m(){.nt7-m{margin-top:-16rem;}}}
+@mixin tachyon-strike-m{@include breakpoint-m(){.strike-m{text-decoration:line-through;}}}
+@mixin tachyon-underline-m{@include breakpoint-m(){.underline-m{text-decoration:underline;}}}
+@mixin tachyon-no-underline-m{@include breakpoint-m(){.no-underline-m{text-decoration:none;}}}
+@mixin tachyon-tl-m{@include breakpoint-m(){.tl-m{text-align:left;}}}
+@mixin tachyon-tr-m{@include breakpoint-m(){.tr-m{text-align:right;}}}
+@mixin tachyon-tc-m{@include breakpoint-m(){.tc-m{text-align:center;}}}
+@mixin tachyon-tj-m{@include breakpoint-m(){.tj-m{text-align:justify;}}}
+@mixin tachyon-ttc-m{@include breakpoint-m(){.ttc-m{text-transform:capitalize;}}}
+@mixin tachyon-ttl-m{@include breakpoint-m(){.ttl-m{text-transform:lowercase;}}}
+@mixin tachyon-ttu-m{@include breakpoint-m(){.ttu-m{text-transform:uppercase;}}}
+@mixin tachyon-ttn-m{@include breakpoint-m(){.ttn-m{text-transform:none;}}}
+@mixin tachyon-f-6-m{@include breakpoint-m(){.f-6-m{font-size:6rem;}}}
+@mixin tachyon-f-headline-m{@include breakpoint-m(){.f-headline-m{font-size:6rem;}}}
+@mixin tachyon-f-5-m{@include breakpoint-m(){.f-5-m{font-size:5rem;}}}
+@mixin tachyon-f-subheadline-m{@include breakpoint-m(){.f-subheadline-m{font-size:5rem;}}}
+@mixin tachyon-f1-m{@include breakpoint-m(){.f1-m{font-size:3rem;}}}
+@mixin tachyon-f2-m{@include breakpoint-m(){.f2-m{font-size:2.25rem;}}}
+@mixin tachyon-f3-m{@include breakpoint-m(){.f3-m{font-size:1.5rem;}}}
+@mixin tachyon-f4-m{@include breakpoint-m(){.f4-m{font-size:1.25rem;}}}
+@mixin tachyon-f5-m{@include breakpoint-m(){.f5-m{font-size:1rem;}}}
+@mixin tachyon-f6-m{@include breakpoint-m(){.f6-m{font-size:.875rem;}}}
+@mixin tachyon-f7-m{@include breakpoint-m(){.f7-m{font-size:.75rem;}}}
+@mixin tachyon-measure-m{@include breakpoint-m(){.measure-m{max-width:30em;}}}
+@mixin tachyon-measure-wide-m{@include breakpoint-m(){.measure-wide-m{max-width:34em;}}}
+@mixin tachyon-measure-narrow-m{@include breakpoint-m(){.measure-narrow-m{max-width:20em;}}}
+@mixin tachyon-indent-m{@include breakpoint-m(){.indent-m{text-indent:1em;margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-small-caps-m{@include breakpoint-m(){.small-caps-m{font-variant:small-caps;}}}
+@mixin tachyon-truncate-m{@include breakpoint-m(){.truncate-m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}}
+@mixin tachyon-center-m{@include breakpoint-m(){.center-m{margin-right:auto;margin-left:auto;}}}
+@mixin tachyon-mr-auto-m{@include breakpoint-m(){.mr-auto-m{margin-right:auto;}}}
+@mixin tachyon-ml-auto-m{@include breakpoint-m(){.ml-auto-m{margin-left:auto;}}}
+@mixin tachyon-clip-m{@include breakpoint-m(){.clip-m{position:fixed !important;position:absolute !important;clip:rect( 1px 1px 1px 1px );clip:rect( 1px, 1px, 1px, 1px );}}}
+@mixin tachyon-ws-normal-m{@include breakpoint-m(){.ws-normal-m{white-space:normal;}}}
+@mixin tachyon-nowrap-m{@include breakpoint-m(){.nowrap-m{white-space:nowrap;}}}
+@mixin tachyon-pre-m{@include breakpoint-m(){.pre-m{white-space:pre;}}}
+@mixin tachyon-v-base-m{@include breakpoint-m(){.v-base-m{vertical-align:baseline;}}}
+@mixin tachyon-v-mid-m{@include breakpoint-m(){.v-mid-m{vertical-align:middle;}}}
+@mixin tachyon-v-top-m{@include breakpoint-m(){.v-top-m{vertical-align:top;}}}
+@mixin tachyon-v-btm-m{@include breakpoint-m(){.v-btm-m{vertical-align:bottom;}}}
+@mixin tachyon-aspect-ratio--16x9-l{@include breakpoint-l(){.aspect-ratio--16x9-l{padding-bottom:56.25%;}}}
+@mixin tachyon-aspect-ratio--9x16-l{@include breakpoint-l(){.aspect-ratio--9x16-l{padding-bottom:177.77%;}}}
+@mixin tachyon-aspect-ratio--4x3-l{@include breakpoint-l(){.aspect-ratio--4x3-l{padding-bottom:75%;}}}
+@mixin tachyon-aspect-ratio--3x4-l{@include breakpoint-l(){.aspect-ratio--3x4-l{padding-bottom:133.33%;}}}
+@mixin tachyon-aspect-ratio--6x4-l{@include breakpoint-l(){.aspect-ratio--6x4-l{padding-bottom:66.6%;}}}
+@mixin tachyon-aspect-ratio--4x6-l{@include breakpoint-l(){.aspect-ratio--4x6-l{padding-bottom:150%;}}}
+@mixin tachyon-aspect-ratio--8x5-l{@include breakpoint-l(){.aspect-ratio--8x5-l{padding-bottom:62.5%;}}}
+@mixin tachyon-aspect-ratio--5x8-l{@include breakpoint-l(){.aspect-ratio--5x8-l{padding-bottom:160%;}}}
+@mixin tachyon-aspect-ratio--7x5-l{@include breakpoint-l(){.aspect-ratio--7x5-l{padding-bottom:71.42%;}}}
+@mixin tachyon-aspect-ratio--5x7-l{@include breakpoint-l(){.aspect-ratio--5x7-l{padding-bottom:140%;}}}
+@mixin tachyon-aspect-ratio--1x1-l{@include breakpoint-l(){.aspect-ratio--1x1-l{padding-bottom:100%;}}}
+@mixin tachyon-aspect-ratio--object-l{@include breakpoint-l(){.aspect-ratio--object-l{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100;}}}
+@mixin tachyon-cover-l{@include breakpoint-l(){.cover-l{background-size:cover !important;}}}
+@mixin tachyon-contain-l{@include breakpoint-l(){.contain-l{background-size:contain !important;}}}
+@mixin tachyon-bg-center-l{@include breakpoint-l(){.bg-center-l{background-repeat:no-repeat;background-position:center center;}}}
+@mixin tachyon-bg-top-l{@include breakpoint-l(){.bg-top-l{background-repeat:no-repeat;background-position:top center;}}}
+@mixin tachyon-bg-right-l{@include breakpoint-l(){.bg-right-l{background-repeat:no-repeat;background-position:center right;}}}
+@mixin tachyon-bg-bottom-l{@include breakpoint-l(){.bg-bottom-l{background-repeat:no-repeat;background-position:bottom center;}}}
+@mixin tachyon-bg-left-l{@include breakpoint-l(){.bg-left-l{background-repeat:no-repeat;background-position:center left;}}}
+@mixin tachyon-outline-l{@include breakpoint-l(){.outline-l{outline:1px solid;}}}
+@mixin tachyon-outline-transparent-l{@include breakpoint-l(){.outline-transparent-l{outline:1px solid transparent;}}}
+@mixin tachyon-outline-0-l{@include breakpoint-l(){.outline-0-l{outline:0;}}}
+@mixin tachyon-ba-l{@include breakpoint-l(){.ba-l{border-style:solid;border-width:1px;}}}
+@mixin tachyon-bt-l{@include breakpoint-l(){.bt-l{border-top-style:solid;border-top-width:1px;}}}
+@mixin tachyon-br-l{@include breakpoint-l(){.br-l{border-right-style:solid;border-right-width:1px;}}}
+@mixin tachyon-bb-l{@include breakpoint-l(){.bb-l{border-bottom-style:solid;border-bottom-width:1px;}}}
+@mixin tachyon-bl-l{@include breakpoint-l(){.bl-l{border-left-style:solid;border-left-width:1px;}}}
+@mixin tachyon-bn-l{@include breakpoint-l(){.bn-l{border-style:none;border-width:0;}}}
+@mixin tachyon-br0-l{@include breakpoint-l(){.br0-l{border-radius:0;}}}
+@mixin tachyon-br1-l{@include breakpoint-l(){.br1-l{border-radius:.125rem;}}}
+@mixin tachyon-br2-l{@include breakpoint-l(){.br2-l{border-radius:.25rem;}}}
+@mixin tachyon-br3-l{@include breakpoint-l(){.br3-l{border-radius:.5rem;}}}
+@mixin tachyon-br4-l{@include breakpoint-l(){.br4-l{border-radius:1rem;}}}
+@mixin tachyon-br-100-l{@include breakpoint-l(){.br-100-l{border-radius:100%;}}}
+@mixin tachyon-br-pill-l{@include breakpoint-l(){.br-pill-l{border-radius:9999px;}}}
+@mixin tachyon-br--bottom-l{@include breakpoint-l(){.br--bottom-l{border-top-left-radius:0;border-top-right-radius:0;}}}
+@mixin tachyon-br--top-l{@include breakpoint-l(){.br--top-l{border-bottom-left-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-br--right-l{@include breakpoint-l(){.br--right-l{border-top-left-radius:0;border-bottom-left-radius:0;}}}
+@mixin tachyon-br--left-l{@include breakpoint-l(){.br--left-l{border-top-right-radius:0;border-bottom-right-radius:0;}}}
+@mixin tachyon-b--dotted-l{@include breakpoint-l(){.b--dotted-l{border-style:dotted;}}}
+@mixin tachyon-b--dashed-l{@include breakpoint-l(){.b--dashed-l{border-style:dashed;}}}
+@mixin tachyon-b--solid-l{@include breakpoint-l(){.b--solid-l{border-style:solid;}}}
+@mixin tachyon-b--none-l{@include breakpoint-l(){.b--none-l{border-style:none;}}}
+@mixin tachyon-bw0-l{@include breakpoint-l(){.bw0-l{border-width:0;}}}
+@mixin tachyon-bw1-l{@include breakpoint-l(){.bw1-l{border-width:.125rem;}}}
+@mixin tachyon-bw2-l{@include breakpoint-l(){.bw2-l{border-width:.25rem;}}}
+@mixin tachyon-bw3-l{@include breakpoint-l(){.bw3-l{border-width:.5rem;}}}
+@mixin tachyon-bw4-l{@include breakpoint-l(){.bw4-l{border-width:1rem;}}}
+@mixin tachyon-bw5-l{@include breakpoint-l(){.bw5-l{border-width:2rem;}}}
+@mixin tachyon-bt-0-l{@include breakpoint-l(){.bt-0-l{border-top-width:0;}}}
+@mixin tachyon-br-0-l{@include breakpoint-l(){.br-0-l{border-right-width:0;}}}
+@mixin tachyon-bb-0-l{@include breakpoint-l(){.bb-0-l{border-bottom-width:0;}}}
+@mixin tachyon-bl-0-l{@include breakpoint-l(){.bl-0-l{border-left-width:0;}}}
+@mixin tachyon-shadow-1-l{@include breakpoint-l(){.shadow-1-l{box-shadow:0 0 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-2-l{@include breakpoint-l(){.shadow-2-l{box-shadow:0 0 8px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-3-l{@include breakpoint-l(){.shadow-3-l{box-shadow:2px 2px 4px 2px rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-4-l{@include breakpoint-l(){.shadow-4-l{box-shadow:2px 2px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-shadow-5-l{@include breakpoint-l(){.shadow-5-l{box-shadow:4px 4px 8px 0 rgba( 0, 0, 0, .2 );}}}
+@mixin tachyon-top-0-l{@include breakpoint-l(){.top-0-l{top:0;}}}
+@mixin tachyon-left-0-l{@include breakpoint-l(){.left-0-l{left:0;}}}
+@mixin tachyon-right-0-l{@include breakpoint-l(){.right-0-l{right:0;}}}
+@mixin tachyon-bottom-0-l{@include breakpoint-l(){.bottom-0-l{bottom:0;}}}
+@mixin tachyon-top-1-l{@include breakpoint-l(){.top-1-l{top:1rem;}}}
+@mixin tachyon-left-1-l{@include breakpoint-l(){.left-1-l{left:1rem;}}}
+@mixin tachyon-right-1-l{@include breakpoint-l(){.right-1-l{right:1rem;}}}
+@mixin tachyon-bottom-1-l{@include breakpoint-l(){.bottom-1-l{bottom:1rem;}}}
+@mixin tachyon-top-2-l{@include breakpoint-l(){.top-2-l{top:2rem;}}}
+@mixin tachyon-left-2-l{@include breakpoint-l(){.left-2-l{left:2rem;}}}
+@mixin tachyon-right-2-l{@include breakpoint-l(){.right-2-l{right:2rem;}}}
+@mixin tachyon-bottom-2-l{@include breakpoint-l(){.bottom-2-l{bottom:2rem;}}}
+@mixin tachyon-top--1-l{@include breakpoint-l(){.top--1-l{top:-1rem;}}}
+@mixin tachyon-right--1-l{@include breakpoint-l(){.right--1-l{right:-1rem;}}}
+@mixin tachyon-bottom--1-l{@include breakpoint-l(){.bottom--1-l{bottom:-1rem;}}}
+@mixin tachyon-left--1-l{@include breakpoint-l(){.left--1-l{left:-1rem;}}}
+@mixin tachyon-top--2-l{@include breakpoint-l(){.top--2-l{top:-2rem;}}}
+@mixin tachyon-right--2-l{@include breakpoint-l(){.right--2-l{right:-2rem;}}}
+@mixin tachyon-bottom--2-l{@include breakpoint-l(){.bottom--2-l{bottom:-2rem;}}}
+@mixin tachyon-left--2-l{@include breakpoint-l(){.left--2-l{left:-2rem;}}}
+@mixin tachyon-absolute--fill-l{@include breakpoint-l(){.absolute--fill-l{top:0;right:0;bottom:0;left:0;}}}
+@mixin tachyon-cl-l{@include breakpoint-l(){.cl-l{clear:left;}}}
+@mixin tachyon-cr-l{@include breakpoint-l(){.cr-l{clear:right;}}}
+@mixin tachyon-cb-l{@include breakpoint-l(){.cb-l{clear:both;}}}
+@mixin tachyon-cn-l{@include breakpoint-l(){.cn-l{clear:none;}}}
+@mixin tachyon-dn-l{@include breakpoint-l(){.dn-l{display:none;}}}
+@mixin tachyon-di-l{@include breakpoint-l(){.di-l{display:inline;}}}
+@mixin tachyon-db-l{@include breakpoint-l(){.db-l{display:block;}}}
+@mixin tachyon-dib-l{@include breakpoint-l(){.dib-l{display:inline-block;}}}
+@mixin tachyon-dit-l{@include breakpoint-l(){.dit-l{display:inline-table;}}}
+@mixin tachyon-dt-l{@include breakpoint-l(){.dt-l{display:table;}}}
+@mixin tachyon-dtc-l{@include breakpoint-l(){.dtc-l{display:table-cell;}}}
+@mixin tachyon-dt-row-l{@include breakpoint-l(){.dt-row-l{display:table-row;}}}
+@mixin tachyon-dt-row-group-l{@include breakpoint-l(){.dt-row-group-l{display:table-row-group;}}}
+@mixin tachyon-dt-column-l{@include breakpoint-l(){.dt-column-l{display:table-column;}}}
+@mixin tachyon-dt-column-group-l{@include breakpoint-l(){.dt-column-group-l{display:table-column-group;}}}
+@mixin tachyon-dt--fixed-l{@include breakpoint-l(){.dt--fixed-l{table-layout:fixed;width:100%;}}}
+@mixin tachyon-flex-l{@include breakpoint-l(){.flex-l{display:-webkit-box;display:-ms-flexbox;display:flex;}}}
+@mixin tachyon-inline-flex-l{@include breakpoint-l(){.inline-flex-l{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;}}}
+@mixin tachyon-flex-auto-l{@include breakpoint-l(){.flex-auto-l{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0;}}}
+@mixin tachyon-flex-none-l{@include breakpoint-l(){.flex-none-l{-webkit-box-flex:0;-ms-flex:none;flex:none;}}}
+@mixin tachyon-flex-column-l{@include breakpoint-l(){.flex-column-l{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}}}
+@mixin tachyon-flex-row-l{@include breakpoint-l(){.flex-row-l{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}}
+@mixin tachyon-flex-wrap-l{@include breakpoint-l(){.flex-wrap-l{-ms-flex-wrap:wrap;flex-wrap:wrap;}}}
+@mixin tachyon-flex-nowrap-l{@include breakpoint-l(){.flex-nowrap-l{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}}}
+@mixin tachyon-flex-wrap-reverse-l{@include breakpoint-l(){.flex-wrap-reverse-l{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;}}}
+@mixin tachyon-flex-column-reverse-l{@include breakpoint-l(){.flex-column-reverse-l{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}}}
+@mixin tachyon-flex-row-reverse-l{@include breakpoint-l(){.flex-row-reverse-l{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;}}}
+@mixin tachyon-items-start-l{@include breakpoint-l(){.items-start-l{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}}}
+@mixin tachyon-items-end-l{@include breakpoint-l(){.items-end-l{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}}}
+@mixin tachyon-items-center-l{@include breakpoint-l(){.items-center-l{-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}}
+@mixin tachyon-items-baseline-l{@include breakpoint-l(){.items-baseline-l{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;}}}
+@mixin tachyon-items-stretch-l{@include breakpoint-l(){.items-stretch-l{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;}}}
+@mixin tachyon-self-start-l{@include breakpoint-l(){.self-start-l{-ms-flex-item-align:start;align-self:flex-start;}}}
+@mixin tachyon-self-end-l{@include breakpoint-l(){.self-end-l{-ms-flex-item-align:end;align-self:flex-end;}}}
+@mixin tachyon-self-center-l{@include breakpoint-l(){.self-center-l{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;}}}
+@mixin tachyon-self-baseline-l{@include breakpoint-l(){.self-baseline-l{-ms-flex-item-align:baseline;align-self:baseline;}}}
+@mixin tachyon-self-stretch-l{@include breakpoint-l(){.self-stretch-l{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch;}}}
+@mixin tachyon-justify-start-l{@include breakpoint-l(){.justify-start-l{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}}}
+@mixin tachyon-justify-end-l{@include breakpoint-l(){.justify-end-l{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}}}
+@mixin tachyon-justify-center-l{@include breakpoint-l(){.justify-center-l{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}}}
+@mixin tachyon-justify-between-l{@include breakpoint-l(){.justify-between-l{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}}}
+@mixin tachyon-justify-around-l{@include breakpoint-l(){.justify-around-l{-ms-flex-pack:distribute;justify-content:space-around;}}}
+@mixin tachyon-content-start-l{@include breakpoint-l(){.content-start-l{-ms-flex-line-pack:start;align-content:flex-start;}}}
+@mixin tachyon-content-end-l{@include breakpoint-l(){.content-end-l{-ms-flex-line-pack:end;align-content:flex-end;}}}
+@mixin tachyon-content-center-l{@include breakpoint-l(){.content-center-l{-ms-flex-line-pack:center;align-content:center;}}}
+@mixin tachyon-content-between-l{@include breakpoint-l(){.content-between-l{-ms-flex-line-pack:justify;align-content:space-between;}}}
+@mixin tachyon-content-around-l{@include breakpoint-l(){.content-around-l{-ms-flex-line-pack:distribute;align-content:space-around;}}}
+@mixin tachyon-content-stretch-l{@include breakpoint-l(){.content-stretch-l{-ms-flex-line-pack:stretch;align-content:stretch;}}}
+@mixin tachyon-order-0-l{@include breakpoint-l(){.order-0-l{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;}}}
+@mixin tachyon-order-1-l{@include breakpoint-l(){.order-1-l{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;}}}
+@mixin tachyon-order-2-l{@include breakpoint-l(){.order-2-l{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;}}}
+@mixin tachyon-order-3-l{@include breakpoint-l(){.order-3-l{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;}}}
+@mixin tachyon-order-4-l{@include breakpoint-l(){.order-4-l{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;}}}
+@mixin tachyon-order-5-l{@include breakpoint-l(){.order-5-l{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5;}}}
+@mixin tachyon-order-6-l{@include breakpoint-l(){.order-6-l{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6;}}}
+@mixin tachyon-order-7-l{@include breakpoint-l(){.order-7-l{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7;}}}
+@mixin tachyon-order-8-l{@include breakpoint-l(){.order-8-l{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8;}}}
+@mixin tachyon-order-last-l{@include breakpoint-l(){.order-last-l{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999;}}}
+@mixin tachyon-flex-grow-0-l{@include breakpoint-l(){.flex-grow-0-l{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;}}}
+@mixin tachyon-flex-grow-1-l{@include breakpoint-l(){.flex-grow-1-l{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;}}}
+@mixin tachyon-flex-shrink-0-l{@include breakpoint-l(){.flex-shrink-0-l{-ms-flex-negative:0;flex-shrink:0;}}}
+@mixin tachyon-flex-shrink-1-l{@include breakpoint-l(){.flex-shrink-1-l{-ms-flex-negative:1;flex-shrink:1;}}}
+@mixin tachyon-fl-l{@include breakpoint-l(){.fl-l{float:left;display:inline;}}}
+@mixin tachyon-fr-l{@include breakpoint-l(){.fr-l{float:right;display:inline;}}}
+@mixin tachyon-fn-l{@include breakpoint-l(){.fn-l{float:none;}}}
+@mixin tachyon-i-l{@include breakpoint-l(){.i-l{font-style:italic;}}}
+@mixin tachyon-fs-normal-l{@include breakpoint-l(){.fs-normal-l{font-style:normal;}}}
+@mixin tachyon-normal-l{@include breakpoint-l(){.normal-l{font-weight:normal;}}}
+@mixin tachyon-b-l{@include breakpoint-l(){.b-l{font-weight:bold;}}}
+@mixin tachyon-fw1-l{@include breakpoint-l(){.fw1-l{font-weight:100;}}}
+@mixin tachyon-fw2-l{@include breakpoint-l(){.fw2-l{font-weight:200;}}}
+@mixin tachyon-fw3-l{@include breakpoint-l(){.fw3-l{font-weight:300;}}}
+@mixin tachyon-fw4-l{@include breakpoint-l(){.fw4-l{font-weight:400;}}}
+@mixin tachyon-fw5-l{@include breakpoint-l(){.fw5-l{font-weight:500;}}}
+@mixin tachyon-fw6-l{@include breakpoint-l(){.fw6-l{font-weight:600;}}}
+@mixin tachyon-fw7-l{@include breakpoint-l(){.fw7-l{font-weight:700;}}}
+@mixin tachyon-fw8-l{@include breakpoint-l(){.fw8-l{font-weight:800;}}}
+@mixin tachyon-fw9-l{@include breakpoint-l(){.fw9-l{font-weight:900;}}}
+@mixin tachyon-h1-l{@include breakpoint-l(){.h1-l{height:1rem;}}}
+@mixin tachyon-h2-l{@include breakpoint-l(){.h2-l{height:2rem;}}}
+@mixin tachyon-h3-l{@include breakpoint-l(){.h3-l{height:4rem;}}}
+@mixin tachyon-h4-l{@include breakpoint-l(){.h4-l{height:8rem;}}}
+@mixin tachyon-h5-l{@include breakpoint-l(){.h5-l{height:16rem;}}}
+@mixin tachyon-h-25-l{@include breakpoint-l(){.h-25-l{height:25%;}}}
+@mixin tachyon-h-50-l{@include breakpoint-l(){.h-50-l{height:50%;}}}
+@mixin tachyon-h-75-l{@include breakpoint-l(){.h-75-l{height:75%;}}}
+@mixin tachyon-h-100-l{@include breakpoint-l(){.h-100-l{height:100%;}}}
+@mixin tachyon-min-h-100-l{@include breakpoint-l(){.min-h-100-l{min-height:100%;}}}
+@mixin tachyon-vh-25-l{@include breakpoint-l(){.vh-25-l{height:25vh;}}}
+@mixin tachyon-vh-50-l{@include breakpoint-l(){.vh-50-l{height:50vh;}}}
+@mixin tachyon-vh-75-l{@include breakpoint-l(){.vh-75-l{height:75vh;}}}
+@mixin tachyon-vh-100-l{@include breakpoint-l(){.vh-100-l{height:100vh;}}}
+@mixin tachyon-min-vh-100-l{@include breakpoint-l(){.min-vh-100-l{min-height:100vh;}}}
+@mixin tachyon-h-auto-l{@include breakpoint-l(){.h-auto-l{height:auto;}}}
+@mixin tachyon-h-inherit-l{@include breakpoint-l(){.h-inherit-l{height:inherit;}}}
+@mixin tachyon-tracked-l{@include breakpoint-l(){.tracked-l{letter-spacing:.1em;}}}
+@mixin tachyon-tracked-tight-l{@include breakpoint-l(){.tracked-tight-l{letter-spacing:-.05em;}}}
+@mixin tachyon-tracked-mega-l{@include breakpoint-l(){.tracked-mega-l{letter-spacing:.25em;}}}
+@mixin tachyon-lh-solid-l{@include breakpoint-l(){.lh-solid-l{line-height:1;}}}
+@mixin tachyon-lh-title-l{@include breakpoint-l(){.lh-title-l{line-height:1.25;}}}
+@mixin tachyon-lh-copy-l{@include breakpoint-l(){.lh-copy-l{line-height:1.5;}}}
+@mixin tachyon-mw-100-l{@include breakpoint-l(){.mw-100-l{max-width:100%;}}}
+@mixin tachyon-mw1-l{@include breakpoint-l(){.mw1-l{max-width:1rem;}}}
+@mixin tachyon-mw2-l{@include breakpoint-l(){.mw2-l{max-width:2rem;}}}
+@mixin tachyon-mw3-l{@include breakpoint-l(){.mw3-l{max-width:4rem;}}}
+@mixin tachyon-mw4-l{@include breakpoint-l(){.mw4-l{max-width:8rem;}}}
+@mixin tachyon-mw5-l{@include breakpoint-l(){.mw5-l{max-width:16rem;}}}
+@mixin tachyon-mw6-l{@include breakpoint-l(){.mw6-l{max-width:32rem;}}}
+@mixin tachyon-mw7-l{@include breakpoint-l(){.mw7-l{max-width:48rem;}}}
+@mixin tachyon-mw8-l{@include breakpoint-l(){.mw8-l{max-width:64rem;}}}
+@mixin tachyon-mw9-l{@include breakpoint-l(){.mw9-l{max-width:96rem;}}}
+@mixin tachyon-mw-none-l{@include breakpoint-l(){.mw-none-l{max-width:none;}}}
+@mixin tachyon-w1-l{@include breakpoint-l(){.w1-l{width:1rem;}}}
+@mixin tachyon-w2-l{@include breakpoint-l(){.w2-l{width:2rem;}}}
+@mixin tachyon-w3-l{@include breakpoint-l(){.w3-l{width:4rem;}}}
+@mixin tachyon-w4-l{@include breakpoint-l(){.w4-l{width:8rem;}}}
+@mixin tachyon-w5-l{@include breakpoint-l(){.w5-l{width:16rem;}}}
+@mixin tachyon-w-10-l{@include breakpoint-l(){.w-10-l{width:10%;}}}
+@mixin tachyon-w-20-l{@include breakpoint-l(){.w-20-l{width:20%;}}}
+@mixin tachyon-w-25-l{@include breakpoint-l(){.w-25-l{width:25%;}}}
+@mixin tachyon-w-30-l{@include breakpoint-l(){.w-30-l{width:30%;}}}
+@mixin tachyon-w-33-l{@include breakpoint-l(){.w-33-l{width:33%;}}}
+@mixin tachyon-w-34-l{@include breakpoint-l(){.w-34-l{width:34%;}}}
+@mixin tachyon-w-40-l{@include breakpoint-l(){.w-40-l{width:40%;}}}
+@mixin tachyon-w-50-l{@include breakpoint-l(){.w-50-l{width:50%;}}}
+@mixin tachyon-w-60-l{@include breakpoint-l(){.w-60-l{width:60%;}}}
+@mixin tachyon-w-70-l{@include breakpoint-l(){.w-70-l{width:70%;}}}
+@mixin tachyon-w-75-l{@include breakpoint-l(){.w-75-l{width:75%;}}}
+@mixin tachyon-w-80-l{@include breakpoint-l(){.w-80-l{width:80%;}}}
+@mixin tachyon-w-90-l{@include breakpoint-l(){.w-90-l{width:90%;}}}
+@mixin tachyon-w-100-l{@include breakpoint-l(){.w-100-l{width:100%;}}}
+@mixin tachyon-w-third-l{@include breakpoint-l(){.w-third-l{width:calc( 100% / 3 );}}}
+@mixin tachyon-w-two-thirds-l{@include breakpoint-l(){.w-two-thirds-l{width:calc( 100% / 1.5 );}}}
+@mixin tachyon-w-auto-l{@include breakpoint-l(){.w-auto-l{width:auto;}}}
+@mixin tachyon-overflow-visible-l{@include breakpoint-l(){.overflow-visible-l{overflow:visible;}}}
+@mixin tachyon-overflow-hidden-l{@include breakpoint-l(){.overflow-hidden-l{overflow:hidden;}}}
+@mixin tachyon-overflow-scroll-l{@include breakpoint-l(){.overflow-scroll-l{overflow:scroll;}}}
+@mixin tachyon-overflow-auto-l{@include breakpoint-l(){.overflow-auto-l{overflow:auto;}}}
+@mixin tachyon-overflow-x-visible-l{@include breakpoint-l(){.overflow-x-visible-l{overflow-x:visible;}}}
+@mixin tachyon-overflow-x-hidden-l{@include breakpoint-l(){.overflow-x-hidden-l{overflow-x:hidden;}}}
+@mixin tachyon-overflow-x-scroll-l{@include breakpoint-l(){.overflow-x-scroll-l{overflow-x:scroll;}}}
+@mixin tachyon-overflow-x-auto-l{@include breakpoint-l(){.overflow-x-auto-l{overflow-x:auto;}}}
+@mixin tachyon-overflow-y-visible-l{@include breakpoint-l(){.overflow-y-visible-l{overflow-y:visible;}}}
+@mixin tachyon-overflow-y-hidden-l{@include breakpoint-l(){.overflow-y-hidden-l{overflow-y:hidden;}}}
+@mixin tachyon-overflow-y-scroll-l{@include breakpoint-l(){.overflow-y-scroll-l{overflow-y:scroll;}}}
+@mixin tachyon-overflow-y-auto-l{@include breakpoint-l(){.overflow-y-auto-l{overflow-y:auto;}}}
+@mixin tachyon-static-l{@include breakpoint-l(){.static-l{position:static;}}}
+@mixin tachyon-relative-l{@include breakpoint-l(){.relative-l{position:relative;}}}
+@mixin tachyon-absolute-l{@include breakpoint-l(){.absolute-l{position:absolute;}}}
+@mixin tachyon-fixed-l{@include breakpoint-l(){.fixed-l{position:fixed;}}}
+@mixin tachyon-rotate-45-l{@include breakpoint-l(){.rotate-45-l{-webkit-transform:rotate( 45deg );transform:rotate( 45deg );}}}
+@mixin tachyon-rotate-90-l{@include breakpoint-l(){.rotate-90-l{-webkit-transform:rotate( 90deg );transform:rotate( 90deg );}}}
+@mixin tachyon-rotate-135-l{@include breakpoint-l(){.rotate-135-l{-webkit-transform:rotate( 135deg );transform:rotate( 135deg );}}}
+@mixin tachyon-rotate-180-l{@include breakpoint-l(){.rotate-180-l{-webkit-transform:rotate( 180deg );transform:rotate( 180deg );}}}
+@mixin tachyon-rotate-225-l{@include breakpoint-l(){.rotate-225-l{-webkit-transform:rotate( 225deg );transform:rotate( 225deg );}}}
+@mixin tachyon-rotate-270-l{@include breakpoint-l(){.rotate-270-l{-webkit-transform:rotate( 270deg );transform:rotate( 270deg );}}}
+@mixin tachyon-rotate-315-l{@include breakpoint-l(){.rotate-315-l{-webkit-transform:rotate( 315deg );transform:rotate( 315deg );}}}
+@mixin tachyon-pa0-l{@include breakpoint-l(){.pa0-l{padding:0;}}}
+@mixin tachyon-pa1-l{@include breakpoint-l(){.pa1-l{padding:.25rem;}}}
+@mixin tachyon-pa2-l{@include breakpoint-l(){.pa2-l{padding:.5rem;}}}
+@mixin tachyon-pa3-l{@include breakpoint-l(){.pa3-l{padding:1rem;}}}
+@mixin tachyon-pa4-l{@include breakpoint-l(){.pa4-l{padding:2rem;}}}
+@mixin tachyon-pa5-l{@include breakpoint-l(){.pa5-l{padding:4rem;}}}
+@mixin tachyon-pa6-l{@include breakpoint-l(){.pa6-l{padding:8rem;}}}
+@mixin tachyon-pa7-l{@include breakpoint-l(){.pa7-l{padding:16rem;}}}
+@mixin tachyon-pl0-l{@include breakpoint-l(){.pl0-l{padding-left:0;}}}
+@mixin tachyon-pl1-l{@include breakpoint-l(){.pl1-l{padding-left:.25rem;}}}
+@mixin tachyon-pl2-l{@include breakpoint-l(){.pl2-l{padding-left:.5rem;}}}
+@mixin tachyon-pl3-l{@include breakpoint-l(){.pl3-l{padding-left:1rem;}}}
+@mixin tachyon-pl4-l{@include breakpoint-l(){.pl4-l{padding-left:2rem;}}}
+@mixin tachyon-pl5-l{@include breakpoint-l(){.pl5-l{padding-left:4rem;}}}
+@mixin tachyon-pl6-l{@include breakpoint-l(){.pl6-l{padding-left:8rem;}}}
+@mixin tachyon-pl7-l{@include breakpoint-l(){.pl7-l{padding-left:16rem;}}}
+@mixin tachyon-pr0-l{@include breakpoint-l(){.pr0-l{padding-right:0;}}}
+@mixin tachyon-pr1-l{@include breakpoint-l(){.pr1-l{padding-right:.25rem;}}}
+@mixin tachyon-pr2-l{@include breakpoint-l(){.pr2-l{padding-right:.5rem;}}}
+@mixin tachyon-pr3-l{@include breakpoint-l(){.pr3-l{padding-right:1rem;}}}
+@mixin tachyon-pr4-l{@include breakpoint-l(){.pr4-l{padding-right:2rem;}}}
+@mixin tachyon-pr5-l{@include breakpoint-l(){.pr5-l{padding-right:4rem;}}}
+@mixin tachyon-pr6-l{@include breakpoint-l(){.pr6-l{padding-right:8rem;}}}
+@mixin tachyon-pr7-l{@include breakpoint-l(){.pr7-l{padding-right:16rem;}}}
+@mixin tachyon-pb0-l{@include breakpoint-l(){.pb0-l{padding-bottom:0;}}}
+@mixin tachyon-pb1-l{@include breakpoint-l(){.pb1-l{padding-bottom:.25rem;}}}
+@mixin tachyon-pb2-l{@include breakpoint-l(){.pb2-l{padding-bottom:.5rem;}}}
+@mixin tachyon-pb3-l{@include breakpoint-l(){.pb3-l{padding-bottom:1rem;}}}
+@mixin tachyon-pb4-l{@include breakpoint-l(){.pb4-l{padding-bottom:2rem;}}}
+@mixin tachyon-pb5-l{@include breakpoint-l(){.pb5-l{padding-bottom:4rem;}}}
+@mixin tachyon-pb6-l{@include breakpoint-l(){.pb6-l{padding-bottom:8rem;}}}
+@mixin tachyon-pb7-l{@include breakpoint-l(){.pb7-l{padding-bottom:16rem;}}}
+@mixin tachyon-pt0-l{@include breakpoint-l(){.pt0-l{padding-top:0;}}}
+@mixin tachyon-pt1-l{@include breakpoint-l(){.pt1-l{padding-top:.25rem;}}}
+@mixin tachyon-pt2-l{@include breakpoint-l(){.pt2-l{padding-top:.5rem;}}}
+@mixin tachyon-pt3-l{@include breakpoint-l(){.pt3-l{padding-top:1rem;}}}
+@mixin tachyon-pt4-l{@include breakpoint-l(){.pt4-l{padding-top:2rem;}}}
+@mixin tachyon-pt5-l{@include breakpoint-l(){.pt5-l{padding-top:4rem;}}}
+@mixin tachyon-pt6-l{@include breakpoint-l(){.pt6-l{padding-top:8rem;}}}
+@mixin tachyon-pt7-l{@include breakpoint-l(){.pt7-l{padding-top:16rem;}}}
+@mixin tachyon-pv0-l{@include breakpoint-l(){.pv0-l{padding-top:0;padding-bottom:0;}}}
+@mixin tachyon-pv1-l{@include breakpoint-l(){.pv1-l{padding-top:.25rem;padding-bottom:.25rem;}}}
+@mixin tachyon-pv2-l{@include breakpoint-l(){.pv2-l{padding-top:.5rem;padding-bottom:.5rem;}}}
+@mixin tachyon-pv3-l{@include breakpoint-l(){.pv3-l{padding-top:1rem;padding-bottom:1rem;}}}
+@mixin tachyon-pv4-l{@include breakpoint-l(){.pv4-l{padding-top:2rem;padding-bottom:2rem;}}}
+@mixin tachyon-pv5-l{@include breakpoint-l(){.pv5-l{padding-top:4rem;padding-bottom:4rem;}}}
+@mixin tachyon-pv6-l{@include breakpoint-l(){.pv6-l{padding-top:8rem;padding-bottom:8rem;}}}
+@mixin tachyon-pv7-l{@include breakpoint-l(){.pv7-l{padding-top:16rem;padding-bottom:16rem;}}}
+@mixin tachyon-ph0-l{@include breakpoint-l(){.ph0-l{padding-left:0;padding-right:0;}}}
+@mixin tachyon-ph1-l{@include breakpoint-l(){.ph1-l{padding-left:.25rem;padding-right:.25rem;}}}
+@mixin tachyon-ph2-l{@include breakpoint-l(){.ph2-l{padding-left:.5rem;padding-right:.5rem;}}}
+@mixin tachyon-ph3-l{@include breakpoint-l(){.ph3-l{padding-left:1rem;padding-right:1rem;}}}
+@mixin tachyon-ph4-l{@include breakpoint-l(){.ph4-l{padding-left:2rem;padding-right:2rem;}}}
+@mixin tachyon-ph5-l{@include breakpoint-l(){.ph5-l{padding-left:4rem;padding-right:4rem;}}}
+@mixin tachyon-ph6-l{@include breakpoint-l(){.ph6-l{padding-left:8rem;padding-right:8rem;}}}
+@mixin tachyon-ph7-l{@include breakpoint-l(){.ph7-l{padding-left:16rem;padding-right:16rem;}}}
+@mixin tachyon-ma0-l{@include breakpoint-l(){.ma0-l{margin:0;}}}
+@mixin tachyon-ma1-l{@include breakpoint-l(){.ma1-l{margin:.25rem;}}}
+@mixin tachyon-ma2-l{@include breakpoint-l(){.ma2-l{margin:.5rem;}}}
+@mixin tachyon-ma3-l{@include breakpoint-l(){.ma3-l{margin:1rem;}}}
+@mixin tachyon-ma4-l{@include breakpoint-l(){.ma4-l{margin:2rem;}}}
+@mixin tachyon-ma5-l{@include breakpoint-l(){.ma5-l{margin:4rem;}}}
+@mixin tachyon-ma6-l{@include breakpoint-l(){.ma6-l{margin:8rem;}}}
+@mixin tachyon-ma7-l{@include breakpoint-l(){.ma7-l{margin:16rem;}}}
+@mixin tachyon-ml0-l{@include breakpoint-l(){.ml0-l{margin-left:0;}}}
+@mixin tachyon-ml1-l{@include breakpoint-l(){.ml1-l{margin-left:.25rem;}}}
+@mixin tachyon-ml2-l{@include breakpoint-l(){.ml2-l{margin-left:.5rem;}}}
+@mixin tachyon-ml3-l{@include breakpoint-l(){.ml3-l{margin-left:1rem;}}}
+@mixin tachyon-ml4-l{@include breakpoint-l(){.ml4-l{margin-left:2rem;}}}
+@mixin tachyon-ml5-l{@include breakpoint-l(){.ml5-l{margin-left:4rem;}}}
+@mixin tachyon-ml6-l{@include breakpoint-l(){.ml6-l{margin-left:8rem;}}}
+@mixin tachyon-ml7-l{@include breakpoint-l(){.ml7-l{margin-left:16rem;}}}
+@mixin tachyon-mr0-l{@include breakpoint-l(){.mr0-l{margin-right:0;}}}
+@mixin tachyon-mr1-l{@include breakpoint-l(){.mr1-l{margin-right:.25rem;}}}
+@mixin tachyon-mr2-l{@include breakpoint-l(){.mr2-l{margin-right:.5rem;}}}
+@mixin tachyon-mr3-l{@include breakpoint-l(){.mr3-l{margin-right:1rem;}}}
+@mixin tachyon-mr4-l{@include breakpoint-l(){.mr4-l{margin-right:2rem;}}}
+@mixin tachyon-mr5-l{@include breakpoint-l(){.mr5-l{margin-right:4rem;}}}
+@mixin tachyon-mr6-l{@include breakpoint-l(){.mr6-l{margin-right:8rem;}}}
+@mixin tachyon-mr7-l{@include breakpoint-l(){.mr7-l{margin-right:16rem;}}}
+@mixin tachyon-mb0-l{@include breakpoint-l(){.mb0-l{margin-bottom:0;}}}
+@mixin tachyon-mb1-l{@include breakpoint-l(){.mb1-l{margin-bottom:.25rem;}}}
+@mixin tachyon-mb2-l{@include breakpoint-l(){.mb2-l{margin-bottom:.5rem;}}}
+@mixin tachyon-mb3-l{@include breakpoint-l(){.mb3-l{margin-bottom:1rem;}}}
+@mixin tachyon-mb4-l{@include breakpoint-l(){.mb4-l{margin-bottom:2rem;}}}
+@mixin tachyon-mb5-l{@include breakpoint-l(){.mb5-l{margin-bottom:4rem;}}}
+@mixin tachyon-mb6-l{@include breakpoint-l(){.mb6-l{margin-bottom:8rem;}}}
+@mixin tachyon-mb7-l{@include breakpoint-l(){.mb7-l{margin-bottom:16rem;}}}
+@mixin tachyon-mt0-l{@include breakpoint-l(){.mt0-l{margin-top:0;}}}
+@mixin tachyon-mt1-l{@include breakpoint-l(){.mt1-l{margin-top:.25rem;}}}
+@mixin tachyon-mt2-l{@include breakpoint-l(){.mt2-l{margin-top:.5rem;}}}
+@mixin tachyon-mt3-l{@include breakpoint-l(){.mt3-l{margin-top:1rem;}}}
+@mixin tachyon-mt4-l{@include breakpoint-l(){.mt4-l{margin-top:2rem;}}}
+@mixin tachyon-mt5-l{@include breakpoint-l(){.mt5-l{margin-top:4rem;}}}
+@mixin tachyon-mt6-l{@include breakpoint-l(){.mt6-l{margin-top:8rem;}}}
+@mixin tachyon-mt7-l{@include breakpoint-l(){.mt7-l{margin-top:16rem;}}}
+@mixin tachyon-mv0-l{@include breakpoint-l(){.mv0-l{margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-mv1-l{@include breakpoint-l(){.mv1-l{margin-top:.25rem;margin-bottom:.25rem;}}}
+@mixin tachyon-mv2-l{@include breakpoint-l(){.mv2-l{margin-top:.5rem;margin-bottom:.5rem;}}}
+@mixin tachyon-mv3-l{@include breakpoint-l(){.mv3-l{margin-top:1rem;margin-bottom:1rem;}}}
+@mixin tachyon-mv4-l{@include breakpoint-l(){.mv4-l{margin-top:2rem;margin-bottom:2rem;}}}
+@mixin tachyon-mv5-l{@include breakpoint-l(){.mv5-l{margin-top:4rem;margin-bottom:4rem;}}}
+@mixin tachyon-mv6-l{@include breakpoint-l(){.mv6-l{margin-top:8rem;margin-bottom:8rem;}}}
+@mixin tachyon-mv7-l{@include breakpoint-l(){.mv7-l{margin-top:16rem;margin-bottom:16rem;}}}
+@mixin tachyon-mh0-l{@include breakpoint-l(){.mh0-l{margin-left:0;margin-right:0;}}}
+@mixin tachyon-mh1-l{@include breakpoint-l(){.mh1-l{margin-left:.25rem;margin-right:.25rem;}}}
+@mixin tachyon-mh2-l{@include breakpoint-l(){.mh2-l{margin-left:.5rem;margin-right:.5rem;}}}
+@mixin tachyon-mh3-l{@include breakpoint-l(){.mh3-l{margin-left:1rem;margin-right:1rem;}}}
+@mixin tachyon-mh4-l{@include breakpoint-l(){.mh4-l{margin-left:2rem;margin-right:2rem;}}}
+@mixin tachyon-mh5-l{@include breakpoint-l(){.mh5-l{margin-left:4rem;margin-right:4rem;}}}
+@mixin tachyon-mh6-l{@include breakpoint-l(){.mh6-l{margin-left:8rem;margin-right:8rem;}}}
+@mixin tachyon-mh7-l{@include breakpoint-l(){.mh7-l{margin-left:16rem;margin-right:16rem;}}}
+@mixin tachyon-na1-l{@include breakpoint-l(){.na1-l{margin:-.25rem;}}}
+@mixin tachyon-na2-l{@include breakpoint-l(){.na2-l{margin:-.5rem;}}}
+@mixin tachyon-na3-l{@include breakpoint-l(){.na3-l{margin:-1rem;}}}
+@mixin tachyon-na4-l{@include breakpoint-l(){.na4-l{margin:-2rem;}}}
+@mixin tachyon-na5-l{@include breakpoint-l(){.na5-l{margin:-4rem;}}}
+@mixin tachyon-na6-l{@include breakpoint-l(){.na6-l{margin:-8rem;}}}
+@mixin tachyon-na7-l{@include breakpoint-l(){.na7-l{margin:-16rem;}}}
+@mixin tachyon-nl1-l{@include breakpoint-l(){.nl1-l{margin-left:-.25rem;}}}
+@mixin tachyon-nl2-l{@include breakpoint-l(){.nl2-l{margin-left:-.5rem;}}}
+@mixin tachyon-nl3-l{@include breakpoint-l(){.nl3-l{margin-left:-1rem;}}}
+@mixin tachyon-nl4-l{@include breakpoint-l(){.nl4-l{margin-left:-2rem;}}}
+@mixin tachyon-nl5-l{@include breakpoint-l(){.nl5-l{margin-left:-4rem;}}}
+@mixin tachyon-nl6-l{@include breakpoint-l(){.nl6-l{margin-left:-8rem;}}}
+@mixin tachyon-nl7-l{@include breakpoint-l(){.nl7-l{margin-left:-16rem;}}}
+@mixin tachyon-nr1-l{@include breakpoint-l(){.nr1-l{margin-right:-.25rem;}}}
+@mixin tachyon-nr2-l{@include breakpoint-l(){.nr2-l{margin-right:-.5rem;}}}
+@mixin tachyon-nr3-l{@include breakpoint-l(){.nr3-l{margin-right:-1rem;}}}
+@mixin tachyon-nr4-l{@include breakpoint-l(){.nr4-l{margin-right:-2rem;}}}
+@mixin tachyon-nr5-l{@include breakpoint-l(){.nr5-l{margin-right:-4rem;}}}
+@mixin tachyon-nr6-l{@include breakpoint-l(){.nr6-l{margin-right:-8rem;}}}
+@mixin tachyon-nr7-l{@include breakpoint-l(){.nr7-l{margin-right:-16rem;}}}
+@mixin tachyon-nb1-l{@include breakpoint-l(){.nb1-l{margin-bottom:-.25rem;}}}
+@mixin tachyon-nb2-l{@include breakpoint-l(){.nb2-l{margin-bottom:-.5rem;}}}
+@mixin tachyon-nb3-l{@include breakpoint-l(){.nb3-l{margin-bottom:-1rem;}}}
+@mixin tachyon-nb4-l{@include breakpoint-l(){.nb4-l{margin-bottom:-2rem;}}}
+@mixin tachyon-nb5-l{@include breakpoint-l(){.nb5-l{margin-bottom:-4rem;}}}
+@mixin tachyon-nb6-l{@include breakpoint-l(){.nb6-l{margin-bottom:-8rem;}}}
+@mixin tachyon-nb7-l{@include breakpoint-l(){.nb7-l{margin-bottom:-16rem;}}}
+@mixin tachyon-nt1-l{@include breakpoint-l(){.nt1-l{margin-top:-.25rem;}}}
+@mixin tachyon-nt2-l{@include breakpoint-l(){.nt2-l{margin-top:-.5rem;}}}
+@mixin tachyon-nt3-l{@include breakpoint-l(){.nt3-l{margin-top:-1rem;}}}
+@mixin tachyon-nt4-l{@include breakpoint-l(){.nt4-l{margin-top:-2rem;}}}
+@mixin tachyon-nt5-l{@include breakpoint-l(){.nt5-l{margin-top:-4rem;}}}
+@mixin tachyon-nt6-l{@include breakpoint-l(){.nt6-l{margin-top:-8rem;}}}
+@mixin tachyon-nt7-l{@include breakpoint-l(){.nt7-l{margin-top:-16rem;}}}
+@mixin tachyon-strike-l{@include breakpoint-l(){.strike-l{text-decoration:line-through;}}}
+@mixin tachyon-underline-l{@include breakpoint-l(){.underline-l{text-decoration:underline;}}}
+@mixin tachyon-no-underline-l{@include breakpoint-l(){.no-underline-l{text-decoration:none;}}}
+@mixin tachyon-tl-l{@include breakpoint-l(){.tl-l{text-align:left;}}}
+@mixin tachyon-tr-l{@include breakpoint-l(){.tr-l{text-align:right;}}}
+@mixin tachyon-tc-l{@include breakpoint-l(){.tc-l{text-align:center;}}}
+@mixin tachyon-tj-l{@include breakpoint-l(){.tj-l{text-align:justify;}}}
+@mixin tachyon-ttc-l{@include breakpoint-l(){.ttc-l{text-transform:capitalize;}}}
+@mixin tachyon-ttl-l{@include breakpoint-l(){.ttl-l{text-transform:lowercase;}}}
+@mixin tachyon-ttu-l{@include breakpoint-l(){.ttu-l{text-transform:uppercase;}}}
+@mixin tachyon-ttn-l{@include breakpoint-l(){.ttn-l{text-transform:none;}}}
+@mixin tachyon-f-6-l{@include breakpoint-l(){.f-6-l{font-size:6rem;}}}
+@mixin tachyon-f-headline-l{@include breakpoint-l(){.f-headline-l{font-size:6rem;}}}
+@mixin tachyon-f-5-l{@include breakpoint-l(){.f-5-l{font-size:5rem;}}}
+@mixin tachyon-f-subheadline-l{@include breakpoint-l(){.f-subheadline-l{font-size:5rem;}}}
+@mixin tachyon-f1-l{@include breakpoint-l(){.f1-l{font-size:3rem;}}}
+@mixin tachyon-f2-l{@include breakpoint-l(){.f2-l{font-size:2.25rem;}}}
+@mixin tachyon-f3-l{@include breakpoint-l(){.f3-l{font-size:1.5rem;}}}
+@mixin tachyon-f4-l{@include breakpoint-l(){.f4-l{font-size:1.25rem;}}}
+@mixin tachyon-f5-l{@include breakpoint-l(){.f5-l{font-size:1rem;}}}
+@mixin tachyon-f6-l{@include breakpoint-l(){.f6-l{font-size:.875rem;}}}
+@mixin tachyon-f7-l{@include breakpoint-l(){.f7-l{font-size:.75rem;}}}
+@mixin tachyon-measure-l{@include breakpoint-l(){.measure-l{max-width:30em;}}}
+@mixin tachyon-measure-wide-l{@include breakpoint-l(){.measure-wide-l{max-width:34em;}}}
+@mixin tachyon-measure-narrow-l{@include breakpoint-l(){.measure-narrow-l{max-width:20em;}}}
+@mixin tachyon-indent-l{@include breakpoint-l(){.indent-l{text-indent:1em;margin-top:0;margin-bottom:0;}}}
+@mixin tachyon-small-caps-l{@include breakpoint-l(){.small-caps-l{font-variant:small-caps;}}}
+@mixin tachyon-truncate-l{@include breakpoint-l(){.truncate-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}}
+@mixin tachyon-center-l{@include breakpoint-l(){.center-l{margin-right:auto;margin-left:auto;}}}
+@mixin tachyon-mr-auto-l{@include breakpoint-l(){.mr-auto-l{margin-right:auto;}}}
+@mixin tachyon-ml-auto-l{@include breakpoint-l(){.ml-auto-l{margin-left:auto;}}}
+@mixin tachyon-clip-l{@include breakpoint-l(){.clip-l{position:fixed !important;position:absolute !important;clip:rect( 1px 1px 1px 1px );clip:rect( 1px, 1px, 1px, 1px );}}}
+@mixin tachyon-ws-normal-l{@include breakpoint-l(){.ws-normal-l{white-space:normal;}}}
+@mixin tachyon-nowrap-l{@include breakpoint-l(){.nowrap-l{white-space:nowrap;}}}
+@mixin tachyon-pre-l{@include breakpoint-l(){.pre-l{white-space:pre;}}}
+@mixin tachyon-v-base-l{@include breakpoint-l(){.v-base-l{vertical-align:baseline;}}}
+@mixin tachyon-v-mid-l{@include breakpoint-l(){.v-mid-l{vertical-align:middle;}}}
+@mixin tachyon-v-top-l{@include breakpoint-l(){.v-top-l{vertical-align:top;}}}
+@mixin tachyon-v-btm-l{@include breakpoint-l(){.v-btm-l{vertical-align:bottom;}}}
